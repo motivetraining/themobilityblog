@@ -4,7 +4,7 @@ metaTitle: "Posture: A Fight Against Gravity"
 description: "Posture isn’t about perfection; it's about versatility. Learn why strength and movement matter more than rigid alignment."
 date: "2025-10-04T21:08:57Z"
 dateModified: "2026-02-12T15:51:06Z"
-featuredImage: "https://themobilityblog.com/wp-content/uploads/2025/10/Posture-Fighting-Gravity.jpg"
+featuredImage: "/images/posts/Posture-Fighting-Gravity.jpg"
 categories:
   - "Posture"
 published: true
@@ -28,7 +28,7 @@ That’s why posture is worth a closer look.
 
 ## What Poor Posture Really Looks Like
 
-![](https://themobilityblog.com/wp-content/uploads/2025/10/Poor-Posture-2.jpg)
+![](/images/posts/Poor-Posture-2.jpg)
 
 When most people picture poor posture, they imagine slouching. But the patterns are broader and more predictable:
 
@@ -52,7 +52,7 @@ Posture is not just a slouched spine or rounded shoulders—it’s a cascade of 
 
 Humans are efficient. We always find the path of least resistance.
 
-![](https://themobilityblog.com/wp-content/uploads/2025/10/Lumbar-Extension-Lumbar-Flexion-1.jpg)
+![](/images/posts/Lumbar-Extension-Lumbar-Flexion-1.jpg)
 
 That’s why people tend to fall into flexion while sitting and extension while standing. The body hangs on joints and passive tissues instead of maintaining active support. It’s not laziness—it’s survival. But over time, this “economy” limits options, and posture gets stuck.
 

@@ -4,7 +4,7 @@ metaTitle: "When Stretching Makes Pain Worse"
 description: "Can stretching make pain worse? Learn the red flags of hypermobility and why pain keeps returning when you chase more range."
 date: "2026-02-11T23:44:19Z"
 dateModified: "2026-02-12T15:43:33Z"
-featuredImage: "https://themobilityblog.com/wp-content/uploads/2026/02/Stretching-Pain-Yoga-Hypermobility.jpg"
+featuredImage: "/images/posts/Stretching-Pain-Yoga-Hypermobility.jpg"
 categories:
   - "Mobility"
 published: true

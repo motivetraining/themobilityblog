@@ -3,7 +3,7 @@ title: "What Is Mobility?"
 description: "What is mobility? Learn why it’s more than flexibility—and how strength and control define real movement capacity."
 date: "2024-12-23T00:58:27Z"
 dateModified: "2026-02-15T19:11:05Z"
-featuredImage: "https://themobilityblog.com/wp-content/uploads/2024/12/what-is-mobility.jpg"
+featuredImage: "/images/posts/what-is-mobility.jpg"
 categories:
   - "Mobility"
 published: true

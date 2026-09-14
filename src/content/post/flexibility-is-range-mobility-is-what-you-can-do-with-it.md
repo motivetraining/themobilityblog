@@ -4,7 +4,7 @@ metaTitle: "Flexibility Is Range, Not Mobility"
 description: "Flexibility and mobility aren't the same thing. Learn why owning your range under control matters more than how far you can passively stretch."
 date: "2026-05-27T02:23:22Z"
 dateModified: "2026-05-27T02:23:30Z"
-featuredImage: "https://themobilityblog.com/wp-content/uploads/2026/05/Flexibility-Is-Range.-Mobility-Is-What-You-Can-Do-With-It.jpg"
+featuredImage: "/images/posts/Flexibility-Is-Range.-Mobility-Is-What-You-Can-Do-With-It.jpg"
 categories:
   - "Mobility"
 published: true

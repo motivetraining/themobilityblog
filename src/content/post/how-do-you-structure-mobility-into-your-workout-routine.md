@@ -4,7 +4,7 @@ metaTitle: "How to Structure Mobility Training"
 description: "What's the best way to structure your mobility routine? We asked the pros; here is what they had to say."
 date: "2026-05-14T01:15:32Z"
 dateModified: "2026-05-24T18:40:52Z"
-featuredImage: "https://themobilityblog.com/wp-content/uploads/2026/05/How-Do-You-Structure-Mobility-Into-Your-Workout-Routine.png"
+featuredImage: "/images/posts/How-Do-You-Structure-Mobility-Into-Your-Workout-Routine.png"
 categories:
   - "Mobility"
 published: true

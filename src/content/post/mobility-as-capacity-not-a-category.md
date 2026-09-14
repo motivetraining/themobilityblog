@@ -3,7 +3,7 @@ title: "Mobility as Capacity, Not a Category"
 description: "Mobility isn’t a category of exercise. It’s capacity. Learn why real mobility means controlling your ranges—not just stretching more."
 date: "2026-01-20T17:08:47Z"
 dateModified: "2026-02-12T15:45:34Z"
-featuredImage: "https://themobilityblog.com/wp-content/uploads/2026/01/Capacity.jpg"
+featuredImage: "/images/posts/Capacity.jpg"
 categories:
   - "Mobility"
 published: true

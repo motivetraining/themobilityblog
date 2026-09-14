@@ -4,7 +4,7 @@ metaTitle: "What Does Mobility Mean? We Asked"
 description: "Mobility means control, independence, safety, and adaptability. Coaches and clinicians worldwide share what mobility really is."
 date: "2026-02-12T15:06:53Z"
 dateModified: "2026-02-20T20:10:08Z"
-featuredImage: "https://themobilityblog.com/wp-content/uploads/2026/02/What-Does-Mobility-Mean-1.jpg"
+featuredImage: "/images/posts/What-Does-Mobility-Mean-1.jpg"
 categories:
   - "Mobility"
 published: true

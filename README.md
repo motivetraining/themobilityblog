@@ -22,7 +22,7 @@ title: "Post Title"
 description: "Meta description, ~155 chars"
 date: "2026-01-01T00:00:00Z"
 dateModified: "2026-02-01T00:00:00Z"   # only when revising
-featuredImage: "https://.../image.jpg"
+featuredImage: "/images/posts/your-image.jpg"
 categories:
   - "Mobility"
 published: true
@@ -36,11 +36,8 @@ The file name (`{slug}`) becomes the URL: `src/content/post/what-is-mobility.md`
 ## Migration notes
 
 - Content converted from a WordPress export (13 posts, 2 pages: About, Write With Us).
-- Post images are currently **hotlinked** to the original WordPress media URLs
-  (`themobilityblog.com/wp-content/uploads/...`) — the conversion tool used to
-  build this site could not reach that domain to download them directly. Before
-  cancelling WordPress hosting, download the media library and switch each
-  post's `featuredImage` (and any inline image) to a local file under `public/images/`.
+- Post images (featured + inline) live in `public/images/posts/`, pulled from
+  the WordPress media library export.
 - `src/content/page/` holds the About and Write With Us pages, rendered by
   `src/pages/[page].astro`.
 - The original "Write With Us" page had a Jetpack contact form (name, email,
