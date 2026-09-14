@@ -1,6 +1,7 @@
 # The Mobility Blog
 
-Astro static site, rebuilt off WordPress. Deployed on Vercel.
+Astro static site, rebuilt off WordPress. Deployed on Vercel at
+[vercel.com/motive-a09ec8ec/themobilityblog](https://vercel.com/motive-a09ec8ec/themobilityblog).
 
 ## Commands
 
