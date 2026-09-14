@@ -1,6 +1,6 @@
 ---
 title: "What CARs Are Actually For"
-description: ""
+description: "CARs don't build new range, they maintain what you have. What controlled articular rotations actually measure, and where the hype outruns the evidence."
 date: "2026-08-24T19:40:02Z"
 dateModified: "2026-08-24T19:40:06Z"
 featuredImage: "https://themobilityblog.com/wp-content/uploads/2026/08/What-CARs-Are-ACtually-For.jpg"
