@@ -58,43 +58,9 @@ const { title, description, canonical, image, type = "website" } = Astro.props;
         <nav class="flex items-center gap-6 text-sm">
           <a href="/about" class="hover:underline">About</a>
           <a href="/write-with-us" class="hover:underline">Write With Us</a>
-          <div class="relative group">
-            <button class="flex items-center gap-1 hover:underline" aria-haspopup="true">
-              Programs
-              <svg
-                class="w-3 h-3"
-                viewBox="0 0 12 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 4l4 4 4-4"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></path>
-              </svg>
-            </button>
-            <div
-              class="absolute right-0 top-full pt-2 hidden group-hover:block group-focus-within:block"
-            >
-              <div class="bg-white border border-slate-200 rounded-lg shadow-lg py-2 w-40">
-                <a
-                  href="https://www.movewithpurpose.com/kinstretch"
-                  class="block px-4 py-2 hover:underline"
-                >
-                  Kinstretch
-                </a>
-                <a
-                  href="https://motive-mobility.circle.so/c/welcome-start-here/"
-                  class="block px-4 py-2 hover:underline"
-                >
-                  Online
-                </a>
-              </div>
-            </div>
-          </div>
+          <a href="https://motive-mobility.circle.so/c/welcome-start-here" class="hover:underline">
+            KINSTRETCH Online
+          </a>
         </nav>
       </div>
     </header>
