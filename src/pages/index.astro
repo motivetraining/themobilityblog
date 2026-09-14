@@ -9,17 +9,23 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
 
 <BaseLayout
   title="The Mobility Blog | Mobility, Stretching & Movement Coaching"
-  description="We're a collaborative community of mobility coaches, helping people move better one joint at a time."
+  description="A place for mobility coaches to share what works, and why it works."
   canonical="https://www.themobilityblog.com"
 >
-  <div class="max-w-3xl mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold tracking-tight mb-2">The Mobility Blog</h1>
-    <p class="text-slate-600 mb-10">
-      A collaborative community of mobility coaches, helping people move better one joint at a
-      time.
-    </p>
+  <div class="max-w-5xl mx-auto px-4 py-12">
+    <div class="max-w-md mb-10">
+      <h1 class="text-3xl font-bold tracking-tight mb-4">The Mobility Blog</h1>
+      <p class="text-slate-600">
+        A place for mobility coaches to share what works, and <em>why</em> it works.
+      </p>
+      <p class="text-slate-600 mt-4">
+        Some posts are technical, some are philosophical, but the goal stays the same: help you
+        build better joint options, think more clearly about movement, and train with more
+        intention.
+      </p>
+    </div>
 
-    <ul class="space-y-10">
+    <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-12">
       {
         posts.map((post) => (
           <li>
@@ -32,16 +38,15 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
                   loading="lazy"
                 />
               )}
-              <h2 class="text-xl font-semibold group-hover:underline">{post.data.title}</h2>
-              <p class="text-slate-600 mt-1 text-sm">{post.data.description}</p>
-              <time class="text-xs text-slate-400 mt-2 block">
-                {post.data.date.toLocaleDateString("en-US", {
-                  year: "numeric",
-                  month: "long",
-                  day: "numeric",
-                })}
-              </time>
+              <h2 class="text-xl font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
+                {post.data.title}
+              </h2>
             </a>
+            {post.data.categories[0] && (
+              <span class="inline-block mt-1 text-sm text-slate-500 underline decoration-1 underline-offset-2">
+                {post.data.categories[0]}
+              </span>
+            )}
           </li>
         ))
       }
