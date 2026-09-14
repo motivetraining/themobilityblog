@@ -1,5 +1,6 @@
 ---
 title: "Isometrics: Infinite Tension, Infinite Potential"
+metaTitle: "Isometrics: Infinite Tension"
 description: "Isometrics build strength through controlled tension. Learn how they improve joint health, stability, and long-term resilience."
 date: "2025-05-21T02:22:32Z"
 dateModified: "2026-02-12T15:51:41Z"

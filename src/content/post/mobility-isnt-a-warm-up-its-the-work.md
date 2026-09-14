@@ -1,5 +1,6 @@
 ---
 title: "Mobility Isn’t a Warm-Up. It’s the Work."
+metaTitle: "Mobility Isn’t a Warm-Up"
 description: "Mobility isn’t just a warm-up. It’s the work. Learn why joint control and strength should be trained and not rushed before lifting."
 date: "2026-01-02T04:19:13Z"
 dateModified: "2026-02-12T15:48:09Z"

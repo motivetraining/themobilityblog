@@ -13,14 +13,36 @@ export async function getStaticPaths() {
 const { post } = Astro.props;
 const { Content } = await render(post);
 const canonical = `https://www.themobilityblog.com/${post.id}`;
+const pageTitle = `${post.data.metaTitle ?? post.data.title} | The Mobility Blog`;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  headline: post.data.title,
+  description: post.data.description,
+  datePublished: post.data.date.toISOString(),
+  dateModified: (post.data.dateModified ?? post.data.date).toISOString(),
+  ...(post.data.featuredImage && { image: post.data.featuredImage }),
+  author: {
+    "@type": "Person",
+    name: "Brian Murray",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "The Mobility Blog",
+  },
+  mainEntityOfPage: canonical,
+};
 ---
 
 <BaseLayout
-  title={`${post.data.title} | The Mobility Blog`}
+  title={pageTitle}
   description={post.data.description}
   canonical={canonical}
   image={post.data.featuredImage}
+  type="article"
 >
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="max-w-3xl mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
     <time class="text-sm text-slate-400 block">

@@ -1,5 +1,6 @@
 ---
-title: "What Does Mobility Mean? We Asked The Pros"
+title: "What Does Mobility Mean? We Asked the Pros"
+metaTitle: "What Does Mobility Mean? We Asked"
 description: "Mobility means control, independence, safety, and adaptability. Coaches and clinicians worldwide share what mobility really is."
 date: "2026-02-12T15:06:53Z"
 dateModified: "2026-02-20T20:10:08Z"

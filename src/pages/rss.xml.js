@@ -5,8 +5,7 @@ export async function GET(context) {
   const posts = await getCollection("post", ({ data }) => data.published);
   return rss({
     title: "The Mobility Blog",
-    description:
-      "We're a collaborative community of mobility coaches, helping people move better one joint at a time.",
+    description: "A place for mobility coaches to share what works, and why it works.",
     site: context.site,
     items: posts.map((post) => ({
       title: post.data.title,

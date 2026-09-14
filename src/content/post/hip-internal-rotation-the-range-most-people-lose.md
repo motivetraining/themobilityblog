@@ -1,5 +1,6 @@
 ---
 title: "Hip Internal Rotation: The Range Most People Lose"
+metaTitle: "Hip Internal Rotation: What You Lose"
 description: "Most people lose hip internal rotation without noticing. Here's why it matters, how to test it, and how to build the range back safely."
 date: "2026-09-10T09:20:23Z"
 dateModified: "2026-09-10T12:27:59Z"

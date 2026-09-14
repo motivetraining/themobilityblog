@@ -1,5 +1,6 @@
 ---
 title: "Posture: An Ongoing Fight Against Gravity"
+metaTitle: "Posture: A Fight Against Gravity"
 description: "Posture isn’t about perfection; it's about versatility. Learn why strength and movement matter more than rigid alignment."
 date: "2025-10-04T21:08:57Z"
 dateModified: "2026-02-12T15:51:06Z"
