@@ -85,19 +85,19 @@ The joint doesn't need the circle. You need to know what the circle shows you, a
 
 ## References
 
-Effectiveness of Functional Range Conditioning in treating patients with chronic non-specific low back pain. NCT03456050. [https://clinicaltrials.gov/study/NCT03456050](https://clinicaltrials.gov/study/NCT03456050)
+[Effectiveness of Functional Range Conditioning in treating patients with chronic non-specific low back pain.](https://clinicaltrials.gov/study/NCT03456050) NCT03456050.
 
-Functional Anatomy Seminars. *CARs: Advanced Interpretation and Application.* [https://functionalanatomyseminars.com/wp-content/uploads/2018/08/Lecture-4-CARs-Analysis.pdf](https://functionalanatomyseminars.com/wp-content/uploads/2018/08/Lecture-4-CARs-Analysis.pdf) and *Functional Range Conditioning.* [https://functionalanatomyseminars.com/frs-system/functional-range-conditioning/](https://functionalanatomyseminars.com/frs-system/functional-range-conditioning/)
+Functional Anatomy Seminars. [*CARs: Advanced Interpretation and Application.*](https://functionalanatomyseminars.com/wp-content/uploads/2018/08/Lecture-4-CARs-Analysis.pdf) and [*Functional Range Conditioning.*](https://functionalanatomyseminars.com/frs-system/functional-range-conditioning/)
 
-Synovial fluid and solute transport in articular cartilage. ScienceDirect Topics overview. [https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/synovial-fluid](https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/synovial-fluid)
+[Synovial fluid and solute transport in articular cartilage.](https://www.sciencedirect.com/topics/agricultural-and-biological-sciences/synovial-fluid) ScienceDirect Topics overview.
 
-Articular cartilage and the effects of joint immobilization. Orthogate Press. [https://www.orthogate.org/press/chapter-2-articular-cartilage/](https://www.orthogate.org/press/chapter-2-articular-cartilage/)
+[Articular cartilage and the effects of joint immobilization.](https://www.orthogate.org/press/chapter-2-articular-cartilage/) Orthogate Press.
 
-Lephart et al., Proprioception and Neuromuscular Control. [https://musculoskeletalkey.com/proprioception-and-neuromuscular-control/](https://musculoskeletalkey.com/proprioception-and-neuromuscular-control/)
+Lephart et al., [Proprioception and Neuromuscular Control.](https://musculoskeletalkey.com/proprioception-and-neuromuscular-control/)
 
-Proske and Gandevia, The roles of mechanoreceptors in muscle and skin in human proprioception. [https://www.sciencedirect.com/science/article/abs/pii/S2468867321000389](https://www.sciencedirect.com/science/article/abs/pii/S2468867321000389)
+Proske and Gandevia, [The roles of mechanoreceptors in muscle and skin in human proprioception.](https://www.sciencedirect.com/science/article/abs/pii/S2468867321000389)
 
-Alizadeh et al. (2023), Resistance training induces improvements in range of motion: a systematic review and meta-analysis. *Sports Medicine.* [https://link.springer.com/article/10.1007/s40279-022-01804-x](https://link.springer.com/article/10.1007/s40279-022-01804-x)
+Alizadeh et al. (2023), [Resistance training induces improvements in range of motion: a systematic review and meta-analysis.](https://link.springer.com/article/10.1007/s40279-022-01804-x) *Sports Medicine.*
 
 ---
 
