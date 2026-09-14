@@ -21,7 +21,7 @@ Mobility is what you can actively do inside that range. It is range plus control
 
 This is not a word game. The two qualities are trained differently, they fail differently, and they show up in performance differently. Treating them as one thing is how people end up stretching for months, only to wonder why nothing in their training feels different.
 
-## Why The Difference Matters
+## Why the Difference Matters
 
 Here is the part that gets skipped. Range you cannot control is not neutral. It is often a liability.
 
@@ -29,11 +29,11 @@ Think about what control is doing. When a joint travels toward its end range, th
 
 That is what compensation actually is. It is not a character flaw or bad technique you can cue away in one session. It is the system covering for a capacity it does not have. The flexible person whose squat looks borrowed is not doing it wrong on purpose. Their hips can reach the bottom position passively, but they cannot maintain and control that position under load, so the spine, ankles, or knees take over to get the job done. The range was there. The ownership was not.
 
-There is also a measurable side to this. We tend to assume stretching is the thing that builds range and lifting is the thing that builds strength, two separate lanes. The research does not draw the line that cleanly. A 2023 systematic review and meta-analysis in Sports Medicine found that resistance training improved range of motion (ROM) about as well as stretching, with no significant difference between the two for ROM gains (1). Read that carefully. It does not mean stretching is useless. It means range is responsive to how you load a joint, not only to how you lengthen it. If lifting through a full range can build the range itself, then the range and the control are not as separate as the two-lane model suggests. They are closer to the same project.
+There is also a measurable side to this. We tend to assume stretching is the thing that builds range and lifting is the thing that builds strength, two separate lanes. The research does not draw the line that cleanly. [A 2023 systematic review and meta-analysis in Sports Medicine](https://link.springer.com/article/10.1007/s40279-022-01804-x) found that resistance training improved range of motion (ROM) about as well as stretching, with no significant difference between the two for ROM gains. Read that carefully. It does not mean stretching is useless. It means range is responsive to how you load a joint, not only to how you lengthen it. If lifting through a full range can build the range itself, then the range and the control are not as separate as the two-lane model suggests. They are closer to the same project.
 
 This is also roughly how systems like [Functional Range Conditioning](https://www.movewithpurpose.com/functional-range-conditioning) define the target in the first place. Mobility is active, usable motion. Not how far you can be moved, but how much of that motion you can own and produce.
 
-## What This Looks Like In Training
+## What This Looks Like in Training
 
 If flexibility is range and mobility is range you can use, then the practical question is not "am I flexible enough." It is "Do I own the range I already have?"
 
@@ -57,7 +57,7 @@ The third is measuring the wrong thing. Touching your toes, doing a split, hitti
 
 The fourth is assuming stiffness always means short tissue. Sometimes a joint feels stuck, not because the tissue is too short, but because the body is limiting a range it cannot control. Stretching harder at that point can be like forcing a door that the system is holding shut for a reason. In those cases, the answer is to build control and strength within the available range, so the body has a reason to give you access to more of it.
 
-## How To Move From One To The Other
+## How to Move from One to the Other
 
 If you have range and want to make it usable, the progression is fairly consistent regardless of the joint.
 
@@ -81,7 +81,7 @@ So if you are deciding where to spend your time, the better question is not how 
 
 ## References
 
-(1) Afonso J, et al. [Strength Training versus Stretching for Improving Range of Motion: A Systematic Review and Meta-Analysis.](https://link.springer.com/article/10.1007/s40279-022-01804-x) *Sports Medicine*, 2023.
+Afonso J, et al. [Strength Training versus Stretching for Improving Range of Motion: A Systematic Review and Meta-Analysis.](https://link.springer.com/article/10.1007/s40279-022-01804-x) *Sports Medicine*, 2023.
 
 ---
 

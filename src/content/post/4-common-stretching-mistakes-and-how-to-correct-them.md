@@ -33,7 +33,7 @@ So next time you stretch, slow down. Take a deep breath in through your nose. Ex
 
 Written by **[Rich Ortiz](https://www.linkedin.com/in/richiortiz/), Physical Therapist, [MovementX](https://movement-x.com)**
 
-### How This Fits Into Mobility Training:
+### How This Fits into Mobility Training:
 
 Breathing absolutely helps people relax and ease into a stretch, and it’s a useful tool for calming the nervous system when someone is first trying to access a position. It reduces threat, helps the body settle, and makes it easier to explore new ranges without rushing.
 
@@ -49,7 +49,7 @@ My tip is to always do 5-10 minutes of light cardio, such as jogging in place or
 
 Written by [**Tamil Arasan**](https://www.linkedin.com/in/tamilarasan-v)**, Founder (Natural Fitness & Mindset Coach), [NatFit Pro](https://natfitpro.com)**
 
-### How This Fits Into Mobility Training:
+### How This Fits into Mobility Training:
 
 From an FRC standpoint, a warm-up isn’t just about making muscles feel looser; it’s about preparing the nervous system for whatever input you’re about to give it. A few minutes of general movement help raise body temperature, increase awareness, and make the tissues more responsive. You’re not just warming up the body—you’re warming up the workspace you plan to train.
 
@@ -71,7 +71,7 @@ Stretching performed with this kind of mindful attention can be transformative, 
 
 Written by **[Dr. Shernell Surratt-Gary, D.O.](https://www.linkedin.com/in/shernell-surratt-gary), Clinical Advisor, Aura Wellness**
 
-### How This Fits Into Mobility Training:
+### How This Fits into Mobility Training:
 
 This aligns with how we teach joint training. Stretching isn’t a mechanical act; it’s a conversation between your brain and your body. When the nervous system feels safe, range increases. When it doesn’t, the body naturally limits you. Mindfulness isn’t a buzzword here—it’s the mechanism.
 
@@ -87,7 +87,7 @@ Clear goals make it obvious when you should relax, when you should create tensio
 
 Written by [**Livia Esterhazy**](https://www.linkedin.com/in/livia-esterhazy-30797222), Owner, [**The Thrive Collective**](https://www.thethrivecollective.co)
 
-### How This Fits Into Mobility Training:
+### How This Fits into Mobility Training:
 
 This idea connects closely to the warm-up conversation above. The goal isn’t just to “heat up” the muscles—it’s to give your body enough movement and awareness so the stretch becomes a useful input instead of a surprise. The metaphor of a “cold rubber band” doesn’t literally reflect how tissue behaves, but it does highlight that tissues respond better when they’re prepared.
 

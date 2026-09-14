@@ -51,7 +51,7 @@ Saltmarsh isn't doing mobility work because it sounds good in a program overview
 
 Mobility isn't what you do when you have time left over. It's what makes the harder work survivable across a full training life.
 
-## Build From the Joint Out
+## Build from the Joint Out
 
 Lou Ezrick, CEO of [Evolve Physical Therapy and Sports Rehabilitation](https://evolveny.com/), with nearly twenty years in the field, approaches mobility from a clinical progression that most coaches outside a rehab setting rarely use.
 

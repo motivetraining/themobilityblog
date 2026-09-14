@@ -45,7 +45,7 @@ If you want the longer version of why that matters, the “mobility isn’t a wa
 
 Mobility isn’t a category you check off. It’s the process of earning movement options you can actually use.
 
-## The Joint Perspective is the Missing Link
+## The Joint Perspective Is the Missing Link
 
 Most programs never train shoulder internal rotation. They train pressing patterns.
 
@@ -59,7 +59,7 @@ That’s the difference between training and practice.
 
 Practice is what you do when you want access and control, not just completion.
 
-## Hip Internal Rotation is a Great Example
+## Hip Internal Rotation Is a Great Example
 
 Hip internal rotation is often limited compared to external rotation. Not always. But often enough that it’s worth paying attention to.
 
@@ -73,7 +73,7 @@ The problem is the hip rarely gets trained in the other direction. Then internal
 
 If you want more options, you have to practice the option you’re missing.
 
-## “More Options” is the Whole Argument
+## “More Options” Is the Whole Argument
 
 Mobility isn’t about collecting drills.
 
@@ -119,7 +119,7 @@ You fix it by training the hip’s ability to access and control internal rotati
 
 Same idea for shoulder internal rotation. If you avoid it, it doesn’t magically return because you did a few band pull-aparts.
 
-## What To Do With This
+## What to Do with This
 
 If you take one thing from this article, take this:
 

@@ -17,7 +17,7 @@ Stretching changes tissue tolerance and neural permission. The nervous system pr
 
 Range you don't train is range you're renting.
 
-## Hip Extension As The Worked Example
+## Hip Extension as the Worked Example
 
 Hip extension is a useful area to focus on because almost nobody trains it directly. People stretch their hip flexors all the time. The couch stretch, the kneeling lunge, and the half-kneeling position with the back hip driven forward. Most lifters and most general trainees have done some version of these for years and ended up roughly where they started.
 
@@ -35,7 +35,7 @@ Intent is the next layer. There's a difference between getting into a position a
 
 Frequency is the part nobody wants to hear. Adaptation requires repeated exposure. One mobility session a week is not enough signal to override years of patterning. The reason your range disappears between sessions is that you spent six days reinforcing the default and one day asking for a new one. The math doesn't work. You don't have to train mobility every day for it to stick, but you have to train it often enough for the new input to become part of the body's running average. For most people, that's three to five exposures a week, brief, with intent and some load. Not an hour-long routine. Five minutes that actually demand[ something from the tissue](https://themobilityblog.com/mobility-isnt-a-warm-up-its-the-work/).
 
-## What This Looks Like For The Hip Flexors
+## What This Looks Like for the Hip Flexors
 
 The honest version of training hip extension isn't more stretching. It's loaded end-range work.
 
@@ -57,7 +57,7 @@ People in active pain or rehab contexts need a clinician, not a Field Notes essa
 
 Structural variation is real. Some people have hips that won't extend past a certain point because of how the joint is built, not because of soft tissue restriction. Loaded work at the available end range still has value for those people, but no amount of training will change bone shape. Knowing the difference between a built-in limit and an untrained limit is part of why coaching matters.
 
-## What To Do With This
+## What to Do with This
 
 The takeaway isn't that stretching is useless. It's that stretching alone is an incomplete signal. If you want range that sticks, the stretch is step one, not the whole intervention. Step two is loading the position; step three is making the position part of how you actually move during the week. And step four is doing it often enough that the body believes you.
 
