@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+const posts = (await getCollection("post", ({ data }) => data.published)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+---
+
+<BaseLayout
+  title="The Mobility Blog | Mobility, Stretching & Movement Coaching"
+  description="We're a collaborative community of mobility coaches, helping people move better one joint at a time."
+  canonical="https://www.themobilityblog.com"
+>
+  <div class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight mb-2">The Mobility Blog</h1>
+    <p class="text-slate-600 mb-10">
+      A collaborative community of mobility coaches, helping people move better one joint at a
+      time.
+    </p>
+
+    <ul class="space-y-10">
+      {
+        posts.map((post) => (
+          <li>
+            <a href={`/${post.id}`} class="group block">
+              {post.data.featuredImage && (
+                <img
+                  src={post.data.featuredImage}
+                  alt={post.data.title}
+                  class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
+                  loading="lazy"
+                />
+              )}
+              <h2 class="text-xl font-semibold group-hover:underline">{post.data.title}</h2>
+              <p class="text-slate-600 mt-1 text-sm">{post.data.description}</p>
+              <time class="text-xs text-slate-400 mt-2 block">
+                {post.data.date.toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                })}
+              </time>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

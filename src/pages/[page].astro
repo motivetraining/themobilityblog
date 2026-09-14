@@ -1,0 +1,29 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("page");
+  return pages.map((page) => ({
+    params: { page: page.id },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await render(page);
+const canonical = `https://www.themobilityblog.com/${page.id}`;
+---
+
+<BaseLayout
+  title={`${page.data.title} | The Mobility Blog`}
+  description={`${page.data.title} — The Mobility Blog`}
+  canonical={canonical}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight mb-8">{page.data.title}</h1>
+    <div class="prose prose-slate max-w-none">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>

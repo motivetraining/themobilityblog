@@ -1,0 +1,46 @@
+---
+import { getCollection, render } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("post", ({ data }) => data.published);
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const canonical = `https://www.themobilityblog.com/${post.id}`;
+---
+
+<BaseLayout
+  title={`${post.data.title} | The Mobility Blog`}
+  description={post.data.description}
+  canonical={canonical}
+  image={post.data.featuredImage}
+>
+  <article class="max-w-3xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight mb-3">{post.data.title}</h1>
+    <time class="text-sm text-slate-400 mb-8 block">
+      {post.data.date.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })}
+    </time>
+    {
+      post.data.featuredImage && (
+        <img
+          src={post.data.featuredImage}
+          alt={post.data.title}
+          class="w-full rounded-lg mb-8"
+        />
+      )
+    }
+    <div class="prose prose-slate max-w-none">
+      <Content />
+    </div>
+  </article>
+</BaseLayout>
