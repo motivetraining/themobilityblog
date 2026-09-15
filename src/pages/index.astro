@@ -34,6 +34,8 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
                 <img
                   src={post.data.featuredImage}
                   alt={post.data.title}
+                  width="800"
+                  height="450"
                   class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
                   loading="lazy"
                 />
@@ -41,6 +43,7 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
               <h2 class="text-xl font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
                 {post.data.title}
               </h2>
+              <p class="mt-1 text-sm text-slate-600">{post.data.description}</p>
             </a>
             {post.data.categories[0] && (
               <span class="inline-block mt-1 text-sm text-slate-500 underline decoration-1 underline-offset-2">

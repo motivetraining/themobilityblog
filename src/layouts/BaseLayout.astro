@@ -8,7 +8,8 @@ interface Props {
   image?: string;
   type?: "website" | "article";
 }
-const { title, description, canonical, image, type = "website" } = Astro.props;
+const { title, description, canonical, type = "website" } = Astro.props;
+const image = Astro.props.image ?? "https://www.themobilityblog.com/favicon.png";
 ---
 
 <!doctype html>
@@ -27,11 +28,11 @@ const { title, description, canonical, image, type = "website" } = Astro.props;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
-    {image && <meta property="og:image" content={image} />}
+    <meta property="og:image" content={image} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
-    {image && <meta name="twitter:image" content={image} />}
+    <meta name="twitter:image" content={image} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -71,9 +72,16 @@ const { title, description, canonical, image, type = "website" } = Astro.props;
     </main>
 
     <footer class="border-t border-slate-200 mt-16">
-      <div class="max-w-wide mx-auto px-4 py-8 text-sm text-slate-500 flex justify-between">
+      <div
+        class="max-w-wide mx-auto px-4 py-8 text-sm text-slate-500 flex flex-wrap items-center justify-between gap-4"
+      >
         <span>&copy; {new Date().getFullYear()} The Mobility Blog</span>
-        <a href="/rss.xml" class="hover:underline">RSS</a>
+        <nav class="flex items-center gap-5">
+          <a href="https://www.movewithpurpose.com/" class="hover:underline">Motive Training</a>
+          <a href="https://www.instagram.com/motivetraining/" class="hover:underline">Instagram</a>
+          <a href="https://www.facebook.com/motivetraininggym/" class="hover:underline">Facebook</a>
+          <a href="/rss.xml" class="hover:underline">RSS</a>
+        </nav>
       </div>
     </footer>
   </body>
