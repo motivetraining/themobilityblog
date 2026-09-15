@@ -4,12 +4,20 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
+      },
+      maxWidth: {
+        content: "620px",
+        wide: "1000px",
       },
       typography: {
         DEFAULT: {
           css: {
             maxWidth: "none",
+            a: {
+              color: "#0f766e",
+              textDecorationColor: "#0f766e",
+            },
           },
         },
       },
