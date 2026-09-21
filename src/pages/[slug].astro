@@ -43,16 +43,18 @@ const jsonLd = {
   type="article"
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  <article class="max-w-content mx-auto px-4 py-12">
-    <h1 class="text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
-    <time class="text-sm text-slate-400 block">
-      {post.data.date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })}
-    </time>
-    <hr class="border-slate-900 mt-6 mb-8" />
+  <article class="max-w-wide mx-auto px-4 py-12">
+    <div class="max-w-content mx-auto">
+      <h1 class="text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
+      <time class="text-sm text-slate-400 block">
+        {post.data.date.toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        })}
+      </time>
+      <hr class="border-slate-900 mt-6 mb-8" />
+    </div>
     {
       post.data.featuredImage && (
         <img
@@ -62,7 +64,7 @@ const jsonLd = {
         />
       )
     }
-    <div class="prose prose-slate max-w-none">
+    <div class="prose prose-slate max-w-content mx-auto">
       <Content />
     </div>
   </article>
