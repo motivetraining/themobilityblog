@@ -27,7 +27,7 @@ So the input is a stretch followed by nothing. The permission window opens, and 
 
 ## What's Actually Missing
 
-Three things determine whether range sticks. Load, intent, and frequency.
+Three things determine if range sticks. Load, intent, and frequency.
 
 Load is the part that stretching most often ignores. Tissue adapts to the demand placed on it, and passive range with no resistance is low-priority information for the body. The position gets logged but not prioritized. Loaded end-range work (irradiation through the joint at end range, eccentric training through the new range, isometric contractions at the position) tells the nervous system that the range is functional, not just available. The FRC system formalizes this through [PAILs and RAILs](https://www.movewithpurpose.com/pails-rails). The principle behind it is older than the system: tissue responds to stress under tension, and the tension has to be intentional. Sinking into a stretch and waiting isn't the same as producing force from the position.
 

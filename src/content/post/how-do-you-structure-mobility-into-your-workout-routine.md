@@ -10,7 +10,7 @@ categories:
 published: true
 ---
 
-The debate in most gyms isn't whether mobility matters. It's where it fits and when. Before or after training, on rest days, or between sets, everyone has a preference, and most of them contradict each other.
+The debate in most gyms isn't if mobility matters. Nobody's arguing that. It's where it fits and when. Before or after training, on rest days, or between sets, everyone has a preference, and most of them contradict each other.
 
 Rather than add another opinion to that pile, I asked coaches and training professionals a more direct question: how do you actually structure mobility into your regular workout routine?
 
@@ -78,7 +78,7 @@ What Grout is describing is mobility work that has a destination. The client isn
 
 ## The Common Thread
 
-No single structure works for everyone, and that deserves more than a passing acknowledgment. The five approaches here come from people working in different contexts, with different athletes, toward different goals, and what works for a high school cross-country team at peak mileage won't necessarily map onto a general-population client coming out of physical therapy. The question worth asking isn't which structure to adopt. It's whether the structure you're using is actually built around what your body needs, or whether you've borrowed someone else's answer to a question you haven't yet figured out how to ask.
+No single structure works for everyone, and that deserves more than a passing acknowledgment. The five approaches here come from people working in different contexts, with different athletes, toward different goals, and what works for a high school cross-country team at peak mileage won't necessarily map onto a general-population client coming out of physical therapy. The question worth asking isn't which structure to adopt. It's if the structure you're using is actually built around what your body needs, or if you've borrowed someone else's answer to a question you haven't yet figured out how to ask.
 
 What does your training actually require? And is your current approach honest about that?
 

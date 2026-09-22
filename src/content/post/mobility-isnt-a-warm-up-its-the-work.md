@@ -32,7 +32,7 @@ Mobility is corrective.
 
 Mobility is temporary.
 
-Andmobility exists to support the *real* work.
+And mobility exists to support the *real* work.
 
 Even now, most advice sounds the same.
 
@@ -107,8 +107,6 @@ When mobility is treated as real work, the goal changes.
 You’re no longer chasing a temporary feeling; you're expanding usable workspace.
 
 You’re building strength and control where it’s missing.
-
-That requires appropriate effort, internal load, and patience. It’s uncomfortable work because it forces you into positions you’ve avoided or never owned. Going after weaknesses always is.
 
 But this is the same logic we accept in strength training. We don’t avoid heavy squats because they’re hard. We respect them because they produce adaptation.
 

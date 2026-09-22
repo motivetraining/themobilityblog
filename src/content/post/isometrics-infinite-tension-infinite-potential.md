@@ -46,7 +46,7 @@ Let's say your hips feel stuck, or you can't access internal rotation in your sh
 
 You need input. You need to build tension in that position, own it, and learn to *live* there.
 
-When you use isometrics correctly—especially methods like [PAILs and RAILs](https://www.movewithpurpose.com/pails-rails) from [Functional Range Conditioning](https://www.movewithpurpose.com/functional-range-conditioning)—you're literally teaching your nervous system that a new range is safe. That's how mobility changes stick.
+When you use isometrics correctly, especially methods like [PAILs and RAILs](https://www.movewithpurpose.com/pails-rails) from [Functional Range Conditioning](https://www.movewithpurpose.com/functional-range-conditioning), you're literally teaching your nervous system that a new range is safe. That's how mobility changes stick.
 
 ## The Never-Ending Journey
 
@@ -74,15 +74,7 @@ The process doesn't need to be aggressive to be effective. In fact, starting wit
 
 Mobility training is often viewed as something you "do to your body"; a routine to loosen up, a stretch to feel better.
 
-But isometrics flip that script.
-
-They turn mobility into a dialogue.
-
-A feedback loop.
-
-A self-assessment.
-
-You don't just move better after; you *understand* yourself better, too.
+But isometrics flip that script. They turn mobility into a dialogue, a feedback loop, a self-assessment. You don't just move better after; you *understand* yourself better, too.
 
 So next time you're tempted to skip the "slow stuff," remember: infinite tension holds infinite potential. And it's waiting for you, second by second.
 
