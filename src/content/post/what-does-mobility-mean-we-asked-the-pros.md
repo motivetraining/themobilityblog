@@ -36,7 +36,7 @@ Several professionals described mobility not as range, but as controllable range
 
 Control is the common thread.
 
-Not how far you can go, but whether you can stabilize, generate force, and repeat movement under load. That distinction matters. Passive flexibility might allow you to access a position, but mobility requires ownership of that position.
+Not how far you can go, but if you can stabilize, generate force, and repeat movement under load. That distinction matters. Passive flexibility might allow you to access a position, but mobility requires ownership of that position.
 
 When we train mobility, we’re not chasing deeper positions. We’re building strength inside the ranges that matter.
 
