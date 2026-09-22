@@ -1,0 +1,90 @@
+name: Publish from Drive
+
+on:
+  schedule:
+    # 08:00 America/Chicago (13:00 UTC during CDT, 14:00 UTC during CST).
+    - cron: "0 13 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: publish-from-drive
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install google-api-python-client google-auth pyyaml
+
+      - name: Configure git
+        run: |
+          git config user.name "Mobility Blog Publisher"
+          git config user.email "brian@movewithpurpose.com"
+
+      - name: Run publisher
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          DRIVE_QUEUE_FOLDER_ID: ${{ secrets.DRIVE_QUEUE_FOLDER_ID }}
+          DRIVE_PROCESSED_FOLDER_ID: ${{ secrets.DRIVE_PROCESSED_FOLDER_ID }}
+        run: python .github/scripts/publish_from_drive.py
+
+      # main can move while this job runs: a merged pull request, or another
+      # push, lands between checkout and push and the push is rejected as a
+      # non-fast-forward. The post is then committed locally, thrown away with
+      # the runner, and left in the Drive queue with the run marked failed.
+      # Rebasing onto whatever main became keeps the commit and republishes it.
+      - name: Push changes
+        run: |
+          if [[ -z "$(git log origin/main..HEAD 2>/dev/null)" ]]; then
+            echo "Nothing to push."
+            exit 0
+          fi
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo "Pushed on attempt $attempt."
+              exit 0
+            fi
+            echo "Push rejected on attempt $attempt; main moved. Rebasing."
+            git fetch origin main
+            git rebase origin/main || {
+              echo "::error::Rebase onto origin/main failed. The staged posts are"
+              echo "::error::still in the Drive queue and will be picked up by the"
+              echo "::error::next run; nothing was lost."
+              exit 1
+            }
+          done
+          echo "::error::Could not push after 3 attempts. The posts remain in the"
+          echo "::error::Drive queue for the next run."
+          exit 1
+
+      # Only now are the posts genuinely published, so only now do their Drive
+      # files leave the queue. Doing this inside the publisher, before the
+      # push, risks archiving a post that never actually landed.
+      - name: Archive published files in Drive
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          DRIVE_QUEUE_FOLDER_ID: ${{ secrets.DRIVE_QUEUE_FOLDER_ID }}
+          DRIVE_PROCESSED_FOLDER_ID: ${{ secrets.DRIVE_PROCESSED_FOLDER_ID }}
+        run: python .github/scripts/publish_from_drive.py --archive-published
+
+      # Rejected posts leave a marker file. Fail the run so GitHub sends its
+      # built-in failed-run email; the rejection details are in the job summary.
+      - name: Fail run if any posts were rejected
+        run: |
+          if [ -f publish_failures.txt ]; then
+            echo "::error::Some posts were rejected and left in the Drive queue. See the job summary for details."
+            cat publish_failures.txt
+            exit 1
+          fi
