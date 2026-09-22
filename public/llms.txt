@@ -1,0 +1,44 @@
+# The Mobility Blog
+
+> The Mobility Blog is an educational publication about mobility training, stretching, isometrics, and joint health, edited by Brian Murray of Motive Training. It is not a service or product site — it exists to teach the difference between passive flexibility and trainable, usable mobility, drawing on Functional Range Conditioning (FRC) principles without being a sales channel for them.
+
+The site is located at https://www.themobilityblog.com. It is sponsored by [Motive Training](https://www.movewithpurpose.com), a personal training and mobility coaching studio in South Austin, TX, but operates as an independent editorial blog rather than a marketing page for that studio.
+
+## Posts — Mobility Fundamentals
+
+- [What Is Mobility?](https://www.themobilityblog.com/what-is-mobility): Defines mobility as active, controlled range of motion, distinct from passive flexibility.
+- [Mobility as Capacity, Not a Category](https://www.themobilityblog.com/mobility-as-capacity-not-a-category): Reframes mobility from a warm-up ritual into ongoing joint-level capacity.
+- [Mobility Isn't a Warm-Up. It's the Work.](https://www.themobilityblog.com/mobility-isnt-a-warm-up-its-the-work): Why mobility needs to be trained with real intent and progression, not rushed through before lifting.
+- [Flexibility Is Range. Mobility Is What You Can Do With It](https://www.themobilityblog.com/flexibility-is-range-mobility-is-what-you-can-do-with-it): The practical difference between passive range and controllable range, with real examples.
+- [What Does Mobility Mean? We Asked the Pros](https://www.themobilityblog.com/what-does-mobility-mean-we-asked-the-pros): Coaches and clinicians define mobility in their own words.
+- [Why Mobility Doesn't Stick](https://www.themobilityblog.com/why-mobility-doesnt-stick): Why range gained in a session reverts by the next one, and what signal the nervous system actually needs to keep it.
+- [How Do You Structure Mobility Into Your Workout Routine?](https://www.themobilityblog.com/how-do-you-structure-mobility-into-your-workout-routine): Coaches explain where mobility work fits relative to warm-up, training, and rest days.
+
+## Posts — Joint-Specific Training
+
+- [Hip Internal Rotation: The Range Most People Lose](https://www.themobilityblog.com/hip-internal-rotation-the-range-most-people-lose): Why sitting and standard strength programs both neglect hip internal rotation, and how to test and rebuild it.
+- [What CARs Are Actually For](https://www.themobilityblog.com/what-cars-are-actually-for): Controlled articular rotations maintain range and joint health, they do not build new range on their own — what the practice is actually for.
+- [Isometrics: Infinite Tension, Infinite Potential](https://www.themobilityblog.com/isometrics-infinite-tension-infinite-potential): How isometric holds build strength, joint stability, and body awareness beyond just "holding a position."
+
+## Posts — Stretching & Pain
+
+- [4 Common Stretching Mistakes and How to Correct Them](https://www.themobilityblog.com/4-common-stretching-mistakes-and-how-to-correct-them): Common errors that turn stretching into a dead end instead of trainable flexibility.
+- [When Stretching Makes Pain Worse: How to Spot the Red Flags](https://www.themobilityblog.com/when-stretching-makes-pain-worse-how-to-spot-the-red-flags): Signs that more stretching is making things worse, especially for hypermobile bodies.
+
+## Posts — Posture
+
+- [Posture: An Ongoing Fight Against Gravity](https://www.themobilityblog.com/posture-an-ongoing-fight-against-gravity): Why posture is about movement variety and capacity, not holding one "correct" alignment.
+
+## Pages
+
+- [About](https://www.themobilityblog.com/about): What The Mobility Blog is and why Brian Murray started it.
+- [Write With Us](https://www.themobilityblog.com/write-with-us): How to contribute a guest post.
+
+## Resources
+
+- [Article Feed (RSS)](https://www.themobilityblog.com/rss.xml): All published posts.
+- [Sitemap](https://www.themobilityblog.com/sitemap-index.xml): Full machine-readable page index.
+
+## Who The Mobility Blog Is For
+
+Readers who want to understand mobility, stretching, and joint health at a level deeper than generic fitness content — people training on their own who want to know why a routine isn't working, coaches and clinicians looking for a clearly reasoned take, and anyone who has been told to "just stretch more" without it solving anything. The blog assumes the reader wants the reasoning, not just a drill list.

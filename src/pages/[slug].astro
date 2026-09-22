@@ -14,6 +14,10 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 const canonical = `https://www.themobilityblog.com/${post.id}`;
 const pageTitle = `${post.data.metaTitle ?? post.data.title} | The Mobility Blog`;
+const modifiedTime = (post.data.dateModified ?? post.data.date).toISOString();
+const isRevised =
+  post.data.dateModified &&
+  post.data.dateModified.getTime() - post.data.date.getTime() > 24 * 60 * 60 * 1000;
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -41,6 +45,8 @@ const jsonLd = {
   canonical={canonical}
   image={post.data.featuredImage}
   type="article"
+  publishedTime={post.data.date.toISOString()}
+  modifiedTime={modifiedTime}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="max-w-content mx-auto px-4 py-12">
@@ -51,6 +57,20 @@ const jsonLd = {
         month: "long",
         day: "numeric",
       })}
+      {
+        isRevised && (
+          <span>
+            {" "}
+            (updated{" "}
+            {post.data.dateModified!.toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+            )
+          </span>
+        )
+      }
     </time>
     <hr class="border-slate-900 mt-6 mb-8" />
     {
