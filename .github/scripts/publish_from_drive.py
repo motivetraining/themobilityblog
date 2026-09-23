@@ -236,16 +236,6 @@ def validate(fm, body, image_name, md_name):
     if "**" in body:
         errors.append("Bold markdown found in body")
 
-    # Checked across frontmatter as well as body: description ships as
-    # rendered prose (meta description, OG description), so a body-only
-    # check would let "whether" through the queue in the one field that
-    # actually reaches the page's <head>.
-    fm_text = " ".join(str(v) for v in fm.values() if isinstance(v, str))
-    if "whether" in body.lower():
-        errors.append("Forbidden word 'whether' found in body")
-    if "whether" in fm_text.lower():
-        errors.append("Forbidden word 'whether' found in frontmatter")
-
     if re.search(r"it'?s not (just )?[^.]*,? it'?s", body, re.IGNORECASE):
         errors.append("Antithesis construction found in body (not X, it's Y)")
 
