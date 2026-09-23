@@ -33,6 +33,17 @@ Body in Markdown.
 
 The file name (`{slug}`) becomes the URL: `src/content/post/what-is-mobility.md` → `/what-is-mobility`.
 
+### Heading case
+
+`title` (H1) and every `##`/`###` heading in the body are Title Case, no
+exceptions — this is the convention across every existing post. Capitalize
+every word except articles, coordinating conjunctions, and prepositions of
+three letters or fewer (a, an, the, and, but, or, of, in, on, to, up), and
+always capitalize the first and last word of the heading regardless of
+length — a 4+ letter word like "from," "with," or "into" is capitalized
+even mid-heading. Example: "Where the Restriction Actually Comes From,"
+not "Where the restriction actually comes from."
+
 ## Migration notes
 
 - Content converted from a WordPress export (13 posts, 2 pages: About, Write With Us).

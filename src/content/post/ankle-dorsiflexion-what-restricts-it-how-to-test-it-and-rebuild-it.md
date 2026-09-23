@@ -16,7 +16,7 @@ Every coach who's spent real time under the bar with people eventually runs into
 
 Ankle dorsiflexion is the motion of the shin traveling forward over a planted foot. It's what has to happen every time you squat, lunge, walk downhill, or absorb a landing. It's also probably the most underdiagnosed restriction in general population training, because it hides behind other joints. People blame their hips for a shallow squat. They blame their quads for knee pain. Rarely does anyone check the ankle first, even though the ankle is often the actual ceiling.
 
-## What dorsiflexion actually is, and why the test you use matters
+## What Dorsiflexion Actually Is, and Why the Test You Use Matters
 
 The talocrural joint is formed by the talus sitting inside the mortise created by the tibia and fibula. The talar dome isn't a simple cylinder. It's wedge-shaped, wider at the front than the back, which means full dorsiflexion requires the mortise itself to widen slightly to let that wider section through (8). That widening is small, roughly a millimeter, produced by a couple degrees of external rotation at the fibula (9). Most people never think about the fibula as part of an ankle mobility problem. It usually is one, in a small but real way.
 
@@ -24,7 +24,7 @@ There are also two ways to measure the range itself, and they don't measure the 
 
 Normal WBLT values sit above roughly 44 degrees in a lot of the literature, with values under 30 degrees flagged as a meaningful functional deficit (4). That's a wide window, and individual variation inside it is real. But someone testing well under 30 isn't expressing a preference. That's a restriction with downstream consequences.
 
-## Where the restriction actually comes from
+## Where the Restriction Actually Comes From
 
 This is the part most internet advice skips straight past on its way to prescribing calf stretches. Dorsiflexion can be limited by at least four different structures, and they don't respond to the same fix.
 
@@ -36,7 +36,7 @@ The third and fourth are the two calf muscles, and they restrict dorsiflexion th
 
 Then there's the structure that gets missed most often, because it isn't soft tissue at all. Anterior ankle impingement is a bony block, osteophyte formation at the front of the tibia and talus, usually built up from repetitive terminal dorsiflexion loading or a history of ankle sprains (13, 14). It shows up constantly in soccer players, dancers, and jumpers for exactly that reason. This one has a distinct feel on assessment. Instead of a springy, stretch-like resistance at end range, there's a hard, sometimes sharp stop, often with localized pain right at the front of the joint. No amount of stretching or mobilizing changes bone. If that's what you're feeling under your hands, the right move is a referral, not a longer hold.
 
-## Why this shows up in your squat before it shows up anywhere else
+## Why This Shows Up in Your Squat Before It Shows Up Anywhere Else
 
 Walking doesn't ask much of the ankle. Normal gait requires somewhere around 5 to 15 degrees of dorsiflexion during stance, with some research putting the functional minimum around 10 degrees (12). That's exactly why a real restriction can go unnoticed for years. Someone can walk around fine every day and still be sitting well under the range they need the moment they load a squat, take stairs two at a time, or run uphill, since jogging demands noticeably more range than walking does (12).
 
@@ -44,13 +44,13 @@ The squat is where it gets exposed fastest, because it's the highest closed-chai
 
 It doesn't stop at depth. Limited dorsiflexion has also been linked to altered knee mechanics during squatting and single-leg tasks, including greater knee valgus displacement, which matters for anyone tracking ACL injury risk factors (1). And reduced dorsiflexion has been associated with a higher rate of Achilles tendinopathy, with one prospective study putting the risk at roughly two and a half times higher in people with the least available range (4). None of this means restricted dorsiflexion causes those outcomes on its own. Bodies are more complicated than a single-joint explanation. But the pattern is consistent enough that checking the ankle before rebuilding a squat, a landing mechanic, or a running gait isn't optional. It's the first place to look.
 
-## Where the evidence gets messy
+## Where the Evidence Gets Messy
 
 I want to be straight about the limits here, because this is exactly the kind of topic that gets oversold. Joint mobilization research on dorsiflexion is promising but not settled. A systematic review with meta-analysis on ankle mobilization found a statistically significant pooled improvement in dorsiflexion, but that significance disappeared once the analysis was restricted to only the higher quality trials (5). That's not a reason to drop the technique. It's a reason to say the effect is real in some people and contexts, and probably smaller and less reliable than the confident version of this claim you'll see elsewhere.
 
 Static calf stretching has a similar story. A systematic review found static stretching does increase dorsiflexion, with effects in the two to three degree range depending on duration, and the researchers considered the results at 15 to 30 minutes of stretching robust (6). Two to three degrees is real, but it's small next to a 44 degree normal range, and nowhere close to what you'd need if the actual limiter is capsular, bony, or sitting in the mortise instead of the muscle. This is the same lesson from the isometrics piece showing up from a different angle. The dose that produces change is usually longer and more specific than what people are actually doing, and the method has to match the structure you're trying to change, not just the joint.
 
-## How to actually test and rebuild it
+## How to Actually Test and Rebuild It
 
 Start with the weight-bearing lunge test against a wall. Foot a few inches back, knee driving forward to touch the wall without the heel lifting, and walk the foot back until you find the true limit. That's the only version of this test worth trusting for training decisions, since it's the one that actually predicts what happens under load (1).
 
