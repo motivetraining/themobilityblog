@@ -9,7 +9,7 @@ dateModified: 2026-09-22
 featuredImage: /images/posts/ankle-dorsiflexion-what-restricts-it-how-to-test-it-and-rebuild-it.jpg
 categories:
 - Mobility
-published: false
+published: true
 ---
 
 Every coach who's spent real time under the bar with people eventually runs into the same wall. Someone can't get their squat below parallel no matter how much hip mobility work they do, and the fix isn't in the hip at all. It's six inches lower, at a joint nobody thinks about until it stops cooperating.
