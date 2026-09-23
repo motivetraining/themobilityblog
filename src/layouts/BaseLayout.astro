@@ -7,8 +7,10 @@ interface Props {
   canonical: string;
   image?: string;
   type?: "website" | "article";
+  publishedTime?: string;
+  modifiedTime?: string;
 }
-const { title, description, canonical, type = "website" } = Astro.props;
+const { title, description, canonical, type = "website", publishedTime, modifiedTime } = Astro.props;
 const image = Astro.props.image ?? "https://www.themobilityblog.com/favicon.png";
 ---
 
@@ -29,6 +31,8 @@ const image = Astro.props.image ?? "https://www.themobilityblog.com/favicon.png"
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:image" content={image} />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
