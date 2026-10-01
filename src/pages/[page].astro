@@ -17,7 +17,7 @@ const canonical = `https://www.themobilityblog.com/${page.id}`;
 
 <BaseLayout
   title={`${page.data.title} | The Mobility Blog`}
-  description={`${page.data.title} — The Mobility Blog`}
+  description={page.data.description ?? `${page.data.title} | The Mobility Blog`}
   canonical={canonical}
 >
   <article class="max-w-wide mx-auto px-4 py-12">

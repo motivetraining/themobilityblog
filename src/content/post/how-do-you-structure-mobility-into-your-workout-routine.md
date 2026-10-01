@@ -4,7 +4,7 @@ metaTitle: "How to Structure Mobility Training"
 description: "What's the best way to structure your mobility routine? We asked the pros; here is what they had to say."
 date: "2026-05-14T01:15:32Z"
 dateModified: "2026-05-24T18:40:52Z"
-featuredImage: "/images/posts/How-Do-You-Structure-Mobility-Into-Your-Workout-Routine.png"
+featuredImage: "/images/posts/How-Do-You-Structure-Mobility-Into-Your-Workout-Routine.jpg"
 categories:
   - "Mobility"
 published: true
@@ -24,7 +24,7 @@ The most common mistake people make with mobility is treating it like a checkbox
 
 Bovay's sequence moves from priming the joint through full-body dynamics to reinforcing the new range with controlled reps at the start of a working set, then progressively loading it as strength builds. This isn't mobility before training. It's mobility as the opening chapter of a session, with the rest of the training responsible for finishing it.
 
-Opening a joint and owning a joint are two different things, and if you've been [treating the warm-up as something separate from the real work](https://themobilityblog.com/mobility-isnt-a-warm-up-its-the-work/), that distinction is worth sitting with.
+Opening a joint and owning a joint are two different things, and if you've been [treating the warm-up as something separate from the real work](/mobility-isnt-a-warm-up-its-the-work), that distinction is worth sitting with.
 
 ## Match the Work to the Goal
 
@@ -58,7 +58,7 @@ Lou Ezrick, CEO of [Evolve Physical Therapy and Sports Rehabilitation](https://e
 
 > My structure follows a specific progression: evaluate the joint, heal restrictions through manual therapy, and then strengthen. I integrate dynamic stability exercises, such as standing on one foot or plank variations, into every warm-up to prep the ankle and shoulder joints for load. I also include eccentric negatives, like slowly lowering into a squat, to improve tendon stiffness and resilience against injury.
 
-The *evaluate-then-strengthen* sequence is worth borrowing even when you're not working in a clinical context, because most people skip straight to loading without a clear picture of what the joint is actually working with. The eccentric loading point is particularly relevant; tendons respond well to slow, controlled lengthening under load, and building that tolerance is what allows joints to handle repeated stress over time without breaking down. That's not a warm-up strategy. It's a long-term joint management approach, and if you want to understand more about how tension-based training fits into that picture, the [isometrics piece](https://themobilityblog.com/isometrics-infinite-tension-infinite-potential/) covers that ground in more depth.
+The *evaluate-then-strengthen* sequence is worth borrowing even when you're not working in a clinical context, because most people skip straight to loading without a clear picture of what the joint is actually working with. The eccentric loading point is particularly relevant; tendons respond well to slow, controlled lengthening under load, and building that tolerance is what allows joints to handle repeated stress over time without breaking down. That's not a warm-up strategy. It's a long-term joint management approach, and if you want to understand more about how tension-based training fits into that picture, the [isometrics piece](/isometrics-infinite-tension-infinite-potential) covers that ground in more depth.
 
 ## Make It Pattern-Specific
 
@@ -74,7 +74,7 @@ The case example she offered is one most coaches will recognize.
 
 > A busy client coming out of PT has a strong habit of rounding their back. I make her mobility hinge-based: practice hip hinging before lifting, then between sets, do three controlled hinge reps to a wall and 20 to 30 seconds of postural opening. So the movement pattern becomes automatic in workouts and daily life.
 
-What Grout is describing is mobility work that has a destination. The client isn't just opening a hip or stretching a thoracic segment in isolation; she's reinforcing the exact pattern the session is built around, repeatedly, until it becomes the default. Range built without that connection tends to stay in the drill. Range built around a pattern that actually matters is what [mobility as capacity](https://themobilityblog.com/mobility-as-capacity-not-a-category/) looks like in practice.
+What Grout is describing is mobility work that has a destination. The client isn't just opening a hip or stretching a thoracic segment in isolation; she's reinforcing the exact pattern the session is built around, repeatedly, until it becomes the default. Range built without that connection tends to stay in the drill. Range built around a pattern that actually matters is what [mobility as capacity](/mobility-as-capacity-not-a-category) looks like in practice.
 
 ## The Common Thread
 

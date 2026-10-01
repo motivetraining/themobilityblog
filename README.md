@@ -23,6 +23,9 @@ description: "Meta description, ~155 chars"
 date: "2026-01-01T00:00:00Z"
 dateModified: "2026-02-01T00:00:00Z"   # only when revising
 featuredImage: "/images/posts/your-image.jpg"
+imageAlt: "Describe what the image shows"   # optional; falls back to the title
+author: "Guest Name, Credentials"          # optional; defaults to Brian Murray
+authorUrl: "https://guest-site.com/"       # optional
 categories:
   - "Mobility"
 published: true
@@ -32,6 +35,14 @@ Body in Markdown.
 ```
 
 The file name (`{slug}`) becomes the URL: `src/content/post/what-is-mobility.md` → `/what-is-mobility`.
+
+Link to other posts with relative paths (`[What Is Mobility?](/what-is-mobility)`),
+not `https://themobilityblog.com/...` URLs, which bounce through two redirects
+(apex → www, trailing slash stripped) before landing.
+
+Keep featured images at or under 1600px wide. The Drive publisher shrinks
+queued images to that automatically; images added by hand should be resized
+before committing.
 
 ### Heading case
 

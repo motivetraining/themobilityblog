@@ -42,7 +42,7 @@ When we train mobility, we’re not chasing deeper positions. We’re building s
 
 ---
 
-**Recent Article:** [Posture: The Ongoing Fight Against Gravity](https://themobilityblog.com/posture-an-ongoing-fight-against-gravity/)
+**Recent Article:** [Posture: The Ongoing Fight Against Gravity](/posture-an-ongoing-fight-against-gravity)
 
 ---
 

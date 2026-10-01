@@ -9,7 +9,7 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
 
 <BaseLayout
   title="The Mobility Blog | Mobility, Stretching & Movement Coaching"
-  description="A place for mobility coaches to share what works, and why it works."
+  description="Practical, evidence-informed writing on mobility, stretching, and joint health from coaches who teach it: what works, why it works, and how to train it."
   canonical="https://www.themobilityblog.com"
 >
   <div class="max-w-wide mx-auto px-4 py-12">
@@ -27,17 +27,18 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
 
     <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-12">
       {
-        posts.map((post) => (
+        posts.map((post, i) => (
           <li>
             <a href={`/${post.id}`} class="group block">
               {post.data.featuredImage && (
                 <img
                   src={post.data.featuredImage}
-                  alt={post.data.title}
+                  alt=""
                   width="800"
                   height="450"
                   class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
-                  loading="lazy"
+                  loading={i < 2 ? "eager" : "lazy"}
+                  decoding="async"
                 />
               )}
               <h2 class="text-xl font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
@@ -46,7 +47,7 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
               <p class="mt-1 text-sm text-slate-600">{post.data.description}</p>
             </a>
             {post.data.categories[0] && (
-              <span class="inline-block mt-1 text-sm text-slate-500 underline decoration-1 underline-offset-2">
+              <span class="inline-block mt-1 text-sm text-slate-500">
                 {post.data.categories[0]}
               </span>
             )}

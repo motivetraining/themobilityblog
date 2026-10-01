@@ -10,6 +10,9 @@ const post = defineCollection({
     date: z.coerce.date(),
     dateModified: z.coerce.date().optional(),
     featuredImage: z.string().optional(),
+    imageAlt: z.string().optional(),
+    author: z.string().default("Brian Murray"),
+    authorUrl: z.string().url().optional(),
     categories: z.array(z.string()).default([]),
     published: z.boolean().default(true),
   }),
@@ -19,6 +22,7 @@ const page = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/page" }),
   schema: z.object({
     title: z.string(),
+    description: z.string().optional(),
   }),
 });
 

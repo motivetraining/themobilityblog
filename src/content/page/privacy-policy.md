@@ -1,5 +1,6 @@
 ---
 title: "Privacy Policy"
+description: "How The Mobility Blog handles visitor data: aggregate hosting analytics only, no tracking cookies, no ads, and no selling of visitor information."
 ---
 
 Last updated: September 2026

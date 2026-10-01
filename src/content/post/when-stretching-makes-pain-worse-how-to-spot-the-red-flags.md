@@ -5,12 +5,14 @@ description: "Can stretching make pain worse? Learn the red flags of hypermobili
 date: "2026-02-11T23:44:19Z"
 dateModified: "2026-02-12T15:43:33Z"
 featuredImage: "/images/posts/Stretching-Pain-Yoga-Hypermobility.jpg"
+author: "David Weintraub, LMT"
+authorUrl: "https://bodyworksdw.com/"
 categories:
   - "Mobility"
 published: true
 ---
 
-***Editor's Note: **I think it's important for you to read our article ([What Is Mobility?](https://themobilityblog.com/what-is-mobility/)), as it's a good primer for this conversation. A lot of what David is describing below is on the other end of the mobility spectrum (i.e., hypermobility). People often associate mobility with having a lot of range of motion, but in our world, mobility also means **controlling **range of motion. *
+***Editor's Note: **I think it's important for you to read our article ([What Is Mobility?](/what-is-mobility)), as it's a good primer for this conversation. A lot of what David is describing below is on the other end of the mobility spectrum (i.e., hypermobility). People often associate mobility with having a lot of range of motion, but in our world, mobility also means **controlling **range of motion. *
 
 *Dig in.*
 
