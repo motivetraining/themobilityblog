@@ -55,6 +55,13 @@ length — a 4+ letter word like "from," "with," or "into" is capitalized
 even mid-heading. Example: "Where the Restriction Actually Comes From,"
 not "Where the restriction actually comes from."
 
+## Planned posts
+
+`briefs/` holds a writing brief per planned post, plus the shared voice,
+sourcing, and publishing rules in `briefs/README.md`. To draft one, point
+Claude at a brief: "Write the post in `briefs/01-90-90-hip-stretch.md`,
+following `briefs/README.md`."
+
 ## Migration notes
 
 - Content converted from a WordPress export (13 posts, 2 pages: About, Write With Us).

@@ -1,15 +1,19 @@
 ---
 title: "Privacy Policy"
-description: "How The Mobility Blog handles visitor data: aggregate hosting analytics only, no tracking cookies, no ads, and no selling of visitor information."
+description: "How The Mobility Blog handles visitor data: no analytics or tracking scripts, no tracking cookies, no ads, and no selling of visitor information."
 ---
 
-Last updated: September 2026
+Last updated: October 2026
 
 This policy explains what information The Mobility Blog collects from visitors and how it's used.
 
 ## What We Collect
 
-This site uses basic hosting analytics (provided by Vercel) to understand traffic, such as which pages are viewed and general visitor location and device type. This is aggregate, non-identifying data used to see what content is working, not to track individuals.
+This site does not run analytics or tracking scripts. Like any website, it is served by a hosting provider (Vercel), whose servers handle standard technical request data, such as your IP address and browser type, to deliver pages and keep the service secure.
+
+Pages load the Sora typeface from Google Fonts, so your browser requests font files from Google's servers, which receive your IP address as part of that request.
+
+We use Google Search Console to see which search queries bring people to the site. That data is aggregated by Google and doesn't identify individual visitors.
 
 We do not use tracking cookies, run ads, or sell visitor data.
 
