@@ -6,14 +6,38 @@ export async function getStaticPaths() {
   const posts = await getCollection("post", ({ data }) => data.published);
   return posts.map((post) => ({
     params: { slug: post.id },
-    props: { post },
+    props: { post, allPosts: posts },
   }));
 }
 
-const { post } = Astro.props;
+const { post, allPosts } = Astro.props;
 const { Content } = await render(post);
-const canonical = `https://www.themobilityblog.com/${post.id}`;
+const site = "https://www.themobilityblog.com";
+const canonical = `${site}/${post.id}`;
 const pageTitle = `${post.data.metaTitle ?? post.data.title} | The Mobility Blog`;
+const imageUrl = post.data.featuredImage && new URL(post.data.featuredImage, site).href;
+const modified = post.data.dateModified ?? post.data.date;
+const authorUrl =
+  post.data.authorUrl ??
+  (post.data.author === "Brian Murray" ? "https://www.movewithpurpose.com/meet-the-founder" : undefined);
+
+// Show the updated date only when the revision is a real one, not the same-day
+// save WordPress stamped on most imports.
+const showUpdated = modified.valueOf() - post.data.date.valueOf() > 7 * 24 * 60 * 60 * 1000;
+const formatDate = (d: Date) =>
+  d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+
+// Related posts: shared categories first, then newest. Every post links to
+// three others, so no post is an orphan in Google's crawl of the site.
+const related = allPosts
+  .filter((p) => p.id !== post.id)
+  .map((p) => ({
+    post: p,
+    shared: p.data.categories.filter((c) => post.data.categories.includes(c)).length,
+  }))
+  .sort((a, b) => b.shared - a.shared || b.post.data.date.valueOf() - a.post.data.date.valueOf())
+  .slice(0, 3)
+  .map((r) => r.post);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -21,15 +45,19 @@ const jsonLd = {
   headline: post.data.title,
   description: post.data.description,
   datePublished: post.data.date.toISOString(),
-  dateModified: (post.data.dateModified ?? post.data.date).toISOString(),
-  ...(post.data.featuredImage && { image: post.data.featuredImage }),
+  dateModified: modified.toISOString(),
+  ...(imageUrl && { image: imageUrl }),
+  ...(post.data.categories.length > 0 && { articleSection: post.data.categories[0] }),
   author: {
     "@type": "Person",
-    name: "Brian Murray",
+    name: post.data.author,
+    ...(authorUrl && { url: authorUrl }),
   },
   publisher: {
     "@type": "Organization",
     name: "The Mobility Blog",
+    url: site,
+    logo: { "@type": "ImageObject", url: `${site}/apple-touch-icon.png` },
   },
   mainEntityOfPage: canonical,
 };
@@ -41,23 +69,35 @@ const jsonLd = {
   canonical={canonical}
   image={post.data.featuredImage}
   type="article"
+  publishedTime={post.data.date}
+  modifiedTime={modified}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <article class="max-w-wide mx-auto px-4 py-12">
     <h1 class="text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
-    <time class="text-sm text-slate-400 block">
-      {post.data.date.toLocaleDateString("en-US", {
-        year: "numeric",
-        month: "long",
-        day: "numeric",
-      })}
-    </time>
+    <p class="text-sm text-slate-500">
+      By {authorUrl ? <a href={authorUrl} class="underline decoration-1 underline-offset-2 hover:text-slate-700">{post.data.author}</a> : post.data.author}
+      <span aria-hidden="true"> · </span>
+      <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+      {
+        showUpdated && (
+          <>
+            <span aria-hidden="true"> · </span>
+            Updated <time datetime={modified.toISOString()}>{formatDate(modified)}</time>
+          </>
+        )
+      }
+    </p>
     <hr class="border-slate-900 mt-6 mb-8" />
     {
       post.data.featuredImage && (
         <img
           src={post.data.featuredImage}
-          alt={post.data.title}
+          alt={post.data.imageAlt ?? post.data.title}
+          width="1600"
+          height="900"
+          fetchpriority="high"
+          decoding="async"
           class="w-full aspect-[16/9] object-cover rounded-lg mb-8"
         />
       )
@@ -66,4 +106,36 @@ const jsonLd = {
       <Content />
     </div>
   </article>
+
+  {
+    related.length > 0 && (
+      <aside aria-labelledby="keep-reading" class="max-w-wide mx-auto px-4">
+        <h2 id="keep-reading" class="text-2xl font-bold tracking-tight border-t border-slate-200 pt-10 mb-6">
+          Keep Reading
+        </h2>
+        <ul class="grid sm:grid-cols-3 gap-8">
+          {related.map((p) => (
+            <li>
+              <a href={`/${p.id}`} class="group block">
+                {p.data.featuredImage && (
+                  <img
+                    src={p.data.featuredImage}
+                    alt=""
+                    width="800"
+                    height="450"
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
+                  />
+                )}
+                <span class="font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
+                  {p.data.title}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    )
+  }
 </BaseLayout>

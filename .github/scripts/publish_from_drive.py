@@ -18,6 +18,7 @@ system, so this version is simpler.
 import json
 import os
 import re
+import shutil
 import subprocess
 import sys
 from datetime import date, datetime, timezone
@@ -46,8 +47,9 @@ IMAGE_SUFFIXES = (".jpg", ".jpeg", ".png", ".webp")
 KNOWN_CATEGORIES = {"Mobility", "Stretching", "Isometrics", "Posture"}
 
 # Required by src/content.config.ts's post schema: fields with no .optional()
-# or .default(). metaTitle, dateModified, and featuredImage are optional
-# there; categories and published both have defaults, so neither is required.
+# or .default(). metaTitle, dateModified, featuredImage, imageAlt, and authorUrl
+# are optional there; author, categories, and published all have defaults, so
+# none of them is required.
 REQUIRED_FIELDS = {"title", "description", "date"}
 
 # Every field the post schema accepts. Anything else is dropped here rather
@@ -56,7 +58,7 @@ REQUIRED_FIELDS = {"title", "description", "date"}
 # that's not caught upstream.
 SCHEMA_FIELDS = {
     "title", "metaTitle", "description", "date", "dateModified",
-    "featuredImage", "categories", "published",
+    "featuredImage", "imageAlt", "author", "authorUrl", "categories", "published",
 }
 
 # Spellings seen for the last-updated date, in case a queued draft uses one.
@@ -248,6 +250,25 @@ def validate(fm, body, image_name, md_name):
     return errors
 
 
+def shrink_image(path):
+    """Cap a featured image at 1600px wide and recompress it in place.
+
+    Drafts often arrive straight from a camera or an image generator at 3-5k
+    pixels and several MB, which the post page then serves as-is. The site
+    never displays an image wider than 1000px, so 1600px covers 1.6x screens.
+    Skipped quietly when ImageMagick isn't on the runner.
+    """
+    if not shutil.which("convert") or path.suffix.lower() not in (".jpg", ".jpeg", ".webp"):
+        return
+    before = path.stat().st_size
+    subprocess.run(
+        ["convert", str(path), "-resize", "1600x>", "-strip", "-interlace", "Plane",
+         "-quality", "82", str(path)],
+        check=True,
+    )
+    print(f"  shrank {path.name}: {before // 1024}KB -> {path.stat().st_size // 1024}KB")
+
+
 def held_until(fm):
     """Return the post's publish date if it has not arrived yet, else None.
 
@@ -394,6 +415,7 @@ def main():
         img_bytes = download(svc, img_file["id"])
         md_path.write_bytes(serialize_frontmatter(fm, body).encode("utf-8"))
         img_path.write_bytes(img_bytes)
+        shrink_image(img_path)
 
         subprocess.run(["git", "add", str(md_path), str(img_path)], check=True)
         published.append((stem, md_file["id"], img_file["id"]))

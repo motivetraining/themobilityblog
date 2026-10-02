@@ -1,5 +1,6 @@
 ---
 title: "About"
+description: "The Mobility Blog is where coaches and clinicians share honest, practical writing on mobility training, stretching, and joint health. Founded by Brian Murray."
 ---
 
 The Mobility Blog is a place to learn from industry experts on mobility training, stretching, coaching, and the principles that shape better movement.
