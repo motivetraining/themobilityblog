@@ -17,9 +17,10 @@ const canonical = `${site}/${post.id}`;
 const pageTitle = `${post.data.metaTitle ?? post.data.title} | The Mobility Blog`;
 const imageUrl = post.data.featuredImage && new URL(post.data.featuredImage, site).href;
 const modified = post.data.dateModified ?? post.data.date;
-const authorUrl =
-  post.data.authorUrl ??
-  (post.data.author === "Brian Murray" ? "https://www.movewithpurpose.com/meet-the-founder" : undefined);
+// Brian's byline links to the on-site author page, which carries his Person
+// schema; guest authors link wherever their frontmatter says.
+const isBrian = post.data.author === "Brian Murray";
+const authorUrl = post.data.authorUrl ?? (isBrian ? `${site}/about` : undefined);
 
 // Show the updated date only when the revision is a real one, not the same-day
 // save WordPress stamped on most imports.
@@ -48,11 +49,13 @@ const jsonLd = {
   dateModified: modified.toISOString(),
   ...(imageUrl && { image: imageUrl }),
   ...(post.data.categories.length > 0 && { articleSection: post.data.categories[0] }),
-  author: {
-    "@type": "Person",
-    name: post.data.author,
-    ...(authorUrl && { url: authorUrl }),
-  },
+  author: isBrian
+    ? { "@type": "Person", "@id": `${site}/about#brian-murray`, name: "Brian Murray", url: `${site}/about` }
+    : {
+        "@type": "Person",
+        name: post.data.author,
+        ...(authorUrl && { url: authorUrl }),
+      },
   publisher: {
     "@type": "Organization",
     name: "The Mobility Blog",

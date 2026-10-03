@@ -13,6 +13,27 @@ export async function getStaticPaths() {
 const { page } = Astro.props;
 const { Content } = await render(page);
 const canonical = `https://www.themobilityblog.com/${page.id}`;
+
+// The About page doubles as Brian's author page: every post he wrote points
+// its author schema at this @id, so search engines and AI tools can tie the
+// articles to one person with stated credentials.
+const personJsonLd = page.id === "about" && {
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  url: canonical,
+  mainEntity: {
+    "@type": "Person",
+    "@id": `${canonical}#brian-murray`,
+    name: "Brian Murray",
+    url: canonical,
+    jobTitle: "Mobility Coach",
+    description:
+      "Mobility coach with sixteen years of experience, founder of Motive Training in Austin, TX, and creator of Motive Mobility.",
+    worksFor: { "@type": "Organization", name: "Motive Training", url: "https://www.movewithpurpose.com/" },
+    knowsAbout: ["Mobility training", "Functional Range Conditioning", "Kinstretch", "Stretching", "Joint health"],
+    sameAs: ["https://www.movewithpurpose.com/meet-the-founder"],
+  },
+};
 ---
 
 <BaseLayout
@@ -20,6 +41,7 @@ const canonical = `https://www.themobilityblog.com/${page.id}`;
   description={page.data.description ?? `${page.data.title} | The Mobility Blog`}
   canonical={canonical}
 >
+  {personJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />}
   <article class="max-w-wide mx-auto px-4 py-12">
     <h1 class="text-3xl font-bold tracking-tight mb-8">{page.data.title}</h1>
     <div class="prose prose-slate max-w-none">
