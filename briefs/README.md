@@ -125,6 +125,32 @@ are held to the same standard:
   post.
 - Word counts in each brief are targets, not quotas. Don't pad.
 
+## Writing for AI Answers
+
+Google's AI Overviews, ChatGPT search, and Perplexity quote pages that answer
+a question cleanly and back it up. Most of this is ordinary good SEO; these
+rules make a post easier to quote:
+
+- Put a direct, self-contained answer to the target question in the first one
+  or two sentences of the post. It should make sense quoted on its own,
+  without "this" or "it" pointing back at a heading.
+- Under each `##` heading, lead with the answer to the question that heading
+  implies, then explain. A reader skimming the first sentence of each section
+  should get the whole argument.
+- Phrase some headings the way people ask, where it reads naturally
+  ("How Often Should You Do the 90/90?"), and keep the rest in the site's
+  voice. Don't turn every heading into a question.
+- State specifics with their source in the same sentence: numbers, ranges,
+  study sizes, the year. "A 2023 meta-analysis of 55 studies found..." gets
+  quoted; "research shows..." doesn't.
+- Define a term the first time it appears (CARs, PAILs and RAILs, active-
+  passive gap) in one plain sentence, even if another post defines it too.
+- Keep the post's claims consistent with the rest of the site, so the site
+  says one thing about each idea.
+- Don't add a separate FAQ block or "key takeaways" box. Google no longer
+  shows FAQ rich results for sites like this one, and the rules above do the
+  same job inside the post.
+
 ## Sources
 
 - Every factual claim that isn't Brian's coaching opinion needs a source the
