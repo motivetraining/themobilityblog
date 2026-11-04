@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import { withUtm } from "@/lib/utm.mjs";
 
 interface Props {
   title: string;
@@ -85,7 +86,10 @@ const image = new URL(Astro.props.image ?? "/favicon.png", Astro.site).href;
           <a href="/topics" class="hover:underline">Topics</a>
           <a href="/about" class="hover:underline">About</a>
           <a href="/write-with-us" class="hover:underline">Write With Us</a>
-          <a href="https://motive-mobility.circle.so/c/welcome-start-here" class="hover:underline">
+          <a
+            href={withUtm("https://www.movewithpurpose.com/kinstretch-online", { medium: "nav", content: "kinstretch-online" })}
+            class="hover:underline"
+          >
             KINSTRETCH Online
           </a>
           <a href="/search" class="inline-flex items-center gap-1.5 hover:underline">
@@ -109,7 +113,7 @@ const image = new URL(Astro.props.image ?? "/favicon.png", Astro.site).href;
       >
         <span>&copy; {new Date().getFullYear()} The Mobility Blog</span>
         <nav aria-label="Footer" class="flex items-center gap-5">
-          <a href="https://www.movewithpurpose.com/" class="hover:underline">Our Sponsor</a>
+          <a href={withUtm("https://www.movewithpurpose.com/", { medium: "footer", content: "our-sponsor" })} class="hover:underline">Our Sponsor</a>
           <a href="https://www.instagram.com/themobilityblog/" class="hover:underline">Instagram</a>
           <a href="/privacy-policy" class="hover:underline">Privacy Policy</a>
           <a href="/rss.xml" class="hover:underline">RSS</a>

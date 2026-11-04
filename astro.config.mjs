@@ -6,6 +6,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
 import * as pagefind from "pagefind";
+import { rehypeMotiveUtm } from "./src/lib/utm.mjs";
 
 // The sitemap reads each page's own built HTML, so it can't drift from what
 // the page says about itself:
@@ -67,6 +68,9 @@ export default defineConfig({
   }),
   image: {
     responsiveStyles: false,
+  },
+  markdown: {
+    rehypePlugins: [rehypeMotiveUtm],
   },
   integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap(sitemapOptions), searchIndex()],
 });

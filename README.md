@@ -79,6 +79,17 @@ Vercel's image optimizer (configured in `astro.config.mjs`), which converts
 them to AVIF/WebP at the width each layout needs, so the 1600px JPG is only
 the source.
 
+### Links to Motive Training
+
+Every link to movewithpurpose.com gets UTM parameters at build time
+(`src/lib/utm.mjs`), so Motive's Google Analytics can attribute visits and
+sign-ups to the blog: `utm_source=themobilityblog`, `utm_campaign=blog`,
+`utm_medium` = `nav`, `footer`, `post`, or `page`, and `utm_content` = the post
+slug (or the nav item). Write links in posts as plain URLs; the tags are added
+automatically, and a link that already has `utm_source` is left alone. The
+header's KINSTRETCH Online link points at
+`movewithpurpose.com/kinstretch-online`, the program's sales page.
+
 ### Sitemap
 
 `/sitemap-index.xml` is generated from the built pages. Pages marked
