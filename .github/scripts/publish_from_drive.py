@@ -18,7 +18,6 @@ system, so this version is simpler.
 import json
 import os
 import re
-import shutil
 import subprocess
 import sys
 from datetime import date, datetime, timezone
@@ -269,23 +268,40 @@ def validate(fm, body, image_name, md_name):
     return errors
 
 
+MAX_IMAGE_WIDTH = 1600
+
+
 def shrink_image(path):
     """Cap a featured image at 1600px wide and recompress it in place.
 
     Drafts often arrive straight from a camera or an image generator at 3-5k
-    pixels and several MB, which the post page then serves as-is. The site
-    never displays an image wider than 1000px, so 1600px covers 1.6x screens.
-    Skipped quietly when ImageMagick isn't on the runner.
+    pixels and several MB, which the site would otherwise serve as-is. The
+    site never displays an image wider than 1000px, so 1600px covers 1.6x
+    screens. Uses Pillow (installed by the workflow). This used to shell out
+    to ImageMagick and skip quietly when it was missing, which it is on
+    current GitHub runners, so oversized images shipped unnoticed; a missing
+    Pillow now fails the run instead.
     """
-    if not shutil.which("convert") or path.suffix.lower() not in (".jpg", ".jpeg", ".webp"):
+    from PIL import Image, ImageOps
+
+    suffix = path.suffix.lower()
+    if suffix not in (".jpg", ".jpeg", ".png", ".webp"):
         return
     before = path.stat().st_size
-    subprocess.run(
-        ["convert", str(path), "-resize", "1600x>", "-strip", "-interlace", "Plane",
-         "-quality", "82", str(path)],
-        check=True,
-    )
-    print(f"  shrank {path.name}: {before // 1024}KB -> {path.stat().st_size // 1024}KB")
+    with Image.open(path) as src:
+        img = ImageOps.exif_transpose(src)  # bake in camera rotation before EXIF is dropped
+        if img.width > MAX_IMAGE_WIDTH:
+            height = round(img.height * MAX_IMAGE_WIDTH / img.width)
+            img = img.resize((MAX_IMAGE_WIDTH, height), Image.LANCZOS)
+        if suffix in (".jpg", ".jpeg"):
+            img.convert("RGB").save(path, "JPEG", quality=82, optimize=True, progressive=True)
+        elif suffix == ".webp":
+            img.save(path, "WEBP", quality=82)
+        else:
+            img.save(path, "PNG", optimize=True)
+    with Image.open(path) as out:
+        size = f"{out.width}x{out.height}"
+    print(f"  shrank {path.name}: {before // 1024}KB -> {path.stat().st_size // 1024}KB ({size})")
 
 
 def held_until(fm):
