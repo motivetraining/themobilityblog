@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Image } from "astro:assets";
 import TopicLinks from "@/components/TopicLinks.astro";
 
 interface Props {
@@ -13,11 +14,14 @@ const { post, eager = false } = Astro.props;
   <a href={`/${post.id}`} class="group block">
     {
       post.data.featuredImage && (
-        <img
+        <Image
           src={post.data.featuredImage}
           alt=""
-          width="800"
-          height="450"
+          width={800}
+          height={450}
+          quality={75}
+          widths={[400, 640, 800]}
+          sizes="(min-width: 640px) 470px, calc(100vw - 32px)"
           class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
           loading={eager ? "eager" : "lazy"}
           decoding="async"

@@ -107,7 +107,3 @@ You don't need extreme ranges, dramatic effort, or long holds to make progress. 
 When you approach stretching with that mindset, intent first, input second, your body becomes far more responsive. The positions you practice turn into ranges you can use, and the work you do actually carries over into daily life and training.
 
 When you do that, stretching becomes a meaningful part of your movement practice; not an afterthought.
-
----
-
-Brian Murray is a mobility coach with sixteen years of experience helping people move better, feel stronger, and train without pain. He’s the founder of [Motive Training](https://www.movewithpurpose.com/), a personal training facility in Austin, TX, and the creator of [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here?post_login_redirect=https%3A%2F%2Fmotive-mobility.circle.so%2F), an online platform focused on joint health and movement longevity. Drawing from Functional Range Conditioning (FRC), WeckMethod, and years of hands-on coaching, Brian’s approach bridges the gap between mobility and performance—making complex concepts simple and actionable for anyone who wants to train and **move with purpose**.

@@ -11,7 +11,7 @@ Some posts are technical, some are philosophical, but the goal stays the same: h
 
 [Brian Murray](https://www.movewithpurpose.com/meet-the-founder) started The Mobility Blog to create a home for writing, editing, and collaborating on useful, honest work in the fitness and mobility space. He writes most of the posts here and edits the rest.
 
-Brian is a mobility coach with sixteen years of experience helping people move better, get stronger, and train without pain. He founded [Motive Training](https://www.movewithpurpose.com/), a personal training facility in Austin, TX, and created [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here), an online platform for joint health and movement longevity that includes KINSTRETCH Online classes.
+Brian is a mobility coach with sixteen years of experience helping people move better, get stronger, and train without pain. He founded [Motive Training](https://www.movewithpurpose.com/), a personal training facility in Austin, TX, and created [Motive Mobility](https://www.movewithpurpose.com/kinstretch-online), an online platform for joint health and movement longevity that includes KINSTRETCH Online classes.
 
 His coaching draws on Functional Range Conditioning (FRC) and WeckMethod, alongside years of hands-on work with clients. The aim is to bridge mobility and performance: make the concepts simple enough to act on, and honest about what the evidence does and doesn't support.
 

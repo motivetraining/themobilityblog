@@ -101,7 +101,3 @@ Lephart et al., [Proprioception and Neuromuscular Control.](https://musculoskele
 Proske and Gandevia, [The roles of mechanoreceptors in muscle and skin in human proprioception.](https://www.sciencedirect.com/science/article/abs/pii/S2468867321000389)
 
 Alizadeh et al. (2023), [Resistance training induces improvements in range of motion: a systematic review and meta-analysis.](https://link.springer.com/article/10.1007/s40279-022-01804-x) *Sports Medicine.*
-
----
-
-Brian Murray is a mobility coach with sixteen years of experience helping people move better, feel stronger, and train without pain. He's the founder of [Motive Training](https://www.movewithpurpose.com/), a personal training facility in Austin, TX, and the creator of [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here), an online platform focused on joint health and movement longevity. Drawing from Functional Range Conditioning (FRC), WeckMethod, and years of hands-on coaching, Brian's approach bridges the gap between mobility and performance—making complex concepts simple and actionable for anyone who wants to train and **move with purpose**.

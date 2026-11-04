@@ -79,7 +79,3 @@ Mobility training is often viewed as something you "do to your body"; a routine 
 But isometrics flip that script. They turn mobility into a dialogue, a feedback loop, a self-assessment. You don't just move better after; you *understand* yourself better, too.
 
 So next time you're tempted to skip the "slow stuff," remember: infinite tension holds infinite potential. And it's waiting for you, second by second.
-
----
-
-Brian Murray is a mobility coach with sixteen years of experience helping people move better, feel stronger, and train without pain. He’s the founder of [Motive Training](https://www.movewithpurpose.com/), a personal training facility in Austin, TX, and the creator of [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here?post_login_redirect=https%3A%2F%2Fmotive-mobility.circle.so%2F), an online platform focused on joint health and movement longevity. Drawing from Functional Range Conditioning (FRC), WeckMethod, and years of hands-on coaching, Brian’s approach bridges the gap between mobility and performance—making complex concepts simple and actionable for anyone who wants to train and **move with purpose**.

@@ -1,27 +1,62 @@
 ---
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PostCard from "@/components/PostCard.astro";
+import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import { TOPICS, TOPIC_SLUGS, MIN_INDEXABLE_TOPIC_POSTS, type TopicSlug } from "@/lib/topics";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("post", ({ data }) => data.published)).sort(
     (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
   );
+  const intros = await getCollection("topic");
+  const stray = intros.filter((i) => !(TOPIC_SLUGS as string[]).includes(i.id));
+  if (stray.length) {
+    throw new Error(
+      `Topic intro(s) with no matching topic in src/lib/topics.ts: ${stray.map((i) => i.id).join(", ")}`
+    );
+  }
   // Only topics with at least one post get a page, so there's never an empty archive.
   return TOPIC_SLUGS.map((topic) => ({
     params: { topic },
-    props: { topic, posts: posts.filter((p) => p.data.tags.includes(topic)) },
+    props: {
+      topic,
+      posts: posts.filter((p) => p.data.tags.includes(topic)),
+      intro: intros.find((i) => i.id === topic),
+    },
   })).filter((path) => path.props.posts.length > 0);
 }
 
 interface Props {
   topic: TopicSlug;
   posts: Awaited<ReturnType<typeof getCollection<"post">>>;
+  intro?: Awaited<ReturnType<typeof getCollection<"topic">>>[number];
 }
-const { topic, posts } = Astro.props;
+const { topic, posts, intro } = Astro.props;
 const { label, description } = TOPICS[topic];
-const canonical = `https://www.themobilityblog.com/topics/${topic}`;
+const site = "https://www.themobilityblog.com";
+const canonical = `${site}/topics/${topic}`;
+const Intro = intro ? (await render(intro)).Content : undefined;
+
+// Tells search engines this page is a collection of the listed posts.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: label,
+  description,
+  url: canonical,
+  isPartOf: { "@type": "WebSite", name: "The Mobility Blog", url: site },
+  mainEntity: {
+    "@type": "ItemList",
+    numberOfItems: posts.length,
+    itemListElement: posts.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      url: `${site}/${p.id}`,
+      name: p.data.title,
+    })),
+  },
+};
 ---
 
 <BaseLayout
@@ -30,12 +65,25 @@ const canonical = `https://www.themobilityblog.com/topics/${topic}`;
   canonical={canonical}
   noindex={posts.length < MIN_INDEXABLE_TOPIC_POSTS}
 >
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
   <div class="max-w-wide mx-auto px-4 py-12">
-    <p class="text-sm text-slate-500 mb-2">
-      <a href="/topics" class="underline decoration-1 underline-offset-2 hover:text-slate-700">Topics</a>
-    </p>
+    <Breadcrumbs
+      crumbs={[
+        { name: "Home", href: "/" },
+        { name: "Topics", href: "/topics" },
+        { name: label, href: `/topics/${topic}` },
+      ]}
+    />
     <h1 class="text-3xl font-bold tracking-tight mb-4">{label}</h1>
-    <p class="text-slate-600 max-w-content mb-12">{description}</p>
+    {
+      Intro ? (
+        <div class="prose prose-slate max-w-content mb-12">
+          <Intro />
+        </div>
+      ) : (
+        <p class="text-slate-600 max-w-content mb-12">{description}</p>
+      )
+    }
     <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-12">
       {posts.map((post, i) => <PostCard post={post} eager={i < 2} />)}
     </ul>

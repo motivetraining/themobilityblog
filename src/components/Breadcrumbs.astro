@@ -1,0 +1,44 @@
+---
+// Visible breadcrumb trail plus matching BreadcrumbList structured data, which
+// Google can show in place of the raw URL in search results. The last crumb is
+// the current page and isn't linked.
+interface Crumb {
+  name: string;
+  href: string;
+}
+interface Props {
+  crumbs: Crumb[];
+}
+const { crumbs } = Astro.props;
+const site = "https://www.themobilityblog.com";
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: crumbs.map((c, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: c.name,
+    item: new URL(c.href, site).href,
+  })),
+};
+---
+
+<script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+<nav aria-label="Breadcrumb" class="text-sm text-slate-500 mb-4" data-pagefind-ignore>
+  <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
+    {
+      crumbs.map((c, i) => (
+        <li class="flex items-center gap-x-2">
+          {i > 0 && <span aria-hidden="true">›</span>}
+          {i < crumbs.length - 1 ? (
+            <a href={c.href} class="underline decoration-1 underline-offset-2 hover:text-slate-700">
+              {c.name}
+            </a>
+          ) : (
+            <span aria-current="page">{c.name}</span>
+          )}
+        </li>
+      ))
+    }
+  </ol>
+</nav>
