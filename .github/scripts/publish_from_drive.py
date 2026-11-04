@@ -37,6 +37,10 @@ POSTS_DIR = Path("src/content/post")
 # Where featuredImage paths ("/images/posts/<file>") resolve to on disk.
 IMAGES_DIR = Path("public/images/posts")
 IMAGE_SUFFIXES = (".jpg", ".jpeg", ".png", ".webp")
+# Site pages (About, Write With Us, ...) that posts may link to as /<slug>.
+PAGES_DIR = Path("src/content/page")
+# Non-post paths the site serves at the root.
+SITE_PATHS = {"", "topics", "search", "rss.xml", "llms.txt"}
 # ====================================
 
 
@@ -244,6 +248,8 @@ def validate(fm, body, image_name, md_name):
             errors.append(
                 f"Unknown tags {unknown_tags}; add them to src/lib/topics.ts and KNOWN_TAGS first"
             )
+        if not 1 <= len(tags) <= 3:
+            errors.append(f"Give the post 1 to 3 tags (has {len(tags)}); see KNOWN_TAGS")
 
     raw_date = fm.get("date")
     if raw_date is not None and coerce_date(raw_date) is None:
@@ -256,7 +262,8 @@ def validate(fm, body, image_name, md_name):
     # Voice rule checks against body only.
     if "—" in body:
         errors.append("Em dash found in body")
-    if "!" in body:
+    # "![" is Markdown image syntax, not an exclamation point.
+    if re.search(r"!(?!\[)", body):
         errors.append("Exclamation point found in body")
     if "**" in body:
         errors.append("Bold markdown found in body")
@@ -270,6 +277,61 @@ def validate(fm, body, image_name, md_name):
             errors.append(f"Heading ends with period: {stripped.strip()}")
             break
 
+    errors.extend(check_links(body, md_stem))
+    errors.extend(check_authorship(fm, body))
+
+    return errors
+
+
+def check_links(body, md_stem):
+    """Catch placeholder and broken links before they ship.
+
+    Every Markdown link target must be a full URL, a mailto:, an #anchor, or a
+    site path. Site paths must resolve to a post, a page, or a topic, so a
+    misspelled slug or a leftover placeholder like FLEXIBILITY_IS_RANGE_URL
+    fails here instead of publishing as a dead link.
+    """
+    errors = []
+    for target in re.findall(r"\]\(([^)\s]+)", body):
+        if target.startswith(("http://", "https://", "mailto:", "#")):
+            continue
+        if not target.startswith("/"):
+            errors.append(f"Link target isn't a URL or a site path (placeholder?): {target}")
+            continue
+        path = target.split("#")[0].split("?")[0].strip("/")
+        if path.startswith("images/"):
+            continue
+        if path.startswith("topics/"):
+            if path.split("/", 1)[1] not in KNOWN_TAGS:
+                errors.append(f"Link to unknown topic page: {target}")
+            continue
+        if path in SITE_PATHS or path == md_stem:
+            continue
+        if not ((POSTS_DIR / f"{path}.md").exists() or (PAGES_DIR / f"{path}.md").exists()):
+            errors.append(f"Internal link to a page that doesn't exist: {target}")
+    return errors
+
+
+def check_authorship(fm, body):
+    """Guest posts must name their author in frontmatter.
+
+    Without author:, the byline and the article schema default to Brian
+    Murray, and Brian's About the Author box is added to the end. A typed
+    "*By Name*" line in the body would then contradict the byline.
+    """
+    errors = []
+    author = str(fm.get("author") or "Brian Murray").strip()
+    looks_guest = re.search(r"guest contributor|^#{2,3} About the Author\s*$", body, re.IGNORECASE | re.MULTILINE)
+    if author == "Brian Murray" and looks_guest:
+        errors.append(
+            "Reads like a guest post (guest contributor / About the Author) but author: isn't set; "
+            "it would publish under Brian Murray"
+        )
+    byline = re.search(r"^\s*[*_]By [^*_\n]+[*_]\s*$", body, re.MULTILINE)
+    if byline:
+        errors.append(
+            f"Remove the typed byline '{byline.group(0).strip()}'; the byline comes from author: in frontmatter"
+        )
     return errors
 
 

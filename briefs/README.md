@@ -2,7 +2,8 @@
 
 One brief per planned post. Each brief is written so Claude (or any writer)
 can draft a publishable post from it without further back-and-forth. This file
-holds the rules every brief shares. Read it in full before drafting from any
+holds the rules every brief shares. `formatting-guide.md` covers the file
+format the Drive publisher checks. Read it in full before drafting from any
 brief.
 
 The `briefs/` folder sits outside `src/`, so nothing here is built into the
