@@ -7,6 +7,9 @@ featuredImage: "/images/posts/90-90-hip-stretch.jpg"
 imageAlt: "Illustration of a translucent pelvis and hip joint, with the head of the femur glowing inside the socket and ribbons of color circling the joint"
 categories:
   - "Mobility"
+tags:
+  - "hips"
+  - "stretching"
 published: true
 ---
 

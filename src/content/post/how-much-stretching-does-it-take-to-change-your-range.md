@@ -6,6 +6,9 @@ date: '2026-10-31T00:00:00Z'
 categories:
 - Stretching
 featuredImage: /images/posts/how-much-stretching-does-it-take-to-change-your-range.jpg
+tags:
+  - "stretching"
+  - "programming"
 published: true
 ---
 

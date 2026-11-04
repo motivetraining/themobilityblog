@@ -7,6 +7,9 @@ featuredImage: "/images/posts/fitness-is-something-you-maintain.jpg"
 imageAlt: "Illustration of a translucent javelin thrower mid-stride with the spine, shoulders, hips, knees, and ankles glowing orange inside swirling rings of light"
 categories:
   - "Mobility"
+tags:
+  - "programming"
+  - "fundamentals"
 published: true
 ---
 

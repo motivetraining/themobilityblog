@@ -82,10 +82,18 @@ const image = new URL(Astro.props.image ?? "/favicon.png", Astro.site).href;
       <div class="max-w-wide mx-auto px-4 py-6 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
         <a href="/" class="font-bold text-lg tracking-tight">The Mobility Blog</a>
         <nav aria-label="Main" class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+          <a href="/topics" class="hover:underline">Topics</a>
           <a href="/about" class="hover:underline">About</a>
           <a href="/write-with-us" class="hover:underline">Write With Us</a>
           <a href="https://motive-mobility.circle.so/c/welcome-start-here" class="hover:underline">
             KINSTRETCH Online
+          </a>
+          <a href="/search" class="inline-flex items-center gap-1.5 hover:underline">
+            <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" class="w-4 h-4">
+              <circle cx="8.5" cy="8.5" r="5.5"></circle>
+              <path d="M13 13l4.5 4.5" stroke-linecap="round"></path>
+            </svg>
+            Search
           </a>
         </nav>
       </div>

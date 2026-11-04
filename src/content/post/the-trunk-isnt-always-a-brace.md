@@ -7,6 +7,9 @@ featuredImage: "/images/posts/the-trunk-isnt-always-a-brace.jpg"
 imageAlt: "Stylized illustration of a human torso with the spine, rib cage, and pelvis glowing in blue and orange, surrounded by sweeping bands of light"
 categories:
   - "Mobility"
+tags:
+  - "spine"
+  - "coaching"
 published: true
 ---
 

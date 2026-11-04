@@ -7,6 +7,9 @@ dateModified: "2026-05-27T02:23:30Z"
 featuredImage: "/images/posts/Flexibility-Is-Range.-Mobility-Is-What-You-Can-Do-With-It.jpg"
 categories:
   - "Mobility"
+tags:
+  - "fundamentals"
+  - "stretching"
 published: true
 ---
 

@@ -1,6 +1,8 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import TopicLinks from "@/components/TopicLinks.astro";
+import { TOPICS } from "@/lib/topics";
 
 export async function getStaticPaths() {
   const posts = await getCollection("post", ({ data }) => data.published);
@@ -28,13 +30,13 @@ const showUpdated = modified.valueOf() - post.data.date.valueOf() > 7 * 24 * 60 
 const formatDate = (d: Date) =>
   d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 
-// Related posts: shared categories first, then newest. Every post links to
-// three others, so no post is an orphan in Google's crawl of the site.
+// Related posts: most shared topic tags first, then newest. Every post links
+// to three others, so no post is an orphan in Google's crawl of the site.
 const related = allPosts
   .filter((p) => p.id !== post.id)
   .map((p) => ({
     post: p,
-    shared: p.data.categories.filter((c) => post.data.categories.includes(c)).length,
+    shared: p.data.tags.filter((t) => post.data.tags.includes(t)).length,
   }))
   .sort((a, b) => b.shared - a.shared || b.post.data.date.valueOf() - a.post.data.date.valueOf())
   .slice(0, 3)
@@ -49,6 +51,7 @@ const jsonLd = {
   dateModified: modified.toISOString(),
   ...(imageUrl && { image: imageUrl }),
   ...(post.data.categories.length > 0 && { articleSection: post.data.categories[0] }),
+  ...(post.data.tags.length > 0 && { keywords: post.data.tags.map((t) => TOPICS[t].label) }),
   author: isBrian
     ? { "@type": "Person", "@id": `${site}/about#brian-murray`, name: "Brian Murray", url: `${site}/about` }
     : {
@@ -76,9 +79,12 @@ const jsonLd = {
   modifiedTime={modified}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  <article class="max-w-wide mx-auto px-4 py-12">
+  <article class="max-w-wide mx-auto px-4 py-12" data-pagefind-body>
+    {/* Search index metadata: topic filters and the result thumbnail. */}
+    {post.data.tags.map((t) => <span hidden data-pagefind-filter={`topic:${TOPICS[t].label}`} />)}
+    {post.data.featuredImage && <span hidden data-pagefind-meta={`image:${post.data.featuredImage}`} />}
     <h1 class="text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
-    <p class="text-sm text-slate-500">
+    <p class="text-sm text-slate-500" data-pagefind-ignore>
       By {authorUrl ? <a href={authorUrl} class="underline decoration-1 underline-offset-2 hover:text-slate-700">{post.data.author}</a> : post.data.author}
       <span aria-hidden="true"> · </span>
       <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
@@ -91,6 +97,7 @@ const jsonLd = {
         )
       }
     </p>
+    <TopicLinks tags={post.data.tags} class="mt-4" />
     <hr class="border-slate-900 mt-6 mb-8" />
     {
       post.data.featuredImage && (

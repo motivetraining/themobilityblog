@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "@/layouts/BaseLayout.astro";
+import PostCard from "@/components/PostCard.astro";
 
 const posts = (await getCollection("post", ({ data }) => data.published)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
@@ -26,34 +27,7 @@ const posts = (await getCollection("post", ({ data }) => data.published)).sort(
     </div>
 
     <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-12">
-      {
-        posts.map((post, i) => (
-          <li>
-            <a href={`/${post.id}`} class="group block">
-              {post.data.featuredImage && (
-                <img
-                  src={post.data.featuredImage}
-                  alt=""
-                  width="800"
-                  height="450"
-                  class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
-                  loading={i < 2 ? "eager" : "lazy"}
-                  decoding="async"
-                />
-              )}
-              <h2 class="text-xl font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
-                {post.data.title}
-              </h2>
-              <p class="mt-1 text-sm text-slate-600">{post.data.description}</p>
-            </a>
-            {post.data.categories[0] && (
-              <span class="inline-block mt-1 text-sm text-slate-500">
-                {post.data.categories[0]}
-              </span>
-            )}
-          </li>
-        ))
-      }
+      {posts.map((post, i) => <PostCard post={post} eager={i < 2} />)}
     </ul>
   </div>
 </BaseLayout>

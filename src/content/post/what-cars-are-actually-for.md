@@ -6,6 +6,9 @@ dateModified: "2026-08-24T19:40:06Z"
 featuredImage: "/images/posts/What-CARs-Are-ACtually-For.jpg"
 categories:
   - "Mobility"
+tags:
+  - "frc-and-kinstretch"
+  - "assessment"
 published: true
 ---
 

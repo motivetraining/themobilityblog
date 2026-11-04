@@ -7,6 +7,9 @@ dateModified: "2026-09-10T12:27:59Z"
 featuredImage: "/images/posts/Hip-Internal-Rotation.jpg"
 categories:
   - "Mobility"
+tags:
+  - "hips"
+  - "assessment"
 published: true
 ---
 

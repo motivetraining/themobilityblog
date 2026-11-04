@@ -8,6 +8,9 @@ featuredImage: "/images/posts/what-is-mobility.jpg"
 imageAlt: "Illustration of a running figure in blue and green with the shoulder, elbow, hip, and knee joints highlighted, trailed by flowing ribbons of color"
 categories:
   - "Mobility"
+tags:
+  - "fundamentals"
+  - "assessment"
 published: true
 ---
 

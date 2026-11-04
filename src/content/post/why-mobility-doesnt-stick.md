@@ -6,6 +6,10 @@ dateModified: "2026-08-24T19:42:20Z"
 featuredImage: "/images/posts/Why-Mobility-Doesnt-Stick.jpg"
 categories:
   - "Mobility"
+tags:
+  - "hips"
+  - "programming"
+  - "isometrics"
 published: true
 ---
 

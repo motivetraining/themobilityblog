@@ -1,0 +1,26 @@
+---
+import { TOPICS, type TopicSlug } from "@/lib/topics";
+
+interface Props {
+  tags: TopicSlug[];
+  class?: string;
+}
+const { tags, class: className = "" } = Astro.props;
+---
+
+{
+  tags.length > 0 && (
+    <ul class={`flex flex-wrap gap-2 ${className}`} aria-label="Topics" data-pagefind-ignore>
+      {tags.map((tag) => (
+        <li>
+          <a
+            href={`/topics/${tag}`}
+            class="inline-block rounded-full border border-slate-300 px-3 py-0.5 text-xs text-slate-600 hover:border-teal-700 hover:text-teal-800"
+          >
+            {TOPICS[tag].label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  )
+}

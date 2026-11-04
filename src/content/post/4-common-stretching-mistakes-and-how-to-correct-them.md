@@ -7,6 +7,8 @@ dateModified: "2026-02-12T15:49:42Z"
 featuredImage: "/images/posts/Stretching-Mistakes.jpg"
 categories:
   - "Stretching"
+tags:
+  - "stretching"
 published: true
 ---
 

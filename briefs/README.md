@@ -53,6 +53,9 @@ featuredImage: "/images/posts/{slug}.jpg"
 imageAlt: "What the image literally shows, e.g. A coach demonstrating the 90/90 hip position on a gym floor"
 categories:
   - "Mobility"
+tags:
+  - "hips"
+  - "assessment"
 published: false
 ---
 ```
@@ -61,6 +64,11 @@ published: false
   byline renders from it. Don't add an author bio to the body.
 - Known categories: Mobility, Stretching, Isometrics, Posture. Use one of
   these unless the brief says otherwise.
+- Tags: one to three topic slugs from `src/lib/topics.ts` (fundamentals,
+  stretching, isometrics, assessment, programming, hips, ankles, spine,
+  posture, frc-and-kinstretch, pain-and-hypermobility, coaching,
+  expert-roundups). The queue rejects a tag that isn't on that list. If a
+  post needs a new topic (shoulders, wrists), add it there first.
 - The slug (the file name) is set in each brief. Don't change it; internal
   links from other briefs depend on it.
 

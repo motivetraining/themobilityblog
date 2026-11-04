@@ -1,5 +1,6 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
+import { TOPIC_SLUGS } from "./lib/topics";
 
 const post = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/post" }),
@@ -14,6 +15,8 @@ const post = defineCollection({
     author: z.string().default("Brian Murray"),
     authorUrl: z.string().url().optional(),
     categories: z.array(z.string()).default([]),
+    // Topic tags, by slug. Must be one of the topics in src/lib/topics.ts.
+    tags: z.array(z.enum(TOPIC_SLUGS)).default([]),
     published: z.boolean().default(true),
   }),
 });

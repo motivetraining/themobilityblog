@@ -7,6 +7,9 @@ dateModified: "2026-02-20T20:10:08Z"
 featuredImage: "/images/posts/What-Does-Mobility-Mean-1.jpg"
 categories:
   - "Mobility"
+tags:
+  - "fundamentals"
+  - "expert-roundups"
 published: true
 ---
 

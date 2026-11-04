@@ -7,6 +7,9 @@ dateModified: "2026-02-12T15:51:06Z"
 featuredImage: "/images/posts/Posture-Fighting-Gravity.jpg"
 categories:
   - "Posture"
+tags:
+  - "posture"
+  - "spine"
 published: true
 ---
 
