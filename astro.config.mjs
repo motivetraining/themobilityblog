@@ -1,10 +1,33 @@
 import { defineConfig } from "astro/config";
+import { existsSync, readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import tailwind from "@astrojs/tailwind";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
 import * as pagefind from "pagefind";
+
+// The sitemap reads each page's own built HTML, so it can't drift from what
+// the page says about itself:
+// - pages marked noindex (search, 404, one-post topic pages) are left out,
+//   since listing a URL that asks not to be indexed sends mixed signals;
+// - lastmod comes from the post's article:modified_time, so search engines
+//   can tell which posts were revised and are worth recrawling.
+// The sitemap integration runs before the Vercel adapter moves dist/.
+function builtHtml(url) {
+  const path = new URL(url).pathname.replace(/\/$/, "");
+  const file = `dist${path || ""}/index.html`;
+  return existsSync(file) ? readFileSync(file, "utf8") : existsSync(`dist${path}.html`) ? readFileSync(`dist${path}.html`, "utf8") : "";
+}
+
+const sitemapOptions = {
+  filter: (page) => !/<meta name="robots" content="noindex"/.test(builtHtml(page)),
+  serialize: (item) => {
+    const modified = builtHtml(item.url).match(/<meta property="article:modified_time" content="([^"]+)"/)?.[1];
+    if (modified) item.lastmod = modified;
+    return item;
+  },
+};
 
 // Builds the site search index (served from /pagefind) once the HTML exists.
 // Only post pages are indexed: their <article> carries data-pagefind-body.
@@ -31,6 +54,19 @@ export default defineConfig({
   site: "https://www.themobilityblog.com",
   output: "static",
   trailingSlash: "never",
-  adapter: vercel(),
-  integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap(), searchIndex()],
+  // Featured images go through Vercel's image optimizer in production, which
+  // serves each one as AVIF/WebP at the width the layout needs instead of the
+  // full 1600px JPG. Locally (dev and preview) Astro uses sharp instead.
+  adapter: vercel({
+    imageService: true,
+    imagesConfig: {
+      sizes: [400, 640, 800, 1200, 1600],
+      formats: ["image/avif", "image/webp"],
+      minimumCacheTTL: 2592000,
+    },
+  }),
+  image: {
+    responsiveStyles: false,
+  },
+  integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap(sitemapOptions), searchIndex()],
 });

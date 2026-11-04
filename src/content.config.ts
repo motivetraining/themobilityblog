@@ -29,4 +29,10 @@ const page = defineCollection({
   }),
 });
 
-export const collections = { post, page };
+// Optional intro copy for topic pages: src/content/topic/{topic-slug}.md.
+const topic = defineCollection({
+  loader: glob({ pattern: "**/*.md", base: "./src/content/topic" }),
+  schema: z.object({}),
+});
+
+export const collections = { post, page, topic };

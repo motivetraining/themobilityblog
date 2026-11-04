@@ -50,6 +50,12 @@ add the slug to `KNOWN_TAGS` in `.github/scripts/publish_from_drive.py`. A
 topic page with only one post is published but marked `noindex` until a
 second post joins it.
 
+Each topic page can have an intro: a Markdown file at
+`src/content/topic/{slug}.md` (body only, no frontmatter) that renders above
+the post list in place of the one-line description. `briefs/topic-intros.md`
+is the brief for writing them. A file named for a topic that isn't in
+`src/lib/topics.ts` fails the build.
+
 `categories` is left over from WordPress (nearly every post is "Mobility") and
 now only feeds the `articleSection` in the post's structured data.
 
@@ -68,7 +74,18 @@ not `https://themobilityblog.com/...` URLs, which bounce through two redirects
 
 Keep featured images at or under 1600px wide. The Drive publisher shrinks
 queued images to that automatically; images added by hand should be resized
-before committing.
+before committing. On the live site, featured images are served through
+Vercel's image optimizer (configured in `astro.config.mjs`), which converts
+them to AVIF/WebP at the width each layout needs, so the 1600px JPG is only
+the source.
+
+### Sitemap
+
+`/sitemap-index.xml` is generated from the built pages. Pages marked
+`noindex` (search, 404, one-post topic pages) are left out automatically, and
+each post's `lastmod` comes from its `dateModified` (or `date`). Set
+`dateModified` when you substantially revise a post so search engines
+recrawl it.
 
 ### Heading case
 
