@@ -46,9 +46,18 @@ IMAGE_SUFFIXES = (".jpg", ".jpeg", ".png", ".webp")
 # before it ships as a new, uninentional category.
 KNOWN_CATEGORIES = {"Mobility", "Stretching", "Isometrics", "Posture"}
 
+# Topic tag slugs, mirroring TOPICS in src/lib/topics.ts. Unlike categories,
+# tags ARE enforced by the Zod schema (an unknown tag fails the site build),
+# so the queue rejects an unknown tag here rather than shipping a broken build.
+KNOWN_TAGS = {
+    "fundamentals", "stretching", "isometrics", "assessment", "programming",
+    "hips", "ankles", "spine", "posture", "frc-and-kinstretch",
+    "pain-and-hypermobility", "coaching", "expert-roundups",
+}
+
 # Required by src/content.config.ts's post schema: fields with no .optional()
 # or .default(). metaTitle, dateModified, featuredImage, imageAlt, and authorUrl
-# are optional there; author, categories, and published all have defaults, so
+# are optional there; author, categories, tags, and published all have defaults, so
 # none of them is required.
 REQUIRED_FIELDS = {"title", "description", "date"}
 
@@ -58,7 +67,7 @@ REQUIRED_FIELDS = {"title", "description", "date"}
 # that's not caught upstream.
 SCHEMA_FIELDS = {
     "title", "metaTitle", "description", "date", "dateModified",
-    "featuredImage", "imageAlt", "author", "authorUrl", "categories", "published",
+    "featuredImage", "imageAlt", "author", "authorUrl", "categories", "tags", "published",
 }
 
 # Spellings seen for the last-updated date, in case a queued draft uses one.
@@ -221,6 +230,16 @@ def validate(fm, body, image_name, md_name):
         unknown_categories = sorted(set(categories) - KNOWN_CATEGORIES)
         if unknown_categories:
             print(f"  note: new categories not seen before: {unknown_categories}")
+
+    tags = fm.get("tags") or []
+    if not isinstance(tags, list):
+        errors.append("tags must be a list")
+    else:
+        unknown_tags = sorted(set(map(str, tags)) - KNOWN_TAGS)
+        if unknown_tags:
+            errors.append(
+                f"Unknown tags {unknown_tags}; add them to src/lib/topics.ts and KNOWN_TAGS first"
+            )
 
     raw_date = fm.get("date")
     if raw_date is not None and coerce_date(raw_date) is None:

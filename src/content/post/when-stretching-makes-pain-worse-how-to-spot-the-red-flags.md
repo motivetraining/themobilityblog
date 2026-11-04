@@ -9,6 +9,9 @@ author: "David Weintraub, LMT"
 authorUrl: "https://bodyworksdw.com/"
 categories:
   - "Mobility"
+tags:
+  - "pain-and-hypermobility"
+  - "stretching"
 published: true
 ---
 

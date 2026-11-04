@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from "astro:content";
+import TopicLinks from "@/components/TopicLinks.astro";
+
+interface Props {
+  post: CollectionEntry<"post">;
+  eager?: boolean;
+}
+const { post, eager = false } = Astro.props;
+---
+
+<li>
+  <a href={`/${post.id}`} class="group block">
+    {
+      post.data.featuredImage && (
+        <img
+          src={post.data.featuredImage}
+          alt=""
+          width="800"
+          height="450"
+          class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
+          loading={eager ? "eager" : "lazy"}
+          decoding="async"
+        />
+      )
+    }
+    <h2
+      class="text-xl font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800"
+    >
+      {post.data.title}
+    </h2>
+    <p class="mt-1 text-sm text-slate-600">{post.data.description}</p>
+  </a>
+  <TopicLinks tags={post.data.tags} class="mt-3" />
+</li>

@@ -7,6 +7,10 @@ featuredImage: "/images/posts/when-the-method-becomes-the-answer.jpg"
 imageAlt: "Illustration of a walking figure with the spine, ribs, pelvis, and joints glowing orange, surrounded by floating panels showing contour lines, a spinal grid, concentric rings, and movement arrows"
 categories:
   - "Mobility"
+tags:
+  - "coaching"
+  - "frc-and-kinstretch"
+  - "assessment"
 published: true
 ---
 

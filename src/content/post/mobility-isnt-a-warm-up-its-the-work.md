@@ -7,6 +7,9 @@ dateModified: "2026-02-12T15:48:09Z"
 featuredImage: "/images/posts/Mobility-Isnt-A-Warm-Up.jpg"
 categories:
   - "Mobility"
+tags:
+  - "programming"
+  - "fundamentals"
 published: true
 ---
 

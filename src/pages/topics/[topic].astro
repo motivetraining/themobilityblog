@@ -1,0 +1,43 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import PostCard from "@/components/PostCard.astro";
+import { TOPICS, TOPIC_SLUGS, MIN_INDEXABLE_TOPIC_POSTS, type TopicSlug } from "@/lib/topics";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("post", ({ data }) => data.published)).sort(
+    (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+  );
+  // Only topics with at least one post get a page, so there's never an empty archive.
+  return TOPIC_SLUGS.map((topic) => ({
+    params: { topic },
+    props: { topic, posts: posts.filter((p) => p.data.tags.includes(topic)) },
+  })).filter((path) => path.props.posts.length > 0);
+}
+
+interface Props {
+  topic: TopicSlug;
+  posts: Awaited<ReturnType<typeof getCollection<"post">>>;
+}
+const { topic, posts } = Astro.props;
+const { label, description } = TOPICS[topic];
+const canonical = `https://www.themobilityblog.com/topics/${topic}`;
+---
+
+<BaseLayout
+  title={`${label} | The Mobility Blog`}
+  description={description}
+  canonical={canonical}
+  noindex={posts.length < MIN_INDEXABLE_TOPIC_POSTS}
+>
+  <div class="max-w-wide mx-auto px-4 py-12">
+    <p class="text-sm text-slate-500 mb-2">
+      <a href="/topics" class="underline decoration-1 underline-offset-2 hover:text-slate-700">Topics</a>
+    </p>
+    <h1 class="text-3xl font-bold tracking-tight mb-4">{label}</h1>
+    <p class="text-slate-600 max-w-content mb-12">{description}</p>
+    <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-12">
+      {posts.map((post, i) => <PostCard post={post} eager={i < 2} />)}
+    </ul>
+  </div>
+</BaseLayout>

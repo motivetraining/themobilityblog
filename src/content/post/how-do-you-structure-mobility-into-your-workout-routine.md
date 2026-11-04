@@ -7,6 +7,9 @@ dateModified: "2026-05-24T18:40:52Z"
 featuredImage: "/images/posts/How-Do-You-Structure-Mobility-Into-Your-Workout-Routine.jpg"
 categories:
   - "Mobility"
+tags:
+  - "programming"
+  - "expert-roundups"
 published: true
 ---
 

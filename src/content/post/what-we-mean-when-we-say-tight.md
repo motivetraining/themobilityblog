@@ -11,6 +11,8 @@ imageAlt: Illustration of a seated figure folding forward over straight legs in 
   against swirling bands of colored light
 categories:
 - Mobility
+tags:
+  - "coaching"
 published: true
 ---
 

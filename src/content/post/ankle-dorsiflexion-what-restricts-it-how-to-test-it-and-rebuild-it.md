@@ -9,6 +9,9 @@ dateModified: 2026-09-22
 featuredImage: /images/posts/ankle-dorsiflexion-what-restricts-it-how-to-test-it-and-rebuild-it.jpg
 categories:
 - Mobility
+tags:
+  - "ankles"
+  - "assessment"
 published: true
 ---
 

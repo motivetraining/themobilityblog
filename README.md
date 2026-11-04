@@ -28,6 +28,9 @@ author: "Guest Name, Credentials"          # optional; defaults to Brian Murray
 authorUrl: "https://guest-site.com/"       # optional
 categories:
   - "Mobility"
+tags:                                       # 1 to 3 topic slugs from src/lib/topics.ts
+  - "hips"
+  - "assessment"
 published: true
 ---
 
@@ -35,6 +38,29 @@ Body in Markdown.
 ```
 
 The file name (`{slug}`) becomes the URL: `src/content/post/what-is-mobility.md` → `/what-is-mobility`.
+
+### Tags and Topic Pages
+
+`tags` drive the topic pages (`/topics` and `/topics/{slug}`), the topic links
+on each post and post card, and the "Keep Reading" picks (posts sharing the
+most tags come first). Tags are slugs from the list in `src/lib/topics.ts`;
+anything not on that list fails the build, so a typo can't create a stray
+topic. To add a topic, add it there with a label and one-line description, and
+add the slug to `KNOWN_TAGS` in `.github/scripts/publish_from_drive.py`. A
+topic page with only one post is published but marked `noindex` until a
+second post joins it.
+
+`categories` is left over from WordPress (nearly every post is "Mobility") and
+now only feeds the `articleSection` in the post's structured data.
+
+### Search
+
+`/search` runs on [Pagefind](https://pagefind.app): a static index built after
+`astro build` (the `searchIndex()` integration in `astro.config.mjs`) and
+served from `/pagefind`. Only post bodies are indexed (the `<article>` with
+`data-pagefind-body`), and results can be filtered by topic. There's nothing to
+run by hand; the index is rebuilt on every deploy. It doesn't exist under
+`bun run dev`, so check search with `bun run build && bun run preview`.
 
 Link to other posts with relative paths (`[What Is Mobility?](/what-is-mobility)`),
 not `https://themobilityblog.com/...` URLs, which bounce through two redirects

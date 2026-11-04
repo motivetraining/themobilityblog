@@ -7,6 +7,8 @@ dateModified: "2026-02-12T15:51:41Z"
 featuredImage: "/images/posts/isometrics-the-dial-never-stops-turning.jpg"
 categories:
   - "Isometrics"
+tags:
+  - "isometrics"
 published: true
 ---
 

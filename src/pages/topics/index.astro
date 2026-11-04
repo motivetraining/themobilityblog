@@ -1,0 +1,45 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { TOPICS, TOPIC_SLUGS } from "@/lib/topics";
+
+const posts = await getCollection("post", ({ data }) => data.published);
+const topics = TOPIC_SLUGS.map((slug) => ({
+  slug,
+  ...TOPICS[slug],
+  count: posts.filter((p) => p.data.tags.includes(slug)).length,
+})).filter((t) => t.count > 0);
+---
+
+<BaseLayout
+  title="Topics | The Mobility Blog"
+  description="Browse The Mobility Blog by topic: stretching, isometrics, assessment, programming, hips, spine, posture, and more."
+  canonical="https://www.themobilityblog.com/topics"
+>
+  <div class="max-w-wide mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold tracking-tight mb-4">Topics</h1>
+    <p class="text-slate-600 max-w-content mb-10">
+      Every post is tagged with the topics it covers. Pick one to see everything we've written on it,
+      or <a href="/search" class="text-teal-700 underline decoration-1 underline-offset-2 hover:text-teal-800">search the site</a>.
+    </p>
+    <ul class="grid sm:grid-cols-2 gap-6">
+      {
+        topics.map((t) => (
+          <li>
+            <a href={`/topics/${t.slug}`} class="group block rounded-lg border border-slate-200 p-5 h-full hover:border-teal-700">
+              <span class="flex items-baseline justify-between gap-4">
+                <span class="text-lg font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
+                  {t.label}
+                </span>
+                <span class="text-sm text-slate-500 whitespace-nowrap">
+                  {t.count} {t.count === 1 ? "post" : "posts"}
+                </span>
+              </span>
+              <span class="block mt-2 text-sm text-slate-600">{t.description}</span>
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</BaseLayout>

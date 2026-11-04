@@ -6,6 +6,9 @@ dateModified: "2026-02-12T15:45:34Z"
 featuredImage: "/images/posts/Capacity.jpg"
 categories:
   - "Mobility"
+tags:
+  - "fundamentals"
+  - "hips"
 published: true
 ---
 
