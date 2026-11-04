@@ -210,6 +210,11 @@ def validate(fm, body, image_name, md_name):
     if missing:
         errors.append(f"Missing frontmatter fields: {sorted(missing)}")
 
+    for field in ("title", "metaTitle"):
+        value = str(fm.get(field) or "").strip()
+        if value.endswith("."):
+            errors.append(f"{field} ends with period: {value}")
+
     expected_image = f"/images/posts/{image_name}"
     if fm.get("featuredImage") != expected_image:
         errors.append(
