@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import TopicLinks from "@/components/TopicLinks.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
+import AuthorBox from "@/components/AuthorBox.astro";
 import { TOPICS } from "@/lib/topics";
 
 export async function getStaticPaths() {
@@ -130,6 +131,7 @@ const jsonLd = {
     <div class="prose prose-slate max-w-none">
       <Content />
     </div>
+    {isBrian && <AuthorBox />}
   </article>
 
   {

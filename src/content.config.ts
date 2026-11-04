@@ -5,8 +5,12 @@ import { TOPIC_SLUGS } from "./lib/topics";
 const post = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/post" }),
   schema: z.object({
-    title: z.string(),
-    metaTitle: z.string().optional(),
+    // Titles are headings: Title Case, and never ending with a period.
+    title: z.string().refine((t) => !t.trim().endsWith("."), "title must not end with a period"),
+    metaTitle: z
+      .string()
+      .refine((t) => !t.trim().endsWith("."), "metaTitle must not end with a period")
+      .optional(),
     description: z.string(),
     date: z.coerce.date(),
     dateModified: z.coerce.date().optional(),
