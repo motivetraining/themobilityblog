@@ -61,7 +61,10 @@ published: false
 ```
 
 - Leave out `author` for Brian's posts. It defaults to Brian Murray, and the
-  byline renders from it. Don't add an author bio to the body.
+  byline renders from it. Don't add an author bio to the body: every post by
+  Brian ends with the shared About the Author box
+  (`src/components/AuthorBox.astro`) automatically. Guest posts set
+  `author:` and can end with their own `## About the Author` section.
 - Known categories: Mobility, Stretching, Isometrics, Posture. Use one of
   these unless the brief says otherwise.
 - Tags: one to three topic slugs from `src/lib/topics.ts` (fundamentals,

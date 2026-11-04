@@ -1,0 +1,30 @@
+---
+import { withUtm } from "@/lib/utm.mjs";
+
+// End-of-post author section for Brian's posts. One component instead of a
+// bio pasted into every Markdown file, so it stays consistent and editable in
+// one place. Guest posts carry their own "About the Author" in the body.
+const motive = withUtm("https://www.movewithpurpose.com/", { medium: "author-box", content: "motive-training" });
+const online = withUtm("https://www.movewithpurpose.com/kinstretch-online", {
+  medium: "author-box",
+  content: "kinstretch-online",
+});
+---
+
+<aside
+  aria-labelledby="about-the-author"
+  class="mt-12 rounded-lg border border-slate-200 bg-slate-50 p-6"
+  data-pagefind-ignore
+>
+  <h2 id="about-the-author" class="text-lg font-bold tracking-tight mb-2">About the Author</h2>
+  <p class="text-slate-700">
+    <a href="/about" class="font-semibold text-teal-700 underline decoration-1 underline-offset-2 hover:text-teal-800">Brian Murray</a>
+    is a mobility coach with sixteen years of experience helping people move better, feel stronger, and train
+    without pain. He founded <a href={motive} class="text-teal-700 underline decoration-1 underline-offset-2 hover:text-teal-800">Motive Training</a>,
+    a personal training studio in Austin, TX, and created
+    <a href={online} class="text-teal-700 underline decoration-1 underline-offset-2 hover:text-teal-800">Motive Mobility</a>,
+    an online platform for joint health and movement longevity that includes KINSTRETCH Online. His coaching draws on
+    Functional Range Conditioning (FRC), WeckMethod, and years of hands-on work, with the goal of making complex ideas
+    simple enough to use.
+  </p>
+</aside>

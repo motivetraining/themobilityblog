@@ -1,17 +1,19 @@
 ---
 title: 'Active Mobility, Flexibility, and Rehearsal Sets: Which Goal Are You Solving?'
-description: An ankle drill, a calf stretch, and a practice squat can all get called
-  mobility work. Naming the goal of each one changes how you coach it and how you
-  read the research behind it.
+description: "An ankle drill, a calf stretch, and a practice squat can all get called mobility work. Naming each one's goal changes how you coach it and read the research."
 date: '2026-11-04T00:00:00Z'
+featuredImage: /images/posts/active-mobility-flexibility-rehearsal-sets.jpg
+imageAlt: Illustration of a translucent figure in a deep squat, with the spine, hips, knees, and ankles glowing orange against a blue background with ribbons of light
+author: Rafael Vinicius
 categories:
 - Mobility
 - Stretching
-featuredImage: /images/posts/active-mobility-flexibility-rehearsal-sets.jpg
+tags:
+  - "stretching"
+  - "assessment"
+  - "coaching"
 published: true
 ---
-
-*By Rafael Vinicius*
 
 *Rafael Vinicius is a guest contributor. He writes from the perspective of a Physical Education student and recreational strength trainee.*
 
@@ -77,7 +79,7 @@ These examples organize a coaching conversation, not a universal exercise sequen
 2. Blazevich AJ et al. 2018. No effect of muscle stretching within a full, dynamic warm-up on athletic performance. *Medicine & Science in Sports & Exercise* 50(6):1258–1266. https://pubmed.ncbi.nlm.nih.gov/29300214/
 3. Pope RP et al. 2000. A randomized trial of preexercise stretching for prevention of lower-limb injury. *Medicine & Science in Sports & Exercise* 32(2):271–277. https://pubmed.ncbi.nlm.nih.gov/10694106/
 
-*Editor's note: Konrad and Tilp's finding raises a question worth sitting with. If six weeks of stretching changed tolerance rather than tissue, what does the trainee actually own at the end of that block? Range someone can reach passively and range they can control under load aren't always the same thing, which is where active mobility work earns its place. We dig into that distinction in [Flexibility Is Range. Mobility Is What You Can Do With It](FLEXIBILITY_IS_RANGE_URL).*
+*Editor's note: Konrad and Tilp's finding raises a question worth sitting with. If six weeks of stretching changed tolerance rather than tissue, what does the trainee actually own at the end of that block? Range someone can reach passively and range they can control under load aren't always the same thing, which is where active mobility work earns its place. We dig into that distinction in [Flexibility Is Range. Mobility Is What You Can Do With It](/flexibility-is-range-mobility-is-what-you-can-do-with-it).*
 
 ## About the Author
 
