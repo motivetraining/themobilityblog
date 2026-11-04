@@ -86,7 +86,3 @@ So if you are deciding where to spend your time, the better question is not how 
 ## References
 
 Afonso J, et al. [Strength Training versus Stretching for Improving Range of Motion: A Systematic Review and Meta-Analysis.](https://link.springer.com/article/10.1007/s40279-022-01804-x) *Sports Medicine*, 2023.
-
----
-
-Brian Murray is a mobility coach with sixteen years of experience helping people move better, feel stronger, and train without pain. He's the founder of [Motive Training](https://www.movewithpurpose.com/), a personal training facility in Austin, TX, and the creator of [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here), an online platform focused on joint health and movement longevity. Drawing from Functional Range Conditioning (FRC), WeckMethod, and years of hands-on coaching, Brian's approach bridges the gap between mobility and performance—making complex concepts simple and actionable for anyone who wants to train and **move with purpose**.

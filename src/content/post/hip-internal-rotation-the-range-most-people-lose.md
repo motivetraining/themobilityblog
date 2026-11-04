@@ -54,7 +54,3 @@ This is why internal rotation gets deliberate attention in our programming, rath
 - [Hip Range of Motion: Normal Values, Biomechanics and Clinical Guide](https://orthofixar.com/special-test/hip-range-of-motion-and-biomechanics/)
 - [Alterations in Internal Rotation and Compensatory Injury Patterns Around the Hip, Pelvis, and Lumbar Spine](https://vivo.weill.cornell.edu/display/pubid22392560)
 - [Alizadeh et al. (2023), Resistance training induces improvements in range of motion: a systematic review and meta-analysis, Sports Medicine](https://link.springer.com/article/10.1007/s40279-022-01804-x)
-
----
-
-Brian Murray is a mobility coach with sixteen years of experience helping people move better, feel stronger, and train without pain. He founded Motive Training, a personal training facility in Austin, TX, and created [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here), an online platform focused on joint health and movement longevity. Drawing from Functional Range Conditioning (FRC), WeckMethod, and years of hands-on coaching, Brian's approach bridges the gap between mobility and performance—making complex concepts simple and actionable for anyone who wants to train and **move with purpose**.

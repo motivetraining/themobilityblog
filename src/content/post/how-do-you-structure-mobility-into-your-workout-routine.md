@@ -84,7 +84,3 @@ What Grout is describing is mobility work that has a destination. The client isn
 No single structure works for everyone, and that deserves more than a passing acknowledgment. The five approaches here come from people working in different contexts, with different athletes, toward different goals, and what works for a high school cross-country team at peak mileage won't necessarily map onto a general-population client coming out of physical therapy. The question worth asking isn't which structure to adopt. It's if the structure you're using is actually built around what your body needs, or if you've borrowed someone else's answer to a question you haven't yet figured out how to ask.
 
 What does your training actually require? And is your current approach honest about that?
-
----
-
-Brian Murray is a mobility coach with sixteen years of experience helping people move better, feel stronger, and train without pain. He's the founder of [Motive Training](https://movewithpurpose.com/), a personal training facility in Austin, TX, and the creator of [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here), an online platform focused on joint health and movement longevity. Drawing from Functional Range Conditioning (FRC), WeckMethod, and years of hands-on coaching, Brian's approach bridges the gap between mobility and performance—making complex concepts simple and actionable for anyone who wants to train and **move with purpose**.
