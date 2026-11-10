@@ -9,8 +9,8 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   noindex
 >
   <link rel="stylesheet" href="/pagefind/pagefind-ui.css" />
-  <div class="max-w-wide mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold tracking-tight mb-6">Search</h1>
+  <div class="max-w-wide mx-auto px-4 sm:px-6 py-10 sm:py-14 min-h-[60vh]">
+    <h1 class="text-4xl sm:text-5xl font-bold tracking-tight mb-8">Search</h1>
     <div id="search"></div>
     <noscript>
       <p class="text-slate-600">
@@ -63,12 +63,12 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 
 <style is:global>
   #search {
-    --pagefind-ui-font: "Sora", ui-sans-serif, system-ui, sans-serif;
+    --pagefind-ui-font: "Sora Variable", "Sora", ui-sans-serif, system-ui, sans-serif;
     --pagefind-ui-primary: #0f766e;
     --pagefind-ui-text: #0f172a;
     --pagefind-ui-border: #cbd5e1;
     --pagefind-ui-tag: #f1f5f9;
-    --pagefind-ui-border-radius: 8px;
+    --pagefind-ui-border-radius: 12px;
     --pagefind-ui-image-border-radius: 6px;
     --pagefind-ui-image-box-ratio: 16 / 9;
   }

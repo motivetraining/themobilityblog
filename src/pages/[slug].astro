@@ -5,7 +5,10 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
 import TopicLinks from "@/components/TopicLinks.astro";
 import Breadcrumbs from "@/components/Breadcrumbs.astro";
 import AuthorBox from "@/components/AuthorBox.astro";
+import PostCard from "@/components/PostCard.astro";
+import TableOfContents from "@/components/TableOfContents.astro";
 import { TOPICS } from "@/lib/topics";
+import { readingMinutes, wordCount, formatDate } from "@/lib/reading-time";
 
 export async function getStaticPaths() {
   const posts = await getCollection("post", ({ data }) => data.published);
@@ -16,7 +19,7 @@ export async function getStaticPaths() {
 }
 
 const { post, allPosts } = Astro.props;
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 const site = "https://www.themobilityblog.com";
 const canonical = `${site}/${post.id}`;
 const pageTitle = `${post.data.metaTitle ?? post.data.title} | The Mobility Blog`;
@@ -25,13 +28,12 @@ const modified = post.data.dateModified ?? post.data.date;
 // Brian's byline links to the on-site author page, which carries his Person
 // schema; guest authors link wherever their frontmatter says.
 const isBrian = post.data.author === "Brian Murray";
-const authorUrl = post.data.authorUrl ?? (isBrian ? `${site}/about` : undefined);
+const authorUrl = post.data.authorUrl ?? (isBrian ? "/about" : undefined);
 
 // Show the updated date only when the revision is a real one, not the same-day
 // save WordPress stamped on most imports.
 const showUpdated = modified.valueOf() - post.data.date.valueOf() > 7 * 24 * 60 * 60 * 1000;
-const formatDate = (d: Date) =>
-  d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
+const minutes = readingMinutes(post.body);
 
 // Related posts: most shared topic tags first, then newest. Every post links
 // to three others, so no post is an orphan in Google's crawl of the site.
@@ -61,6 +63,9 @@ const jsonLd = {
   datePublished: post.data.date.toISOString(),
   dateModified: modified.toISOString(),
   ...(imageUrl && { image: imageUrl }),
+  inLanguage: "en-US",
+  wordCount: wordCount(post.body),
+  timeRequired: `PT${minutes}M`,
   ...(post.data.categories.length > 0 && { articleSection: post.data.categories[0] }),
   ...(post.data.tags.length > 0 && { keywords: post.data.tags.map((t) => TOPICS[t].label) }),
   author: isBrian
@@ -68,7 +73,7 @@ const jsonLd = {
     : {
         "@type": "Person",
         name: post.data.author,
-        ...(authorUrl && { url: authorUrl }),
+        ...(post.data.authorUrl && { url: post.data.authorUrl }),
       },
   publisher: {
     "@type": "Organization",
@@ -85,85 +90,89 @@ const jsonLd = {
   description={post.data.description}
   canonical={canonical}
   image={post.data.featuredImage}
+  imageAlt={post.data.imageAlt ?? post.data.title}
   type="article"
   publishedTime={post.data.date}
   modifiedTime={modified}
+  progress
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  <article class="max-w-wide mx-auto px-4 py-12" data-pagefind-body>
+  <article data-pagefind-body>
     {/* Search index metadata: topic filters and the result thumbnail. */}
     {post.data.tags.map((t) => <span hidden data-pagefind-filter={`topic:${TOPICS[t].label}`} />)}
     {post.data.featuredImage && <span hidden data-pagefind-meta={`image:${post.data.featuredImage}`} />}
-    <Breadcrumbs crumbs={crumbs} />
-    <h1 class="text-4xl font-bold tracking-tight mb-3">{post.data.title}</h1>
-    <p class="text-sm text-slate-500" data-pagefind-ignore>
-      By {authorUrl ? <a href={authorUrl} class="underline decoration-1 underline-offset-2 hover:text-slate-700">{post.data.author}</a> : post.data.author}
-      <span aria-hidden="true"> · </span>
-      <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+
+    <header class="hero-band">
+      <div class="max-w-wide mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-32 sm:pb-48">
+        <Breadcrumbs crumbs={crumbs} hideCurrent />
+        <h1 class="max-w-4xl text-3xl sm:text-5xl font-bold tracking-tight leading-[1.1] text-balance">
+          {post.data.title}
+        </h1>
+        <p class="mt-5 text-sm text-slate-600" data-pagefind-ignore>
+          By {authorUrl ? <a href={authorUrl} class="font-semibold text-slate-900 underline decoration-slate-300 decoration-1 underline-offset-4 hover:text-teal-700 hover:decoration-teal-700">{post.data.author}</a> : <span class="font-semibold text-slate-900">{post.data.author}</span>}
+          <span aria-hidden="true"> · </span>
+          <time datetime={post.data.date.toISOString()}>{formatDate(post.data.date)}</time>
+          {
+            showUpdated && (
+              <>
+                <span aria-hidden="true"> · </span>
+                Updated <time datetime={modified.toISOString()}>{formatDate(modified)}</time>
+              </>
+            )
+          }
+          <span aria-hidden="true"> · </span>
+          {minutes} min read
+        </p>
+        <TopicLinks tags={post.data.tags} class="mt-5 [&_a]:bg-white [&_a]:ring-1 [&_a]:ring-slate-200" />
+      </div>
+    </header>
+
+    <div class="max-w-wide mx-auto px-4 sm:px-6">
+      {/* The featured image straddles the header band and the page. */}
       {
-        showUpdated && (
-          <>
-            <span aria-hidden="true"> · </span>
-            Updated <time datetime={modified.toISOString()}>{formatDate(modified)}</time>
-          </>
+        post.data.featuredImage ? (
+          <Image
+            src={post.data.featuredImage}
+            alt={post.data.imageAlt ?? post.data.title}
+            width={1600}
+            height={900}
+            quality={75}
+            widths={[640, 800, 1200, 1600]}
+            sizes="(min-width: 1120px) 1072px, calc(100vw - 32px)"
+            loading="eager"
+            fetchpriority="high"
+            decoding="async"
+            class="-mt-24 sm:-mt-36 w-full aspect-[16/9] object-cover rounded-2xl shadow-xl ring-1 ring-slate-900/10 bg-slate-100"
+          />
+        ) : (
+          <div class="-mt-24 sm:-mt-36" />
         )
       }
-    </p>
-    <TopicLinks tags={post.data.tags} class="mt-4" />
-    <hr class="border-slate-900 mt-6 mb-8" />
-    {
-      post.data.featuredImage && (
-        <Image
-          src={post.data.featuredImage}
-          alt={post.data.imageAlt ?? post.data.title}
-          width={1600}
-          height={900}
-          quality={75}
-          widths={[640, 800, 1200, 1600]}
-          sizes="(min-width: 1000px) 968px, calc(100vw - 32px)"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-          class="w-full aspect-[16/9] object-cover rounded-lg mb-8"
-        />
-      )
-    }
-    <div class="prose prose-slate max-w-none">
-      <Content />
+
+      <div class="mt-10 sm:mt-14 grid gap-8 lg:grid-cols-[minmax(0,720px)_minmax(0,1fr)] lg:gap-16">
+        <aside class="lg:order-2">
+          <div class="lg:sticky lg:top-24">
+            <TableOfContents headings={headings} />
+          </div>
+        </aside>
+        <div class="min-w-0">
+          <div class="prose prose-slate sm:prose-lg max-w-none prose-headings:scroll-mt-24 prose-p:leading-[1.8]">
+            <Content />
+          </div>
+          {isBrian && <AuthorBox />}
+        </div>
+      </div>
     </div>
-    {isBrian && <AuthorBox />}
   </article>
 
   {
     related.length > 0 && (
-      <aside aria-labelledby="keep-reading" class="max-w-wide mx-auto px-4">
-        <h2 id="keep-reading" class="text-2xl font-bold tracking-tight border-t border-slate-200 pt-10 mb-6">
+      <aside aria-labelledby="keep-reading" class="max-w-wide mx-auto px-4 sm:px-6 mt-16">
+        <h2 id="keep-reading" class="text-2xl font-bold tracking-tight border-t border-slate-200 pt-12 mb-8">
           Keep Reading
         </h2>
-        <ul class="grid sm:grid-cols-3 gap-8">
-          {related.map((p) => (
-            <li>
-              <a href={`/${p.id}`} class="group block">
-                {p.data.featuredImage && (
-                  <Image
-                    src={p.data.featuredImage}
-                    alt=""
-                    width={800}
-                    height={450}
-                    quality={75}
-                    widths={[400, 640]}
-                    sizes="(min-width: 640px) 300px, calc(100vw - 32px)"
-                    loading="lazy"
-                    decoding="async"
-                    class="w-full aspect-[16/9] object-cover rounded-lg mb-3"
-                  />
-                )}
-                <span class="font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
-                  {p.data.title}
-                </span>
-              </a>
-            </li>
-          ))}
+        <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          {related.map((p) => <PostCard post={p} heading="h3" />)}
         </ul>
       </aside>
     )

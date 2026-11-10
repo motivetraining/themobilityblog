@@ -31,7 +31,7 @@ That’s why posture is worth a closer look.
 
 ## What Poor Posture Really Looks Like
 
-![](/images/posts/Poor-Posture-2.jpg)
+![Side-view illustration of a standing woman with three labeled posture patterns: forward head tilt, excess thoracic flexion, and excess lumbar extension](/images/posts/Poor-Posture-2.jpg)
 
 When most people picture poor posture, they imagine slouching. But the patterns are broader and more predictable:
 
@@ -55,7 +55,7 @@ Posture is not just a slouched spine or rounded shoulders; it’s a cascade of c
 
 Humans are efficient. We always find the path of least resistance.
 
-![](/images/posts/Lumbar-Extension-Lumbar-Flexion-1.jpg)
+![Two side-view illustrations: a man standing with his lower back arched into extension, and the same man seated at a laptop with his spine rounded into flexion](/images/posts/Lumbar-Extension-Lumbar-Flexion-1.jpg)
 
 That’s why people tend to fall into flexion while sitting and extension while standing. The body hangs on joints and passive tissues instead of maintaining active support. It’s not laziness; it’s survival. But over time, this “economy” limits options, and posture gets stuck.
 

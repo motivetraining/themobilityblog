@@ -42,10 +42,16 @@ const personJsonLd = page.id === "about" && {
   canonical={canonical}
 >
   {personJsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(personJsonLd)} />}
-  <article class="max-w-wide mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold tracking-tight mb-8">{page.data.title}</h1>
-    <div class="prose prose-slate max-w-none">
-      <Content />
+  <article>
+    <header class="hero-band border-b border-slate-200/70">
+      <div class="max-w-wide mx-auto px-4 sm:px-6 py-10 sm:py-14">
+        <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">{page.data.title}</h1>
+      </div>
+    </header>
+    <div class="max-w-wide mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <div class="prose prose-slate sm:prose-lg max-w-prose prose-headings:scroll-mt-24 prose-p:leading-[1.8]">
+        <Content />
+      </div>
     </div>
   </article>
 </BaseLayout>

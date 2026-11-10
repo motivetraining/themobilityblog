@@ -16,26 +16,37 @@ const topics = TOPIC_SLUGS.map((slug) => ({
   description="Browse The Mobility Blog by topic: stretching, isometrics, assessment, programming, hips, spine, posture, and more."
   canonical="https://www.themobilityblog.com/topics"
 >
-  <div class="max-w-wide mx-auto px-4 py-12">
-    <h1 class="text-3xl font-bold tracking-tight mb-4">Topics</h1>
-    <p class="text-slate-600 max-w-content mb-10">
-      Every post is tagged with the topics it covers. Pick one to see everything we've written on it,
-      or <a href="/search" class="text-teal-700 underline decoration-1 underline-offset-2 hover:text-teal-800">search the site</a>.
-    </p>
-    <ul class="grid sm:grid-cols-2 gap-6">
+  <section class="hero-band border-b border-slate-200/70">
+    <div class="max-w-wide mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">Topics</h1>
+      <p class="mt-4 text-lg text-slate-600 max-w-content">
+        Every post is tagged with the topics it covers. Pick one to see everything we've written on it,
+        or <a href="/search" class="text-teal-700 underline decoration-1 underline-offset-2 hover:text-teal-800">search the site</a>.
+      </p>
+    </div>
+  </section>
+  <div class="max-w-wide mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {
         topics.map((t) => (
           <li>
-            <a href={`/topics/${t.slug}`} class="group block rounded-lg border border-slate-200 p-5 h-full hover:border-teal-700">
+            <a
+              href={`/topics/${t.slug}`}
+              class="group relative block h-full overflow-hidden rounded-2xl bg-white p-6 ring-1 ring-slate-200 transition duration-300 hover:-translate-y-0.5 hover:shadow-lg hover:ring-teal-700/40"
+            >
+              <span
+                aria-hidden="true"
+                class="absolute inset-x-0 top-0 h-1 origin-left scale-x-0 bg-gradient-to-r from-purple-400 via-sky-400 to-emerald-400 transition-transform duration-300 group-hover:scale-x-100"
+              />
               <span class="flex items-baseline justify-between gap-4">
-                <span class="text-lg font-semibold text-teal-700 underline decoration-1 underline-offset-2 group-hover:text-teal-800">
+                <span class="text-lg font-semibold tracking-tight text-slate-900 transition-colors group-hover:text-teal-700">
                   {t.label}
                 </span>
-                <span class="text-sm text-slate-500 whitespace-nowrap">
+                <span class="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-medium text-slate-600 whitespace-nowrap">
                   {t.count} {t.count === 1 ? "post" : "posts"}
                 </span>
               </span>
-              <span class="block mt-2 text-sm text-slate-600">{t.description}</span>
+              <span class="block mt-2 text-sm leading-relaxed text-slate-600">{t.description}</span>
             </a>
           </li>
         ))

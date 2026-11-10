@@ -4,11 +4,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Sora", "ui-sans-serif", "system-ui", "sans-serif"],
+        sans: ["Sora Variable", "Sora", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       maxWidth: {
         content: "620px",
-        wide: "1000px",
+        prose: "720px",
+        wide: "1120px",
       },
       typography: {
         DEFAULT: {

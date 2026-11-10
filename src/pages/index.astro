@@ -1,33 +1,137 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import PostCard from "@/components/PostCard.astro";
+import TopicLinks from "@/components/TopicLinks.astro";
+import { TOPICS, TOPIC_SLUGS } from "@/lib/topics";
+import { readingMinutes, formatShortDate } from "@/lib/reading-time";
 
+const site = "https://www.themobilityblog.com";
 const posts = (await getCollection("post", ({ data }) => data.published)).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
 );
+const [latest, ...rest] = posts;
+const topics = TOPIC_SLUGS.filter((slug) => posts.some((p) => p.data.tags.includes(slug)));
+
+// Tells search engines the home page is the blog's index and which posts it lists.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  name: "The Mobility Blog",
+  url: site,
+  description:
+    "Practical, evidence-informed writing on mobility, stretching, and joint health from coaches who teach it.",
+  blogPost: posts.map((p) => ({
+    "@type": "BlogPosting",
+    headline: p.data.title,
+    url: `${site}/${p.id}`,
+    datePublished: p.data.date.toISOString(),
+  })),
+};
 ---
 
 <BaseLayout
   title="The Mobility Blog | Mobility, Stretching & Movement Coaching"
   description="Practical, evidence-informed writing on mobility, stretching, and joint health from coaches who teach it: what works, why it works, and how to train it."
-  canonical="https://www.themobilityblog.com"
+  canonical={site}
 >
-  <div class="max-w-wide mx-auto px-4 py-12">
-    <div class="max-w-content mb-12">
-      <h1 class="text-3xl font-bold tracking-tight mb-4">The Mobility Blog</h1>
-      <p class="text-slate-600">
-        A place for mobility coaches to share what works, and <em>why</em> it works.
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+  <section class="hero-band border-b border-slate-200/70">
+    <div class="max-w-wide mx-auto px-4 sm:px-6 py-14 sm:py-20">
+      <h1 class="text-sm font-semibold uppercase tracking-[0.18em] text-teal-700">The Mobility Blog</h1>
+      <p class="mt-4 max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08] text-balance">
+        A place for mobility coaches to share what works, and
+        <em class="text-brand-gradient not-italic">why</em> it works.
       </p>
-      <p class="text-slate-600 mt-4">
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
         Some posts are technical, some are philosophical, but the goal stays the same: help you
         build better joint options, think more clearly about movement, and train with more
         intention.
       </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a
+          href="/what-is-mobility"
+          class="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-teal-700"
+        >
+          Start Here: What Is Mobility?
+        </a>
+        <a
+          href="/topics"
+          class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-300 transition-colors hover:ring-teal-700 hover:text-teal-700"
+        >
+          Browse Topics
+        </a>
+      </div>
     </div>
+  </section>
 
-    <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-12">
-      {posts.map((post, i) => <PostCard post={post} eager={i < 2} />)}
-    </ul>
+  <div class="max-w-wide mx-auto px-4 sm:px-6">
+    {/* Newest post, given the room to carry the page. */}
+    <section aria-labelledby="latest-heading" class="py-12 sm:py-16">
+      <a href={`/${latest.id}`} class="group grid gap-6 lg:grid-cols-[1.25fr_1fr] lg:gap-12 items-center">
+        {
+          latest.data.featuredImage && (
+            <div class="card-image !rounded-2xl">
+              <Image
+                src={latest.data.featuredImage}
+                alt=""
+                width={1200}
+                height={675}
+                quality={75}
+                widths={[400, 640, 800, 1200]}
+                sizes="(min-width: 1120px) 600px, (min-width: 1024px) 55vw, calc(100vw - 32px)"
+                loading="eager"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+          )
+        }
+        <div>
+          <p class="flex items-center gap-3 text-xs font-medium text-slate-500">
+            <span id="latest-heading" class="rounded-full bg-teal-700 px-3 py-1 font-semibold uppercase tracking-wider text-white">
+              Latest
+            </span>
+            <span>
+              <time datetime={latest.data.date.toISOString()}>{formatShortDate(latest.data.date)}</time>
+              <span aria-hidden="true"> · </span>
+              {readingMinutes(latest.body)} min read
+            </span>
+          </p>
+          <h2 class="mt-4 text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight leading-tight text-balance transition-colors group-hover:text-teal-700">
+            {latest.data.title}
+          </h2>
+          <p class="mt-4 text-base leading-relaxed text-slate-600">{latest.data.description}</p>
+          <p class="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-teal-700">
+            Read the post
+            <span aria-hidden="true" class="transition-transform group-hover:translate-x-1">→</span>
+          </p>
+        </div>
+      </a>
+      <TopicLinks tags={latest.data.tags} class="mt-5 lg:hidden" />
+    </section>
+
+    <nav aria-label="Topics" class="border-y border-slate-200 py-5 flex flex-wrap items-center gap-x-2 gap-y-2.5">
+      <span class="mr-2 text-sm font-semibold text-slate-900">Browse by topic</span>
+      {
+        topics.map((slug) => (
+          <a
+            href={`/topics/${slug}`}
+            class="rounded-full bg-slate-100 px-3.5 py-1.5 text-sm font-medium text-slate-700 transition-colors hover:bg-teal-700 hover:text-white"
+          >
+            {TOPICS[slug].label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <section aria-labelledby="all-posts" class="pt-12 sm:pt-16">
+      <h2 id="all-posts" class="text-2xl font-bold tracking-tight mb-8">More Posts</h2>
+      <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+        {rest.map((post) => <PostCard post={post} heading="h3" />)}
+      </ul>
+    </section>
   </div>
 </BaseLayout>

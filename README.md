@@ -79,6 +79,12 @@ Vercel's image optimizer (configured in `astro.config.mjs`), which converts
 them to AVIF/WebP at the width each layout needs, so the 1600px JPG is only
 the source.
 
+Images inside a post body (`![alt text](/images/posts/file.jpg)`) get their
+width, height, and lazy loading added at build time (`src/lib/rehype-content.mjs`),
+so the text doesn't jump as they load. Always write the alt text: it's what
+screen readers and image search read. Tables in a post are wrapped so they
+scroll sideways on a phone.
+
 ### Links to Motive Training
 
 Every link to movewithpurpose.com gets UTM parameters at build time
@@ -108,6 +114,21 @@ always capitalize the first and last word of the heading regardless of
 length — a 4+ letter word like "from," "with," or "into" is capitalized
 even mid-heading. Example: "Where the Restriction Actually Comes From,"
 not "Where the restriction actually comes from."
+
+## Design
+
+- **Font:** Sora, served from this site (`@fontsource-variable/sora`) and
+  preloaded in `src/layouts/BaseLayout.astro`. There is no request to Google
+  Fonts.
+- **Shared styles** live in `src/styles/global.css`: the tinted header band
+  (`.hero-band`), the gradient text (`.text-brand-gradient`), card hover
+  (`.card-image`), long-form copy (`.prose` overrides), and the reading
+  progress bar on posts.
+- **Post pages** show a reading time, a progress bar, and an "In This Post"
+  list built from the post's `##` headings (posts with three or more).
+- **Images in `public/`:** `logo-mark.png` (header logo and favicon, cropped
+  from `apple-touch-icon.png`) and `og-default.jpg` (1200×630 share image for
+  pages without a featured image: home, topics, About).
 
 ## Planned posts
 

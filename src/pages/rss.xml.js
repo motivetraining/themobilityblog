@@ -9,6 +9,7 @@ export async function GET(context) {
     title: "The Mobility Blog",
     description: "A place for mobility coaches to share what works, and why it works.",
     site: context.site,
+    customData: "<language>en-us</language>",
     items: posts.map((post) => ({
       title: post.data.title,
       description: post.data.description,
