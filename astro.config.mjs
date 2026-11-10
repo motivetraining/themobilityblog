@@ -7,6 +7,7 @@ import sitemap from "@astrojs/sitemap";
 import vercel from "@astrojs/vercel";
 import * as pagefind from "pagefind";
 import { rehypeMotiveUtm } from "./src/lib/utm.mjs";
+import { rehypeContent } from "./src/lib/rehype-content.mjs";
 
 // The sitemap reads each page's own built HTML, so it can't drift from what
 // the page says about itself:
@@ -69,8 +70,14 @@ export default defineConfig({
   image: {
     responsiveStyles: false,
   },
+  // Starts fetching a page when a link is hovered or touched, so the click
+  // that follows lands on HTML that's already downloaded.
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: "hover",
+  },
   markdown: {
-    rehypePlugins: [rehypeMotiveUtm],
+    rehypePlugins: [rehypeMotiveUtm, rehypeContent],
   },
   integrations: [tailwind({ applyBaseStyles: false }), mdx(), sitemap(sitemapOptions), searchIndex()],
 });

@@ -1,9 +1,7 @@
 ---
 title: What We Mean When We Say Tight
 metaTitle: What We Mean When We Say Tight
-description: 'Written for coaches: tight, passive, activation, and weak are some of
-  the least precise words in mobility, and each one quietly carries a theory about
-  what''s wrong. A case for getting the language right.'
+description: "Tight, passive, activation, weak: the least precise words in mobility each carry a theory about what's wrong. A coach's case for getting the language right."
 date: '2026-10-29T12:00:00Z'
 featuredImage: /images/posts/what-we-mean-when-we-say-tight.jpg
 imageAlt: Illustration of a seated figure folding forward over straight legs in a

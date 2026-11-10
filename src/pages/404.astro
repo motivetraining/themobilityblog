@@ -8,13 +8,24 @@ import BaseLayout from "@/layouts/BaseLayout.astro";
   canonical="https://www.themobilityblog.com/404"
   noindex
 >
-  <div class="max-w-content mx-auto px-4 py-24 text-center">
-    <h1 class="text-3xl font-bold tracking-tight mb-4">Page Not Found</h1>
-    <p class="text-slate-600 mb-8">
-      The page you're looking for doesn't exist or may have moved.
-    </p>
-    <a href="/" class="text-teal-700 underline decoration-1 underline-offset-2 hover:text-teal-800">
-      Back to The Mobility Blog
-    </a>
+  <div class="hero-band">
+    <div class="max-w-content mx-auto px-4 py-24 sm:py-32 text-center">
+      <p class="text-brand-gradient text-7xl sm:text-8xl font-bold tracking-tight">404</p>
+      <h1 class="mt-4 text-3xl font-bold tracking-tight">Page Not Found</h1>
+      <p class="mt-4 text-slate-600">
+        The page you're looking for doesn't exist or may have moved.
+      </p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <a href="/" class="rounded-full bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-teal-700">
+          Back to The Mobility Blog
+        </a>
+        <a href="/search" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-300 transition-colors hover:text-teal-700 hover:ring-teal-700">
+          Search the Site
+        </a>
+        <a href="/topics" class="rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-300 transition-colors hover:text-teal-700 hover:ring-teal-700">
+          Browse Topics
+        </a>
+      </div>
+    </div>
   </div>
 </BaseLayout>

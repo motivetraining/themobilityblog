@@ -8,8 +8,12 @@ interface Crumb {
 }
 interface Props {
   crumbs: Crumb[];
+  /** Leave the current page out of the visible trail (it stays in the
+   *  structured data). For posts, where the H1 directly below repeats it. */
+  hideCurrent?: boolean;
 }
-const { crumbs } = Astro.props;
+const { crumbs, hideCurrent = false } = Astro.props;
+const visible = hideCurrent ? crumbs.slice(0, -1) : crumbs;
 const site = "https://www.themobilityblog.com";
 const jsonLd = {
   "@context": "https://schema.org",
@@ -27,11 +31,11 @@ const jsonLd = {
 <nav aria-label="Breadcrumb" class="text-sm text-slate-500 mb-4" data-pagefind-ignore>
   <ol class="flex flex-wrap items-center gap-x-2 gap-y-1">
     {
-      crumbs.map((c, i) => (
+      visible.map((c, i) => (
         <li class="flex items-center gap-x-2">
           {i > 0 && <span aria-hidden="true">›</span>}
-          {i < crumbs.length - 1 ? (
-            <a href={c.href} class="underline decoration-1 underline-offset-2 hover:text-slate-700">
+          {hideCurrent || i < crumbs.length - 1 ? (
+            <a href={c.href} class="font-medium hover:text-teal-700">
               {c.name}
             </a>
           ) : (

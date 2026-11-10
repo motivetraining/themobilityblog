@@ -66,26 +66,33 @@ const jsonLd = {
   noindex={posts.length < MIN_INDEXABLE_TOPIC_POSTS}
 >
   <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
-  <div class="max-w-wide mx-auto px-4 py-12">
-    <Breadcrumbs
-      crumbs={[
-        { name: "Home", href: "/" },
-        { name: "Topics", href: "/topics" },
-        { name: label, href: `/topics/${topic}` },
-      ]}
-    />
-    <h1 class="text-3xl font-bold tracking-tight mb-4">{label}</h1>
-    {
-      Intro ? (
-        <div class="prose prose-slate max-w-content mb-12">
-          <Intro />
-        </div>
-      ) : (
-        <p class="text-slate-600 max-w-content mb-12">{description}</p>
-      )
-    }
-    <ul class="grid sm:grid-cols-2 gap-x-8 gap-y-12">
-      {posts.map((post, i) => <PostCard post={post} eager={i < 2} />)}
+  <section class="hero-band border-b border-slate-200/70">
+    <div class="max-w-wide mx-auto px-4 sm:px-6 py-10 sm:py-14">
+      <Breadcrumbs
+        crumbs={[
+          { name: "Home", href: "/" },
+          { name: "Topics", href: "/topics" },
+          { name: label, href: `/topics/${topic}` },
+        ]}
+      />
+      <h1 class="text-4xl sm:text-5xl font-bold tracking-tight">{label}</h1>
+      {
+        Intro ? (
+          <div class="prose prose-slate max-w-content mt-5">
+            <Intro />
+          </div>
+        ) : (
+          <p class="mt-4 text-lg text-slate-600 max-w-content">{description}</p>
+        )
+      }
+      <p class="mt-6 text-sm font-medium text-slate-500">
+        {posts.length} {posts.length === 1 ? "post" : "posts"}
+      </p>
+    </div>
+  </section>
+  <div class="max-w-wide mx-auto px-4 sm:px-6 py-12 sm:py-16">
+    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+      {posts.map((post, i) => <PostCard post={post} eager={i < 3} />)}
     </ul>
   </div>
 </BaseLayout>

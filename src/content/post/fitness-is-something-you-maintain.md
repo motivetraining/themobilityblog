@@ -1,7 +1,7 @@
 ---
 title: "Fitness Is Something You Maintain"
 metaTitle: "Fitness Is Something You Maintain"
-description: "Most of how we talk about fitness treats it as an activity with a start and end date. A coach's case for treating it as a set of capacities you either keep or lose, and what that changes about training."
+description: "Fitness isn't an activity with a start and end date. A coach's case for treating it as capacities you either keep or lose, and what that changes in training."
 date: "2026-10-26T12:00:00Z"
 featuredImage: "/images/posts/fitness-is-something-you-maintain.jpg"
 imageAlt: "Illustration of a translucent javelin thrower mid-stride with the spine, shoulders, hips, knees, and ankles glowing orange inside swirling rings of light"

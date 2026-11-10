@@ -1,0 +1,48 @@
+---
+// Google Analytics (GA4) for the blog's own property, plus a click event on
+// links to Motive Training so each post's click-throughs can be counted.
+//
+// Only the live site reports: local dev and Vercel preview deployments are
+// left out so test visits don't end up in the numbers.
+//
+// Events sent on a click to movewithpurpose.com:
+//   kso_click     the link goes to KINSTRETCH Online
+//   motive_click  any other Motive Training link
+// Both carry link_url, placement (nav, footer, post, page, author-box) and
+// link_content (the post slug or nav item), read from the link's UTM tags.
+const GA_ID = "G-7HYBQPSC9S";
+const enabled = import.meta.env.PROD && process.env.VERCEL_ENV !== "preview";
+---
+
+{
+  enabled && (
+    <>
+      <script is:inline async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
+      <script is:inline define:vars={{ GA_ID }}>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+          dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", GA_ID);
+
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest && e.target.closest("a[href]");
+          if (!a) return;
+          var url;
+          try {
+            url = new URL(a.href);
+          } catch (_) {
+            return;
+          }
+          if (!/(^|\.)movewithpurpose\.com$/.test(url.hostname)) return;
+          gtag("event", /kinstretch-online/.test(url.pathname) ? "kso_click" : "motive_click", {
+            link_url: url.origin + url.pathname,
+            placement: url.searchParams.get("utm_medium") || "",
+            link_content: url.searchParams.get("utm_content") || "",
+          });
+        });
+      </script>
+    </>
+  )
+}

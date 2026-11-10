@@ -1,0 +1,40 @@
+---
+// "In This Post" jump links, built from the post's H2 headings. On desktop it
+// sits beside the article and stays in view; on phones it's a collapsed
+// disclosure above the text so it doesn't push the first paragraph down.
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+}
+const items = Astro.props.headings.filter((h) => h.depth === 2);
+---
+
+{
+  items.length >= 3 && (
+    <details class="toc group/toc rounded-xl border border-slate-200 bg-slate-50/70 lg:border-0 lg:bg-transparent" data-pagefind-ignore>
+      <summary class="list-none [&::-webkit-details-marker]:hidden cursor-pointer px-4 py-3 lg:p-0 lg:mb-3 flex items-center justify-between text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">
+        In This Post
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="w-4 h-4 transition-transform group-open/toc:rotate-180">
+          <path d="M5 8l5 5 5-5" />
+        </svg>
+      </summary>
+      <nav aria-label="In this post" class="px-4 pb-4 lg:p-0">
+        <ol class="space-y-2.5 border-l border-slate-200 text-sm leading-snug">
+          {items.map((h) => (
+            <li>
+              <a href={`#${h.slug}`} class="-ml-px block border-l border-transparent pl-4 text-slate-600 transition-colors hover:border-teal-700 hover:text-teal-700">
+                {h.text}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </nav>
+    </details>
+    <script is:inline>
+      // Open by default where it sits in the sidebar; collapsed on phones.
+      (function () {
+        var toc = document.querySelector("details.toc");
+        if (toc && window.matchMedia("(min-width: 1024px)").matches) toc.open = true;
+      })();
+    </script>
+  )
+}
