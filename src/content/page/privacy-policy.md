@@ -1,21 +1,27 @@
 ---
 title: "Privacy Policy"
-description: "How The Mobility Blog handles visitor data: no analytics or tracking scripts, no tracking cookies, no ads, and no selling of visitor information."
+description: "How The Mobility Blog handles visitor data: what Google Analytics collects, which cookies it sets, how to opt out, and what we never do (ads, selling data)."
 ---
 
-Last updated: October 2026
+Last updated: November 2026
 
 This policy explains what information The Mobility Blog collects from visitors and how it's used.
 
 ## What We Collect
 
-This site does not run analytics or tracking scripts. Like any website, it is served by a hosting provider (Vercel), whose servers handle standard technical request data, such as your IP address and browser type, to deliver pages and keep the service secure.
+Like any website, this site is served by a hosting provider (Vercel), whose servers handle standard technical request data, such as your IP address and browser type, to deliver pages and keep the service secure.
 
-Pages load the Sora typeface from Google Fonts, so your browser requests font files from Google's servers, which receive your IP address as part of that request.
+We use Google Analytics to understand how people find and use the site: which pages are read, roughly where visitors are located (country and city, not street address), what kind of device and browser they use, and which site or search referred them. We also record when a visitor clicks a link from this site to Motive Training, so we can see which posts readers find useful enough to follow up on. Google Analytics does not give us your name, email address, or full IP address.
+
+To do this, Google Analytics sets cookies in your browser (named `_ga` and `_ga_` followed by an ID) that tell a returning visitor from a new one. They last up to two years. Google processes this data on our behalf; see [how Google uses information from sites that use its services](https://policies.google.com/technologies/partner-sites).
+
+You can opt out by installing the [Google Analytics Opt-out Browser Add-on](https://tools.google.com/dlpage/gaoptout), by blocking cookies for this site in your browser settings, or by using a content blocker. The site works the same either way.
 
 We use Google Search Console to see which search queries bring people to the site. That data is aggregated by Google and doesn't identify individual visitors.
 
-We do not use tracking cookies, run ads, or sell visitor data.
+The site's fonts are served from this site, so reading a page makes no request to Google Fonts.
+
+We do not run ads or sell visitor data.
 
 ## Contact Forms and Email
 
@@ -23,7 +29,7 @@ If you email us directly (for example, through the [Write With Us](/write-with-u
 
 ## External Links
 
-Posts on this site sometimes link to external sites, including [Motive Training](https://www.movewithpurpose.com/) and the Motive Mobility community on Circle. Those sites have their own privacy practices, which this policy doesn't cover.
+Posts on this site sometimes link to external sites, including [Motive Training](https://www.movewithpurpose.com/) and the Motive Mobility community on Circle. Links to Motive Training carry tags in the address (for example `utm_source=themobilityblog`) that tell Motive Training the visit came from this blog and from which page. Those sites have their own privacy practices, which this policy doesn't cover.
 
 ## Changes to This Policy
 

@@ -96,6 +96,16 @@ automatically, and a link that already has `utm_source` is left alone. The
 header's KINSTRETCH Online link points at
 `movewithpurpose.com/kinstretch-online`, the program's sales page.
 
+### Analytics
+
+Google Analytics (GA4, the blog's own property) is loaded by
+`src/components/Analytics.astro`. It reports only from the live site, not from
+local dev or Vercel preview deployments. A click on any movewithpurpose.com
+link sends a `kso_click` event (KINSTRETCH Online links) or `motive_click`
+event (everything else), with `placement` and `link_content` taken from the
+link's UTM tags. To report on those two fields in GA, register them as
+event-scoped custom dimensions (Admin → Custom definitions).
+
 ### Sitemap
 
 `/sitemap-index.xml` is generated from the built pages. Pages marked

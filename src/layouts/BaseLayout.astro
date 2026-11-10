@@ -4,6 +4,7 @@ import "@/styles/global.css";
 // The Latin subset of Sora, preloaded so text renders in the right font on
 // first paint. The font is served from this site (no request to Google Fonts).
 import soraLatin from "@fontsource-variable/sora/files/sora-latin-wght-normal.woff2?url";
+import Analytics from "@/components/Analytics.astro";
 import { withUtm } from "@/lib/utm.mjs";
 import { TOPICS } from "@/lib/topics";
 
@@ -106,6 +107,7 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
         },
       })}
     />
+    <Analytics />
   </head>
   <body class="min-h-screen bg-white text-slate-900 flex flex-col font-sans">
     <a
