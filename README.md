@@ -106,6 +106,15 @@ event (everything else), with `placement` and `link_content` taken from the
 link's UTM tags. To report on those two fields in GA, register them as
 event-scoped custom dimensions (Admin → Custom definitions).
 
+### Search Console Audit
+
+`bun run audit:gsc` (add `-- --json` for everything) prints what people
+searched to find the blog over the last 28 and 90 days, which pages they
+landed on, and the prior 28 days for comparison. The monthly topic-plan
+routine reads it. It needs `GSC_SERVICE_ACCOUNT_KEY` in the environment, and
+that service account must be a user on the `themobilityblog.com` Search
+Console property (Settings → Users and permissions).
+
 ### Sitemap
 
 `/sitemap-index.xml` is generated from the built pages. Pages marked

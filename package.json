@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "audit:gsc": "NODE_USE_ENV_PROXY=1 node scripts/audit-gsc.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "^4.0.5",
