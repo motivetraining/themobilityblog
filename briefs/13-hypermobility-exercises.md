@@ -8,24 +8,23 @@
 | Description (draft) | Hypermobility exercises that build strength and control in the range you already have: what to train, how to progress load, and when to see a clinician. |
 | Category | Mobility |
 | Tags | `pain-and-hypermobility`, `programming` |
-| Author | Brian, or a physical therapist guest (see below) |
+| Author | Brian (not a guest post) |
 | Length | 1,700 to 2,100 words |
 
 Chosen from the November 2026 topic plan (Search Console plus Mangools).
 
-## Before Writing: Two Decisions for Brian
+## Before Writing
 
-1. **Who writes it.** This topic sits close to clinical territory. It suits a
-   physical therapist guest, with their credentials in the byline. If Brian
-   writes it, it stays a coach's post about training, and every statement
-   about diagnosis or symptoms is sourced and brief.
-2. **Overlap with Motive's site.**
-   `https://www.movewithpurpose.com/hypermobility-and-mobility-training`
-   covers nearby ground. Brian chose on 2026-11-12 to write this topic for
-   The Mobility Blog. Keep the two apart: this post owns the exercises
-   search and is written for a national reader; Motive's page stays about
-   how Motive trains hypermobile clients. Link to it once. Do not reuse its
-   wording.
+- **Author.** Brian writes this one (decided 2026-11-12). The topic sits
+  close to clinical territory, so it stays a coach's post about training:
+  every statement about diagnosis or symptoms is sourced and brief.
+- **Overlap with Motive's site.**
+  `https://www.movewithpurpose.com/hypermobility-and-mobility-training`
+  covers nearby ground. Brian chose on 2026-11-12 to write this topic for
+  The Mobility Blog. Keep the two apart: this post owns the exercises
+  search and is written for a national reader; Motive's page stays about
+  how Motive trains hypermobile clients. Link to it once. Do not reuse its
+  wording.
 
 ## Keywords
 
@@ -151,7 +150,7 @@ support.
 
 [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online) once,
 framed as guided control work, in "What to Build Instead" or the wrap-up.
-Use this page, not the circle.so link, so the click is counted in analytics.
+This is the sign-up link every post uses (see `briefs/README.md`).
 
 ## Queue-Ready Frontmatter
 
@@ -170,7 +169,6 @@ description: "Hypermobility exercises that build strength and control in the ran
 date: "2026-11-20T12:00:00Z"
 featuredImage: "/images/posts/hypermobility-exercises.jpg"
 imageAlt: "(describe the image you attach, e.g. Illustration of a figure holding a controlled single-leg stance with the knee and hip joints highlighted)"
-# Guest post only: add  author: "Name, Credentials"  and optionally  authorUrl: "https://..."
 categories:
   - "Mobility"
 tags:

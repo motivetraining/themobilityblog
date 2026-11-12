@@ -136,8 +136,8 @@ live.
 ## CTA
 
 [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online) once,
-in the PAILs and RAILs section. Use this page, not the circle.so link, so the
-click is counted in analytics.
+in the PAILs and RAILs section. This is the sign-up link every post uses (see
+`briefs/README.md`).
 
 ## Queue-Ready Frontmatter
 

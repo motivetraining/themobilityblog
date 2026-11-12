@@ -238,7 +238,10 @@ planned slug.
 
 At most one or two, placed where they help rather than as a sign-off:
 
-- [Motive Mobility / KINSTRETCH Online](https://motive-mobility.circle.so/c/welcome-start-here): Brian's online classes.
+- [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online):
+  Brian's online classes, and the sign-up link for every post. Don't link
+  the Circle community (motive-mobility.circle.so) instead: only clicks to
+  movewithpurpose.com are counted in Google Analytics (`kso_click`).
 - [Motive Training](https://www.movewithpurpose.com/): the sponsor, in-person training in Austin.
 - Motive's deeper guides, when the post touches them:
   [PAILs and RAILs](https://www.movewithpurpose.com/pails-rails),

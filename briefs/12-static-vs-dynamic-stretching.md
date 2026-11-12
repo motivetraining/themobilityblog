@@ -133,8 +133,8 @@ once live.
 ## CTA
 
 [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online) once,
-in "What Neither One Does". Use this page, not the circle.so link, so the
-click is counted in analytics.
+in "What Neither One Does". This is the sign-up link every post uses (see
+`briefs/README.md`).
 
 ## Queue-Ready Frontmatter
 
