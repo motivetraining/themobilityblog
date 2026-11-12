@@ -103,7 +103,7 @@ shoulder CAR briefly and link for the why.
 ## CTA
 
 [Motive's CARs guide](https://www.movewithpurpose.com/controlled-articular-rotations-guide)
-for the CAR setup; [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here)
+for the CAR setup; [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online)
 once.
 
 ## Done When

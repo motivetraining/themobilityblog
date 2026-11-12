@@ -112,7 +112,7 @@ Summarize in two sentences and link.
 ## CTA
 
 One line near "How Mobility Is Trained" pointing to
-[Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here) for
+[KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online) for
 guided classes.
 
 ## Done When

@@ -103,7 +103,7 @@ mentions 90/90), `/what-is-mobility`.
 ## CTA
 
 Motive's [PAILs and RAILs guide](https://www.movewithpurpose.com/pails-rails)
-in the active section; [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here)
+in the active section; [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online)
 once, for guided classes.
 
 ## Done When

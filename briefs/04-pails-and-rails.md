@@ -115,7 +115,7 @@ brief 05, `/what-is-mobility`.
 ## CTA
 
 [Motive's PAILs and RAILs guide](https://www.movewithpurpose.com/pails-rails)
-in "How a Set Works"; [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here)
+in "How a Set Works"; [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online)
 once.
 
 ## Done When
