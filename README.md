@@ -145,9 +145,12 @@ not "Where the restriction actually comes from."
   progress bar on posts.
 - **Post pages** show a reading time, a progress bar, and an "In This Post"
   list built from the post's `##` headings (posts with three or more).
-- **Images in `public/`:** `logo-mark.png` (header logo and favicon, cropped
-  from `apple-touch-icon.png`) and `og-default.jpg` (1200×630 share image for
-  pages without a featured image: home, topics, About).
+- **Images in `public/`:** the logo mark comes from one high-resolution
+  original, cropped to its circle: `logo.png` (header, 144px, transparent
+  outside the circle), `favicon.png` (96px), and `apple-touch-icon.png`
+  (512px on white, also the publisher logo in structured data).
+  `og-default.jpg` is the 1200×630 share image for pages without a featured
+  image (home, topics, About).
 
 ## Planned posts
 
