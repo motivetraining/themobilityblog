@@ -54,8 +54,8 @@ up still learns what Kinstretch is.
 6. **## How Long Before You Notice a Difference.** Honest and general; no
    invented timelines. Link `/why-mobility-doesnt-stick` on frequency.
 7. **## How to Try Kinstretch.** In person: look for certified instructors
-   (verify how to find them). Online: KINSTRETCH Online through
-   [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here),
+   (verify how to find them). Online:
+   [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online),
    with a plain disclosure that it's Brian's program.
 8. **## References**
 
@@ -83,7 +83,7 @@ up still learns what Kinstretch is.
 
 ## CTA
 
-KINSTRETCH Online via [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here),
+[KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online),
 in "How to Try Kinstretch" and once earlier where it fits naturally. This post
 can carry two CTAs; it's the one post where that's appropriate.
 

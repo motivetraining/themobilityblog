@@ -88,7 +88,7 @@ brief 04, `/what-is-mobility`.
 
 ## CTA
 
-[Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here) once.
+[KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online) once.
 
 ## Done When
 

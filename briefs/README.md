@@ -42,6 +42,39 @@ in: a `{slug}.md` and `{slug}.jpg` pair dropped in the queue folder publishes
 the next morning. The same rules apply. The queue's validator rejects a post
 that breaks the voice checks, so run them first either way.
 
+### Drafting in a Claude Chat for the Drive Queue
+
+When the draft is written in a Claude chat that can't see this repo, attach
+three files (the brief, this `README.md`, and `formatting-guide.md`) and
+paste this:
+
+> Write the blog post described in the attached brief for The Mobility Blog.
+> Follow the attached README for voice, structure, and sourcing, and the
+> attached formatting guide for file format.
+>
+> Output one Markdown file, named exactly as the brief's slug with `.md`.
+> Start it with the brief's "Queue-Ready Frontmatter" block, copied exactly;
+> change only `date` to [PUBLISH DATE] and write `imageAlt` for the image I
+> describe: [IMAGE DESCRIPTION].
+>
+> Rules the publisher rejects a post for: no em dashes, no exclamation
+> points, no bold, no "it's not X, it's Y" sentences, no heading ending in a
+> period, no `#` heading in the body, no typed byline. Every `##` and `###`
+> heading is Title Case. Link to other posts only with relative paths from
+> the formatting guide's list of current posts. Open and read every source
+> before citing it, and drop any claim you can't confirm.
+>
+> Before you give me the file, search your draft for `—`, `!`, and `**`,
+> check every internal link against the list, and tell me the word count and
+> anything from the brief you cut or softened.
+
+Then put the `.md` file and a `.jpg` with the same name in the Drive queue
+folder. Briefs 11 and later include the frontmatter block. For an older
+brief, build it from the brief's table: `featuredImage` is `/images/posts/`
+plus the slug plus `.jpg`, `categories` is one of the four known categories,
+`tags` is one to three slugs from `src/lib/topics.ts`, and `published` is
+`true`.
+
 ## Frontmatter
 
 ```yaml
@@ -205,7 +238,10 @@ planned slug.
 
 At most one or two, placed where they help rather than as a sign-off:
 
-- [Motive Mobility / KINSTRETCH Online](https://motive-mobility.circle.so/c/welcome-start-here): Brian's online classes.
+- [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online):
+  Brian's online classes, and the sign-up link for every post. Don't link
+  the Circle community (motive-mobility.circle.so) instead: only clicks to
+  movewithpurpose.com are counted in Google Analytics (`kso_click`).
 - [Motive Training](https://www.movewithpurpose.com/): the sponsor, in-person training in Austin.
 - Motive's deeper guides, when the post touches them:
   [PAILs and RAILs](https://www.movewithpurpose.com/pails-rails),

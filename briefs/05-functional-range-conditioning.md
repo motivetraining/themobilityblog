@@ -62,7 +62,7 @@ CARs post already set this tone; keep it.
    Link `/what-cars-are-actually-for` where the site made this argument.
 8. **## How to Try It.** Find an FRC-certified coach (verify how the official
    directory works before describing it), or a Kinstretch class, or
-   [Motive Mobility](https://motive-mobility.circle.so/c/welcome-start-here)
+   [KINSTRETCH Online](https://www.movewithpurpose.com/kinstretch-online)
    online.
 9. **## References**
 
