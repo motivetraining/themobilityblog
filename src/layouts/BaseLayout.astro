@@ -60,7 +60,7 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#ffffff" />
+    <meta name="theme-color" content="#0b0f19" />
     <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="preload" href={soraLatin} as="font" type="font/woff2" crossorigin />
@@ -118,10 +118,10 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
     </a>
     {progress && <div class="reading-progress" aria-hidden="true" />}
     <div class="h-1 w-full bg-gradient-to-r from-purple-400 via-sky-400 to-emerald-400"></div>
-    <header class="sticky top-0 z-40 border-b border-slate-200/80 bg-white/85 backdrop-blur-md">
+    <header class="sticky top-0 z-40 border-b border-white/10 bg-[#0b0f19] text-white">
       <div class="max-w-wide mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
         <a href="/" class="group flex items-center gap-2.5 font-bold text-lg tracking-tight">
-          <img src="/logo-joint.png" alt="" width="36" height="36" class="h-9 w-9 transition-transform duration-500 group-hover:-rotate-12" />
+          <img src="/logo-joint-white.png" alt="" width="36" height="36" class="h-9 w-9 transition-transform duration-500 group-hover:-rotate-12" />
           The Mobility Blog
         </a>
 
@@ -132,8 +132,8 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
                 href={l.href}
                 aria-current={isCurrent(l.href) ? "page" : undefined}
                 class:list={[
-                  "rounded-full px-3.5 py-2 transition-colors hover:bg-slate-100 hover:text-slate-900",
-                  isCurrent(l.href) ? "text-teal-700" : "text-slate-600",
+                  "rounded-full px-3.5 py-2 transition-colors hover:bg-white/10 hover:text-white",
+                  isCurrent(l.href) ? "text-teal-300" : "text-slate-300",
                 ]}
               >
                 {l.label}
@@ -144,7 +144,7 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
             href="/search"
             aria-label="Search"
             aria-current={isCurrent("/search") ? "page" : undefined}
-            class="rounded-full p-2.5 text-slate-600 transition-colors hover:bg-slate-100 hover:text-slate-900"
+            class="rounded-full p-2.5 text-slate-300 transition-colors hover:bg-white/10 hover:text-white"
           >
             <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" class="w-[18px] h-[18px]">
               <circle cx="8.5" cy="8.5" r="5.5"></circle>
@@ -153,7 +153,7 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
           </a>
           <a
             href={kinstretch}
-            class="ml-2 rounded-full bg-slate-900 px-4 py-2 text-white shadow-sm transition-colors hover:bg-teal-700"
+            class="ml-2 rounded-full bg-teal-500 px-4 py-2 font-semibold text-slate-950 shadow-sm transition-colors hover:bg-teal-400"
           >
             KINSTRETCH Online
           </a>
@@ -162,7 +162,7 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
         {/* Phones: search stays one tap away; the rest folds into a menu that
             works without JavaScript (a native <details> disclosure). */}
         <div class="flex md:hidden items-center gap-1">
-          <a href="/search" aria-label="Search" class="rounded-full p-2.5 text-slate-700 hover:bg-slate-100">
+          <a href="/search" aria-label="Search" class="rounded-full p-2.5 text-slate-200 hover:bg-white/10">
             <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" class="w-5 h-5">
               <circle cx="8.5" cy="8.5" r="5.5"></circle>
               <path d="M13 13l4.5 4.5" stroke-linecap="round"></path>
@@ -171,7 +171,7 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
           <details class="mobile-menu group/menu">
             <summary
               aria-label="Menu"
-              class="list-none [&::-webkit-details-marker]:hidden cursor-pointer rounded-full p-2.5 text-slate-700 hover:bg-slate-100"
+              class="list-none [&::-webkit-details-marker]:hidden cursor-pointer rounded-full p-2.5 text-slate-200 hover:bg-white/10"
             >
               <svg aria-hidden="true" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" class="w-5 h-5">
                 <path class="group-open/menu:hidden" d="M3 5.5h14M3 10h14M3 14.5h14"></path>
@@ -180,20 +180,20 @@ const footerTopics = (["fundamentals", "stretching", "isometrics", "hips", "prog
             </summary>
             <nav
               aria-label="Main"
-              class="absolute inset-x-0 top-full border-b border-slate-200 bg-white shadow-lg px-4 py-3 flex flex-col text-base font-medium"
+              class="absolute inset-x-0 top-full border-b border-white/10 bg-[#0b0f19] shadow-lg px-4 py-3 flex flex-col text-base font-medium"
             >
               {
                 navLinks.map((l) => (
                   <a
                     href={l.href}
                     aria-current={isCurrent(l.href) ? "page" : undefined}
-                    class:list={["rounded-lg px-3 py-3 hover:bg-slate-100", isCurrent(l.href) ? "text-teal-700" : "text-slate-800"]}
+                    class:list={["rounded-lg px-3 py-3 hover:bg-white/10", isCurrent(l.href) ? "text-teal-300" : "text-slate-200"]}
                   >
                     {l.label}
                   </a>
                 ))
               }
-              <a href={kinstretch} class="mt-2 mb-1 rounded-full bg-slate-900 px-4 py-3 text-center text-white">
+              <a href={kinstretch} class="mt-2 mb-1 rounded-full bg-teal-500 px-4 py-3 text-center font-semibold text-slate-950">
                 KINSTRETCH Online
               </a>
             </nav>
