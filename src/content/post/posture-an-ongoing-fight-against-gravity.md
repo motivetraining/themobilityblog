@@ -4,7 +4,8 @@ metaTitle: "Posture: A Fight Against Gravity"
 description: "Posture isn’t about perfection; it's about versatility. Learn why strength and movement matter more than rigid alignment."
 date: "2025-10-04T21:08:57Z"
 dateModified: "2026-02-12T15:51:06Z"
-featuredImage: "/images/posts/Posture-Fighting-Gravity.jpg"
+featuredImage: "/images/posts/posture-an-ongoing-fight-against-gravity.jpg"
+imageAlt: "Translucent figure standing in side view, the spine and joints glowing gold, with golden ribbons of light trailing from the body against a black background"
 categories:
   - "Posture"
 tags:
