@@ -145,12 +145,16 @@ not "Where the restriction actually comes from."
   progress bar on posts.
 - **Post pages** show a reading time, a progress bar, and an "In This Post"
   list built from the post's `##` headings (posts with three or more).
-- **Images in `public/`:** the logo mark comes from one high-resolution
-  original, cropped to its circle: `logo.png` (header, 144px, transparent
-  outside the circle), `favicon.png` (96px), and `apple-touch-icon.png`
-  (512px on white, also the publisher logo in structured data).
-  `og-default.jpg` is the 1200×630 share image for pages without a featured
-  image (home, topics, About).
+- **Header:** a dark bar (`#0b0f19`) with the white logo, so the logo appears
+  as Brian designed it, white on dark; the rest of the site stays light.
+- **Images in `public/`:** the logo is Brian's stacked joint-and-arc mark,
+  taken from his original artwork. `logo-joint.png` (navy, for the light
+  header) and `logo-joint-white.png` (white, for dark backgrounds) are 144px
+  with transparent backgrounds; `favicon.png` is the mark on a white rounded
+  tile (96px); `apple-touch-icon.png` is the original white-on-charcoal mark
+  (512px, also the publisher logo in structured data). `og-default.jpg` is
+  the 1200×630 share image for pages without a featured image (home, topics,
+  About).
 
 ## Planned posts
 
