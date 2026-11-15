@@ -4,7 +4,8 @@ metaTitle: "4 Common Stretching Mistakes"
 description: "4 common stretching mistakes that may be holding you back. Learn how to correct them and build real mobility instead of chasing flexibility."
 date: "2025-11-13T16:14:21Z"
 dateModified: "2026-02-12T15:49:42Z"
-featuredImage: "/images/posts/Stretching-Mistakes.jpg"
+featuredImage: "/images/posts/4-common-stretching-mistakes-and-how-to-correct-them.jpg"
+imageAlt: "Translucent figure in a standing forward fold, the spine glowing from teal at the neck to orange at the hips, wrapped in teal, violet and gold ribbons of light"
 categories:
   - "Stretching"
 tags:
