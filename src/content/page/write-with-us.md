@@ -3,7 +3,7 @@ title: "Write With Us"
 description: "Coaches, trainers, and clinicians: pitch an article to The Mobility Blog. Send a short intro, your credentials, and an outline of your topic."
 ---
 
-## Submit Articles And Ideas, Or Contact Us Directly.
+## Submit Articles and Ideas, or Contact Us Directly
 
 We welcome submissions from coaches and trainers who are passionate about contributing to The Mobility Blog.
 
