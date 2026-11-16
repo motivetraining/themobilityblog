@@ -4,7 +4,8 @@ metaTitle: "How to Structure Mobility Training"
 description: "What's the best way to structure your mobility routine? We asked the pros; here is what they had to say."
 date: "2026-05-14T01:15:32Z"
 dateModified: "2026-05-24T18:40:52Z"
-featuredImage: "/images/posts/How-Do-You-Structure-Mobility-Into-Your-Workout-Routine.jpg"
+featuredImage: "/images/posts/how-do-you-structure-mobility-sequence.jpg"
+imageAlt: "Three translucent figures in a row, an older woman in a deep squat, a young man in a lunge and a man reaching overhead, joints glowing orange and linked by a violet ribbon of light on a light aqua background"
 categories:
   - "Mobility"
 tags:

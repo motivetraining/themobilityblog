@@ -4,8 +4,8 @@ metaTitle: "Isometrics: Infinite Tension"
 description: "Isometrics build strength through controlled tension. Learn how they improve joint health, stability, and long-term resilience."
 date: "2025-05-21T02:22:32Z"
 dateModified: "2026-02-12T15:51:41Z"
-featuredImage: "/images/posts/isometrics-infinite-tension-infinite-potential.jpg"
-imageAlt: "Translucent figure in a deep crouch hugging the knees, with shoulders, elbows, wrists, hips, knees and ankles glowing blue against a black background"
+featuredImage: "/images/posts/isometrics-infinite-tension-infinite-potential-v2.jpg"
+imageAlt: "Translucent figure in a deep crouch hugging the knees, with shoulders, elbows, wrists, hips, knees and ankles glowing blue on a deep ocean-blue background"
 categories:
   - "Isometrics"
 tags:
