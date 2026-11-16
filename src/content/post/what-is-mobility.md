@@ -4,8 +4,8 @@ metaTitle: "What Is Mobility? A Coach's Definition"
 description: "What is mobility? It's the range a joint can reach and control on its own. How it differs from flexibility, how to test it, and how to train it."
 date: "2024-12-23T00:58:27Z"
 dateModified: "2026-10-02T12:00:00Z"
-featuredImage: "/images/posts/what-is-mobility.jpg"
-imageAlt: "Illustration of a running figure in blue and green with the shoulder, elbow, hip, and knee joints highlighted, trailed by flowing ribbons of color"
+featuredImage: "/images/posts/what-is-mobility-hip-circle.jpg"
+imageAlt: "Translucent woman balanced on one leg, circling the other leg out to the side at the hip, with a teal and violet ring of light tracing the range and the hip joint glowing orange on a deep blue background"
 categories:
   - "Mobility"
 tags:

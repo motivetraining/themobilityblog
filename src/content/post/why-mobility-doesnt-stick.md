@@ -3,8 +3,8 @@ title: "Why Mobility Doesn't Stick"
 description: "New range that disappears by your next session isn't a lack of effort, it's an incomplete signal. Here's what actually makes mobility gains stick."
 date: "2026-06-28T13:04:11Z"
 dateModified: "2026-08-24T19:42:20Z"
-featuredImage: "/images/posts/why-mobility-doesnt-stick.jpg"
-imageAlt: "Translucent athletic figure in a deep lunge, hips, knees, ankles and shoulders glowing orange, with blue and violet light trailing around the legs"
+featuredImage: "/images/posts/why-mobility-doesnt-stick-v2.jpg"
+imageAlt: "Translucent athletic figure in a deep lunge, hips, knees, ankles and shoulders glowing orange, with blue and violet light trailing around the legs on an indigo background"
 categories:
   - "Mobility"
 tags:
