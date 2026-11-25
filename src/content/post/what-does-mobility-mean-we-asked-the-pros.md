@@ -5,7 +5,7 @@ description: "Coaches, clinicians and trainers explain what mobility means in th
 date: "2026-02-12T15:06:53Z"
 dateModified: "2026-11-25T12:00:00Z"
 featuredImage: "/images/posts/What-Does-Mobility-Mean-1.jpg"
-imageAlt: "Three translucent figures inside rings of light, a man in a deep squat in a gym, a swimmer stretched out mid-stroke, and a person bending forward at home, joints glowing orange on a pale blue background"
+imageAlt: "Three blue figures with glowing orange joints: a man in a deep squat inside a teal ring of light with a gym behind him, a figure stretched out in a dive through a swirl of water-like light, and a person folding forward inside a gold ring set in a living room, on a pale blue background"
 categories:
   - "Mobility"
 tags:

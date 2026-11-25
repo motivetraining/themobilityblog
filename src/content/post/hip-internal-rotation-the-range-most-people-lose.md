@@ -19,7 +19,7 @@ Nobody's hiding this range on purpose. It's just genuinely absent from both halv
 
 ## What's Actually Missing
 
-Internal rotation is the femur turning medially inside the socket, and you usually test it with the hip and knee bent to ninety degrees. At the same time, the shin swings outward (the shin is doing the visible moving, but the rotation itself happens up at the hip). In [one study of 151 healthy young adults](https://doi.org/10.1589/jpts.27.441), average internal rotation measured seated was a little over forty degrees, with wide variation from person to person, which is already a narrow window for a joint sold as one of the most mobile in the body. Many of the people we assess live well under that number and have no idea, because a joint doesn't announce that it's lost range. It just stops offering it.
+Internal rotation is the femur turning medially inside the socket, and you usually test it with the hip and knee bent to ninety degrees. At the same time, the shin swings outward (the shin is doing the visible moving, but the rotation itself happens up at the hip). In [one study of 151 healthy Japanese students](https://doi.org/10.1589/jpts.27.441), most of them in their twenties, average internal rotation measured seated was a little over forty degrees (a few degrees higher in women), with most people falling within about eight degrees of that. That was passive range, with an examiner turning the hip, which is already a narrow window for a joint sold as one of the most mobile in the body. Many of the people we assess live well under that number and have no idea, because a joint doesn't announce that it's lost range. It just stops offering it.
 
 ## How to Tell If You've Lost It
 
