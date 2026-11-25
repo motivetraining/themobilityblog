@@ -1,9 +1,9 @@
 ---
 title: "Hip Internal Rotation: The Range Most People Lose"
-metaTitle: "Hip Internal Rotation: What You Lose"
-description: "Most people lose hip internal rotation without noticing. Here's why it matters, how to test it, and how to build the range back safely."
+metaTitle: "Hip Internal Rotation: Why You Lose It"
+description: "Hip internal rotation is the range most people lose without noticing. Why it goes, how to test it, and why abduction work alone won't bring it back."
 date: "2026-09-10T09:20:23Z"
-dateModified: "2026-09-10T12:27:59Z"
+dateModified: "2026-11-25T12:00:00Z"
 featuredImage: "/images/posts/Hip-Internal-Rotation.jpg"
 categories:
   - "Mobility"
@@ -13,13 +13,19 @@ tags:
 published: true
 ---
 
-Ask someone with a desk job when they last internally rotated either hip, and you'll get a blank look, not because it's a strange question, but because sitting removes the need for the range entirely. The hip sits somewhere between neutral and external rotation for eight hours a day, five days a week, and nothing about that position ever asks the femur to turn the other way. Then that same person goes and does exactly what most strength programs prescribe: squats, hinges, presses, all of it living in a narrow band that also never touches internal rotation.
+Hip internal rotation is the thigh bone turning inward in the hip socket, and it's the range most people lose without noticing. Ask someone with a desk job when they last internally rotated either hip, and you'll get a blank look, not because it's a strange question, but because sitting removes the need for the range entirely. The hip sits somewhere between neutral and external rotation for eight hours a day, five days a week, and nothing about that position ever asks the femur to turn the other way. Then that same person goes and does exactly what most strength programs prescribe: squats, hinges, presses, all of it living in a narrow band that also never touches internal rotation.
 
 Nobody's hiding this range on purpose. It's just genuinely absent from both halves of the day, and because nothing hurts and nothing feels obviously wrong, most people never find out it's gone until we test it.
 
 ## What's Actually Missing
 
-Internal rotation is the femur turning medially inside the socket, and you usually test it with the hip and knee bent to ninety degrees. At the same time, the shin swings outward (the shin is doing the visible moving, but the rotation itself happens up at the hip). [Normal is around thirty to forty degrees](https://orthofixar.com/special-test/hip-range-of-motion-and-biomechanics/), which is already a narrow window for a joint sold as one of the most mobile in the body. Many of the people we assess live well under that number and have no idea, because a joint doesn't announce that it's lost range. It just stops offering it.
+Internal rotation is the femur turning medially inside the socket, and you usually test it with the hip and knee bent to ninety degrees. At the same time, the shin swings outward (the shin is doing the visible moving, but the rotation itself happens up at the hip). In [one study of 151 healthy young adults](https://doi.org/10.1589/jpts.27.441), average internal rotation measured seated was a little over forty degrees, with wide variation from person to person, which is already a narrow window for a joint sold as one of the most mobile in the body. Many of the people we assess live well under that number and have no idea, because a joint doesn't announce that it's lost range. It just stops offering it.
+
+## How to Tell If You've Lost It
+
+The simplest check is seated. Sit tall on a bench with the knees bent to ninety degrees and the thighs parallel, then let one shin swing outward while the thigh stays put. That outward swing of the shin is internal rotation at the hip. What I watch is less the number than how the movement ends. If the pelvis hikes, the trunk leans away, or the thigh drifts across instead of turning, the hip has run out of rotation and something else is finishing the job. Comparing sides helps, and so does comparing how far the shin goes when you move it yourself against how far it goes when someone guides it there. A big difference between those two points to a control problem more than a space problem.
+
+A rotational CAR gives the same information in motion. We've written about [what CARs are actually for](/what-cars-are-actually-for) in more depth elsewhere on this site, but the short version is that the daily rotation tells you where the compensation starts, not just how far the leg goes. Pinching at the front of the hip during either check is a different signal, and the caveat further down covers it.
 
 ## Why Nobody Notices Until It Costs Them Something
 
@@ -35,7 +41,7 @@ So the actual job is figuring out which one is missing, the space or the strengt
 
 ## Building the Range Back, Then Using It
 
-Assessing what's actually available comes first, and a rotational CAR is the simplest way to do that; we've written about [what CARs are actually for](/what-cars-are-actually-for) in more depth elsewhere on this site, but the short version is that the daily rotation tells you where the compensation starts, not just how far the leg goes. If there's a real gap in space, the [CARs guide over at Motive](https://www.movewithpurpose.com/controlled-articular-rotations-guide) walks through the joint-by-joint setup.
+Assessing what's actually available comes first, using the checks above. If there's a real gap in space, the [CARs guide over at Motive](https://www.movewithpurpose.com/controlled-articular-rotations-guide) walks through the joint-by-joint setup.
 
 Once there's available space, the next job is capturing it, and this is where programming choices start to matter more than any isolated drill. Internally-rotated biased hinges and split squats, positions where the working hip is deliberately loaded somewhere inside that arc rather than in the neutral or externally rotated position most lower-body work defaults to, are how that new range actually gets used under load instead of just sitting there as a number on an assessment. Contraction at length through [PAILs and RAILs](https://www.movewithpurpose.com/pails-rails), and end-range isometric work at several points through the arc rather than only the very end, is generally what converts passive range into something the joint can produce and hold on its own; that's the same logic laid out in the [isometrics piece](/isometrics-infinite-tension-infinite-potential) published here, and it lines up with the broader [literature on resistance training as a driver of range of motion](https://link.springer.com/article/10.1007/s40279-022-01804-x), not just stretching.
 
@@ -51,6 +57,6 @@ This is why internal rotation gets deliberate attention in our programming, rath
 
 ## References
 
-- [Hip Range of Motion: Normal Values, Biomechanics and Clinical Guide](https://orthofixar.com/special-test/hip-range-of-motion-and-biomechanics/)
+- [Han H, Kubo A, Kurosawa K, Maruichi S, Maruyama H. Hip rotation range of motion in sitting and prone positions in healthy Japanese adults. Journal of Physical Therapy Science. 2015;27(2):441-445](https://doi.org/10.1589/jpts.27.441)
 - [Alterations in Internal Rotation and Compensatory Injury Patterns Around the Hip, Pelvis, and Lumbar Spine](https://vivo.weill.cornell.edu/display/pubid22392560)
 - [Alizadeh et al. (2023), Resistance training induces improvements in range of motion: a systematic review and meta-analysis, Sports Medicine](https://link.springer.com/article/10.1007/s40279-022-01804-x)

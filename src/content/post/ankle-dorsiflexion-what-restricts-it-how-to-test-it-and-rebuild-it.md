@@ -1,11 +1,11 @@
 ---
 title: 'Ankle Dorsiflexion: What Restricts It, How to Test It, and How to Rebuild
   It'
-metaTitle: 'Ankle Dorsiflexion: What Restricts It and How to Fix It'
+metaTitle: 'Ankle Dorsiflexion: Test It, Rebuild It'
 description: Ankle dorsiflexion isn't one problem. It can come from the capsule, the
   mortise, either calf muscle, or a bony block, and each one needs a different fix.
 date: 2026-09-22
-dateModified: 2026-09-22
+dateModified: "2026-11-25T12:00:00Z"
 featuredImage: /images/posts/ankle-dorsiflexion-what-restricts-it-how-to-test-it-and-rebuild-it.jpg
 categories:
 - Mobility
@@ -15,9 +15,9 @@ tags:
 published: true
 ---
 
-Every coach who's spent real time under the bar with people eventually runs into the same wall. Someone can't get their squat below parallel no matter how much hip mobility work they do, and the fix isn't in the hip at all. It's six inches lower, at a joint nobody thinks about until it stops cooperating.
+Ankle dorsiflexion is the shin traveling forward over a planted foot, and it limits more squats than most people realize. Every coach who's spent real time under the bar with people eventually runs into the same wall: someone can't get their squat below parallel no matter how much hip mobility work they do, and the limit turns out to be six inches lower, at a joint nobody thinks about until it stops cooperating.
 
-Ankle dorsiflexion is the motion of the shin traveling forward over a planted foot. It's what has to happen every time you squat, lunge, walk downhill, or absorb a landing. It's also probably the most underdiagnosed restriction in general population training, because it hides behind other joints. People blame their hips for a shallow squat. They blame their quads for knee pain. Rarely does anyone check the ankle first, even though the ankle is often the actual ceiling.
+That forward travel of the shin has to happen every time you squat, lunge, walk downhill, or absorb a landing. It's also probably the most underdiagnosed restriction in general population training, because it hides behind other joints. People blame their hips for a shallow squat. They blame their quads for knee pain. Rarely does anyone check the ankle first, even though the ankle is often the actual ceiling.
 
 ## What Dorsiflexion Actually Is, and Why the Test You Use Matters
 
@@ -53,13 +53,17 @@ I want to be straight about the limits here, because this is exactly the kind of
 
 Static calf stretching has a similar story. A systematic review found static stretching does increase dorsiflexion, with effects in the two to three degree range depending on duration, and the researchers considered the results at 15 to 30 minutes of stretching robust (6). Two to three degrees is real, but it's small next to a 44 degree normal range, and nowhere close to what you'd need if the actual limiter is capsular, bony, or sitting in the mortise instead of the muscle. This is the same lesson from the isometrics piece showing up from a different angle. The dose that produces change is usually longer and more specific than what people are actually doing, and the method has to match the structure you're trying to change, not just the joint.
 
-## How to Actually Test and Rebuild It
+## The Knee-to-Wall Test for Ankle Mobility
 
-Start with the weight-bearing lunge test against a wall. Foot a few inches back, knee driving forward to touch the wall without the heel lifting, and walk the foot back until you find the true limit. That's the only version of this test worth trusting for training decisions, since it's the one that actually predicts what happens under load (1).
+The knee-to-wall test is the weight-bearing lunge test described above, done against a wall. Foot a few inches back, knee driving forward to touch the wall without the heel lifting, and walk the foot back until you find the true limit. That's the only version of this test worth trusting for training decisions, since it's the one that actually predicts what happens under load (1).
 
 Pay attention to what the end range feels like, not just the number. A hard, sudden stop with localized pain at the front of the ankle is worth referring out before you program anything into it. That's the impingement pattern, and loading into it repeatedly is how it gets worse, not better.
 
-If the end range feels soft and stretch-like instead, run the Silfverskiold comparison. Straight knee, then bent knee, same wall test both times. A meaningful improvement with the knee bent points to the gastrocnemius, and the fix is loaded gastrocnemius-length work, a straight-leg calf stretch held under real tension rather than the twenty second version most people default to. Little to no change between the two positions points away from the muscle and toward the capsule or the mortise, which is your cue to work joint mobilization instead, whether that's a banded ankle distraction into dorsiflexion or hands-on work if there's an old sprain in the history.
+If the end range feels soft and stretch-like instead, run the Silfverskiold comparison. Straight knee, then bent knee, same wall test both times. A meaningful improvement with the knee bent points to the gastrocnemius. Little to no change between the two positions points away from the muscle and toward the capsule or the mortise.
+
+## How to Rebuild Ankle Dorsiflexion
+
+What the wall test found decides the work. If bending the knee bought you range, the gastrocnemius is the limit, and the fix is loaded gastrocnemius-length work, a straight-leg calf stretch held under real tension rather than the twenty second version most people default to. If bending the knee changed little, look at the capsule or the mortise and work joint mobilization instead, whether that's a banded ankle distraction into dorsiflexion or hands-on work if there's an old sprain in the history.
 
 CARs at the ankle still have a place here, the same way they do everywhere else on this site. They're not how you build the range. They're how you check whether the range you've built is still there and still under control (see [What CARs Are Actually For](/what-cars-are-actually-for)). If you want to see this whole sequence run start to finish, from CARs into PAILs and RAILs into loaded reinforcement, [we put out a free ankle mobility foundations class on YouTube](https://www.movewithpurpose.com/new-to-kinstretch-ankle-mobility-foundations) that walks through exactly this progression at the ankle, no gear required and no cost to watch it. Once dorsiflexion improves on the wall test, the last step is putting it back into the pattern it was missing from. Loaded ankle dorsiflexion drills, deficit reverse lunges, and knee-forward isometric holds at end range all put the new range under the kind of demand it needs to survive contact with an actual lift.
 
