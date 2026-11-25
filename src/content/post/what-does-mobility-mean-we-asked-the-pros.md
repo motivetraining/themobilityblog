@@ -1,10 +1,11 @@
 ---
-title: "What Does Mobility Mean? We Asked the Pros"
-metaTitle: "What Does Mobility Mean? We Asked"
-description: "Mobility means control, independence, safety, and adaptability. Coaches and clinicians worldwide share what mobility really is."
+title: "What Coaches and Clinicians Say Mobility Means to Them"
+metaTitle: "What Mobility Means to Coaches: A Roundup"
+description: "Coaches, clinicians and trainers explain what mobility means in their own work: control, independence, safety, adaptability, confidence and longevity."
 date: "2026-02-12T15:06:53Z"
-dateModified: "2026-02-20T20:10:08Z"
+dateModified: "2026-11-25T12:00:00Z"
 featuredImage: "/images/posts/What-Does-Mobility-Mean-1.jpg"
+imageAlt: "Three blue figures with glowing orange joints: a man in a deep squat inside a teal ring of light with a gym behind him, a figure stretched out in a dive through a swirl of water-like light, and a person folding forward inside a gold ring set in a living room, on a pale blue background"
 categories:
   - "Mobility"
 tags:
@@ -13,13 +14,13 @@ tags:
 published: true
 ---
 
-Mobility is one of those words that gets thrown around constantly in the fitness industry.
+Mobility is one of those words that gets thrown around constantly in the fitness industry. If you want a definition, you'll find it in [What Is Mobility?](/what-is-mobility). This post asks a different question: what the word means to the people who use it at work.
 
 Sometimes it means stretching. Sometimes it means flexibility. Sometimes it’s code for rehab.
 
 The word gets used so often that it starts to lose definition.
 
-At [Motive Training](https://movewithpurpose.com/), we define mobility as usable range of motion—the ability to actively control your joints through the positions your life demands.
+At [Motive Training](https://movewithpurpose.com/), we define mobility as usable range of motion: the ability to actively control your joints through the positions your life demands.
 
 But I wanted to zoom out.
 
